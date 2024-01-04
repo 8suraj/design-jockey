@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+	font-family: 'Monument Extended';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Monument Extended'),
+		url('./assets/font/MonumentExtended-Regular.otf')
+			format('opentype');
+}
+
+@font-face {
+	font-family: 'Monument Extended';
+	font-style: normal;
+	font-weight: 800;
+	src: local('Monument Extended'),
+		url('./assets/font/MonumentExtended-Ultrabold.otf')
+			format('opentype');
+}
+
+:root {
+	@apply font-normal text-xl leading-normal bg-black text-white;
+	font-family: 'Monument Extended';
+	color-scheme: light dark;
+	color: #ffffff;
+	background-color: #000000;
+	background-image: url(./assets/backgrounds/1.jfif);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-blend-mode: hard-light;
+	/* bac */
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+/* base-text : 20px 1.3rem */
