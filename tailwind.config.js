@@ -2,7 +2,12 @@
 export default {
 	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				SFPro: 'SF Pro',
+				MExtended: 'Monument Extended', // Adds a new `font-display` class
+			},
+		},
 		colors: {
 			black: '#000000',
 			black2: '#00000040',
@@ -12,6 +17,30 @@ export default {
 			white: '#FFFFFF',
 			'grey-dark': '#282828',
 			'grey-light': '#939393',
+			transparent: 'transparent',
+			red: '#FF0000',
+		},
+		screens: {
+			m1: '320px',
+			// => @media (min-width: 320px) { ... }
+			m2: '375px',
+
+			m3: '425px',
+
+			sm: '640px',
+			// => @media (min-width: 640px) { ... }
+
+			md: '768px',
+			// => @media (min-width: 768px) { ... }
+
+			lg: '1024px',
+			// => @media (min-width: 1024px) { ... }
+
+			xl: '1280px',
+			// => @media (min-width: 1280px) { ... }
+
+			'2xl': '1536px',
+			// => @media (min-width: 1536px) { ... }
 		},
 	},
 	plugins: [],

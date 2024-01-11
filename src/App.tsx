@@ -6,9 +6,9 @@ import {
 	RouterProvider,
 	Route,
 } from 'react-router-dom';
-// const Hero = lazy(
-// 	() => import('./components/hero/hero.component.tsx')
-// );
+const Footer = lazy(
+	() => import('./components/footer/footer.component.tsx')
+);
 const Navbar = lazy(
 	() => import('./components/navbar/navbar.component.tsx')
 );
@@ -17,7 +17,7 @@ const routes = createBrowserRouter(
 	createRoutesFromElements(
 		<>
 			<Route path='/' element={<Navbar />}>
-				{/* <Route path='/' element={<Hero />} /> */}
+				<Route path='/' element={<Footer />} />
 			</Route>
 		</>
 	)

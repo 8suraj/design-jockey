@@ -18,6 +18,14 @@
 		url('./assets/font/MonumentExtended-Ultrabold.otf')
 			format('opentype');
 }
+@font-face {
+	font-family: 'SF Pro';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Monument Extended'),
+		url('./assets/font/SFPRODISPLAYREGULAR.OTF')
+			format('opentype');
+}
 
 :root {
 	@apply font-normal text-xl leading-normal bg-black text-white;
@@ -25,7 +33,7 @@
 	color-scheme: light dark;
 	color: #ffffff;
 	background-color: #000000;
-	background-image: url(./assets/backgrounds/1.jfif);
+	/* background-image: url(./assets/backgrounds/1.jpg); */
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
