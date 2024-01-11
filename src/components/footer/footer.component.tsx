@@ -14,11 +14,11 @@ export default function Footer() {
 					<input
 						type='text'
 						placeholder='your@email.com'
-						className=' md:w-10/12 w-full outline-0 bg-transparent	border-b-4 md:border-b-8 border-grey-dark
-						 placeholder:text-grey-dark placeholder:sm:text-xl placeholder:md:text-2xl placeholder:xl:text-5xl placeholder:2xl:text-8xl
+						className=' md:w-9/12 w-full outline-0 bg-transparent	border-b-4 md:border-b-8 border-grey-dark
+						 placeholder:text-grey-dark placeholder:sm:text-xl placeholder:md:text-2xl placeholder:xl:text-4xl placeholder:2xl:text-5xl
 						  placeholder:m1:text-[.85rem] placeholder:m2:text-[1.1rem]  placeholder:m3:text-[1.3rem]
-						   md:text-2xl xl:text-5xl m1:text-[.85rem] 
-						   m2:text-[1.1rem]  m3:text-[1.3rem] 2xl:text-8xl'
+						   md:text-2xl xl:text-4xl m1:text-[.85rem] 
+						   m2:text-[1.1rem]  m3:text-[1.3rem] 2xl:text-5xl'
 					/>
 					<div className='md:w-2/12'>
 						<img src={enter} alt='' className='w-8/12' />
