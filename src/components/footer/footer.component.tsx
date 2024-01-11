@@ -38,9 +38,9 @@ export default function Footer() {
 					</label>
 				</div>
 
-				<div className='flex md:flex-row flex-col gap-6 md:gap-0 m1:text-[.5rem] m2:text-[.6rem]  m3:text-[.7rem]'>
-					<div className='md:w-6/12  w-full '>
-						<div className='w-full flex flex-col md:gap-2 '>
+				<div className='flex md:flex-row flex-col gap-6 md:gap-4 m1:text-[.5rem] m2:text-[.6rem]  m3:text-[.7rem] '>
+					<div className='md:w-6/12  w-full  '>
+						<div className='w-full flex flex-col md:gap-2  '>
 							<div className='flex w-full items-center justify-around gap-4'>
 								<div className='md:block hidden w-2/12'>
 									<img
@@ -51,7 +51,7 @@ export default function Footer() {
 								</div>
 								<Button
 									text='Get started'
-									className='bg-black-light rounded-lg  text-sm text-center    py-6  w-10/12 '
+									className='bg-black-light rounded-lg  text-sm text-center    py-6  md:w-10/12 w-full '
 									onClick={(e) => console.log(e)}
 								/>
 							</div>
@@ -61,16 +61,11 @@ export default function Footer() {
 									alt='logo'
 									className='h-full'
 								/>
-								<img
-									src={logos}
-									alt='logo'
-									className='h-full'
-								/>
 							</div>
 						</div>
 					</div>
 					<div className='flex md:w-6/12 w-full text-sm font-SFPro text-grey-light  m1:text-[.5rem] m2:text-[.6rem]  m3:text-[.7rem] '>
-						<div className='flex w-full justify-around'>
+						<div className='flex w-full justify-between'>
 							<div className='flex flex-col'>
 								<h3 className='font-MExtended text-white pb-3'>
 									Service
