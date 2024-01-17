@@ -6,18 +6,23 @@ import {
 	RouterProvider,
 	Route,
 } from 'react-router-dom';
-const Footer = lazy(
-	() => import('./components/footer/footer.component.tsx')
-);
+// const Footer = lazy(
+// 	() => import('./components/footer/footer.component.tsx')
+// );
 const Navbar = lazy(
 	() => import('./components/navbar/navbar.component.tsx')
 );
-
+// const Membership = lazy(
+// 	() => import('./components/mem/mem.component.tsx')
+// );
+const Home = lazy(
+	() => import('./pages/home/home.router.jsx')
+);
 const routes = createBrowserRouter(
 	createRoutesFromElements(
 		<>
 			<Route path='/' element={<Navbar />}>
-				<Route path='/' element={<Footer />} />
+				<Route path='/' element={<Home />} />
 			</Route>
 		</>
 	)
