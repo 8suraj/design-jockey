@@ -31,7 +31,7 @@ interface FaqItemsProps {
 }
 const FaqItems = ({ content }: FaqItemsProps) => {
 	return (
-		<div className='flex justify-between bg-black3 rounded-2xl items-center px-4 py-8  gap-2 m1:text-[.7rem] m2:text-[.8rem]  m3:text-[.85rem] md:text-[.9rem]'>
+		<div className='flex justify-between bg-black3 rounded-2xl items-center px-8 py-8 m1:px-4  gap-2 m1:text-[.7rem] m2:text-[.8rem]  m3:text-[.85rem] md:text-[.9rem]'>
 			<span>{content}</span>
 			<span className='text-base'>+</span>
 		</div>

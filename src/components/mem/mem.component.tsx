@@ -23,20 +23,12 @@ const datas = [
 		content2: 'Paid yearly',
 		bt: 'Buy now',
 	},
-	// {
-	// 	plan: 'Monthly',
-	// 	price: '625',
-	// 	content1:
-	// 		'Get a better website faster with Website development.',
-	// 	content2: 'Requires subscription',
-	// 	bt: 'Add on',
-	// },
 ];
 export default function Membership() {
 	return (
 		<section className='w-full '>
 			<div className='w-11/12  m-auto flex flex-col gap-2'>
-				<h1 className='text-color-primary md:text-left text-center uppercase text-2xl md:text-4xl pt-4'>
+				<h1 className='text-color-primary md:text-left text-center capitalize text-2xl md:text-4xl pt-4'>
 					membership levels
 				</h1>
 				<h4 className='text-white font-SFPro md:text-left text-center  m1:text-[.6rem] text-[.6rem]   md:text-[.7rem] pt-4'>
@@ -147,7 +139,7 @@ export default function Membership() {
 
 							<Button
 								text='Book a call'
-								className='bg-black rounded-lg  text-sm text-center   py-6 px-6  w-6/12 '
+								className='bg-black rounded-lg  text-sm text-center   py-6 px-6   xl:w-4/12 w-10/12'
 								onClick={(e) => console.log(e)}
 							/>
 						</div>

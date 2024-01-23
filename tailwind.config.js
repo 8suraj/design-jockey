@@ -12,6 +12,7 @@ export default {
 			black: '#000000',
 			black2: '#00000040',
 			black3: '#1A1A1A',
+			black4: '#171717',
 			'black-light': '#0C0C0C',
 			'color-primary': '#C4FE01',
 			'color-secondary': '#0038FF',
