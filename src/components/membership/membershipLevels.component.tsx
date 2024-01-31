@@ -1,32 +1,51 @@
-import './mem.css';
+import './membership.css';
 import Button from '../button/button.component.tsx';
 const datas = [
 	{
-		plan: 'Monthly',
+		plan: 'Starter',
 		price: '833',
-		content1:
-			'No minimum commitment. pause or cancel anytime.',
+		content1: [
+			'Updating in every 48 Hrs',
+			'1 pause per month',
+			'No minimum commitment.pause or cancel anytime.',
+			'Source file ownership',
+			'Dedicated designer',
+		],
+
 		content2: 'Paid monthly',
 		bt: 'Buy now',
 	},
+
 	{
-		plan: 'Quarterly',
-		price: '812',
-		content1: 'Save $250. Pause upto 3 times.',
+		plan: 'Core',
+		price: '933',
+		content1: [
+			'Updating in every 24 Hrs',
+			'2 pause per month',
+			'No minimum commitment. pause or cancel anytime.',
+			'Source file ownership',
+			'Dedicated designer',
+		],
 		content2: 'Paid quarterly',
 		bt: 'Buy now',
 	},
 	{
-		plan: 'Yearly',
-		price: '791',
-		content1: 'Save $500. Pause upto 6 times.',
+		plan: 'Growth',
+		price: '1033',
+		content1: [
+			'Updating in every 4 Hrs',
+			'2 pause per month',
+			'No minimum commitment. pause or cancel anytime.',
+			'Source file ownership',
+			'Dedicated designer',
+		],
 		content2: 'Paid yearly',
 		bt: 'Buy now',
 	},
 ];
-export default function Membership() {
+export default function MembershipLevels() {
 	return (
-		<section className='w-full '>
+		<section className='w-full  '>
 			<div className='w-11/12  m-auto flex flex-col gap-2'>
 				<h1 className='text-color-primary md:text-left text-center capitalize text-2xl md:text-4xl pt-4'>
 					membership levels
@@ -44,7 +63,7 @@ export default function Membership() {
 							bt={datas[0].bt}
 						/>
 					</div>
-					<div className='q1'>
+					<div className='m2'>
 						<MembershipItem
 							plan={datas[1].plan}
 							price={datas[1].price}
@@ -53,16 +72,16 @@ export default function Membership() {
 							bt={datas[1].bt}
 						/>
 					</div>
-					<div className='y1'>
+					<div className='m3'>
 						<MembershipItem
-							plan={datas[1].plan}
-							price={datas[1].price}
-							content1={datas[1].content1}
-							content2={datas[1].content2}
-							bt={datas[1].bt}
+							plan={datas[2].plan}
+							price={datas[2].price}
+							content1={datas[2].content1}
+							content2={datas[2].content2}
+							bt={datas[2].bt}
 						/>
 					</div>
-					<div className='wb1  '>
+					<div className='m4 '>
 						<div className='flex flex-col  xl:flex-row justify-center items-center lg:items-start xl:items-center lg:justify-around  bg-black3 rounded-2xl  px-4 py-8 lg:px-12  gap-4 lg:gap-8 h-full'>
 							<div className='flex flex-col lg:items-start items-center w-9/12 '>
 								<h1 className='text-xl md:text-3xl    '>
@@ -75,10 +94,9 @@ export default function Membership() {
 									Development
 								</h1>
 								<div className='flex flex-col gap-1 items-center   font-SFPro m1:text-[.6rem] text-[.6rem]   md:text-[1rem] '>
-									<span className=' block'>
+									<span className=' block text-center'>
 										Get a better website faster with
-										<br className='lg:hidden' /> Website
-										development.
+										<br className='' /> Website development.
 									</span>
 								</div>
 							</div>
@@ -97,17 +115,12 @@ export default function Membership() {
 							/>
 						</div>
 					</div>
-					<div className='wm1'>
+					<div className='m5'>
 						<div className='flex flex-col justify-center items-center lg:items-start lg:justify-around  bg-black3 rounded-2xl  px-4 py-8 lg:px-12  gap-4 lg:gap-2 h-full'>
-							<h1 className='text-xl md:text-3xl    '>
-								What’s
-								<span className='hidden xl:inline'>
-									included:
-								</span>
+							<h1 className='text-xl md:text-3xl m1:text-center lg:text-start  '>
+								What’s included:
 							</h1>
-							<h1 className='text-xl md:text-3xl xl:hidden '>
-								included:
-							</h1>
+
 							<ul className='font-SFPro list-disc text-[.8rem] list-inside xl:text-[1rem]'>
 								<li>
 									Unlimited briefs (One request at a time)
@@ -119,21 +132,17 @@ export default function Membership() {
 							</ul>
 						</div>
 					</div>
-					<div className='hc1'>
+					<div className='m6'>
 						<div className='flex flex-col lg:flex-row  justify-center lg:items-start lg:justify-around  bg-black3 rounded-2xl items-center px-4 py-8 lg:px-12  gap-4 lg:gap-2 h-full'>
 							<div className='flex flex-col  gap-4'>
-								<h1 className='text-xl md:text-3xl'>
+								<h1 className='text-xl md:text-3xl m1:text-center lg:text-start'>
 									Book a call
 								</h1>
 								<div className='flex flex-col gap-1 items-center md:block font-SFPro m1:text-[.6rem] text-[.6rem]   lg:text-[1rem] '>
-									<span className=' block '>
-										Learn more about how
+									<span className=' block m1:text-center lg:text-start '>
+										Learn more about how DesignJockey works
+										and how it can help you.
 									</span>
-									<span className=''>
-										{' '}
-										DesignJockey works and how it
-									</span>
-									<span> can help you.</span>
 								</div>
 							</div>
 
@@ -153,7 +162,7 @@ export default function Membership() {
 interface MembershipItemsProps {
 	plan: string;
 	price: string;
-	content1?: string;
+	content1?: string[];
 	content2: string;
 	bt: string;
 }
@@ -166,14 +175,15 @@ const MembershipItem = ({
 	bt,
 }: MembershipItemsProps) => {
 	return (
-		<div className='flex flex-col justify-center lg:items-start lg:justify-around  bg-black3 rounded-2xl items-center px-4 py-8 lg:px-12  gap-4 lg:gap-2 h-full'>
+		<div className='flex flex-col justify-center lg:items-start lg:justify-around  bg-black3 rounded-2xl items-center px-4 py-8 lg:px-12  gap-4 lg:gap-2 h-full w-full'>
 			<h1 className='text-xl md:text-3xl'>{plan}</h1>
 			<div className='flex flex-col gap-1 items-center md:block font-SFPro m1:text-[.6rem] text-[.6rem]   lg:text-[1rem] '>
-				<span className=' block lg:inline'>
-					{/* No minimum commitment. */}
-					{content1}
-				</span>
-				{/* <span className=''>pause or cancel anytime.</span> */}
+				{/* No minimum commitment. */}
+				<ul className='font-SFPro list-disc text-[.8rem] list-inside xl:text-[1rem]  m1:pl-5 lg:pl-0'>
+					{content1?.map((e) => (
+						<li className=''>{e}</li>
+					))}
+				</ul>
 			</div>
 			<div className='flex flex-col gap-1 items-center lg:items-start'>
 				<h1 className='text-2xl md:text-3xl'>${price}/m</h1>

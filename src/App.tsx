@@ -18,12 +18,16 @@ const Navbar = lazy(
 const Home = lazy(
 	() => import('./pages/home/home.router.jsx')
 );
+const Cart = lazy(
+	() => import('./pages/cart/cart.router.tsx')
+);
 const routes = createBrowserRouter(
 	createRoutesFromElements(
 		<>
 			<Route path='/' element={<Navbar />}>
 				<Route path='/' element={<Home />} />
 			</Route>
+			<Route path='/cart' element={<Cart />} />
 		</>
 	)
 );

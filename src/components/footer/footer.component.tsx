@@ -4,7 +4,7 @@ import logos from '../../assets/backgrounds/logos.png';
 import Button from '../button/button.component';
 export default function Footer() {
 	return (
-		<footer className=' w-full  '>
+		<footer className=' w-full  bg-black2'>
 			<div className='flex flex-col  p-4 md:p-12 gap-6 md:gap-4 '>
 				<h1 className='text-left  w-full text-sm'>
 					sign up to <br className='md:hidden' /> our

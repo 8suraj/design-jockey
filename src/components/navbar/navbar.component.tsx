@@ -2,13 +2,20 @@ import { Outlet } from 'react-router-dom';
 import logo from '../../assets/svgs/logo.svg';
 import humburger from '../../assets/svgs/humburger.svg';
 import Button from '../button/button.component';
-// import Hero1 from '../hero/hero1.component';
+import Hero1 from '../hero/hero1.component';
 import './hero1.css';
 export default function Navbar() {
 	return (
 		<>
-			<div className=' hero1 pb-20'>
-				<nav className='flex  items-center rounded-xl w-11/12 m-auto mt-8 mb-16  bg-black2 backdrop-blur-xl	p-4  md:p-0	 '>
+			<div className=' hero1 h-[100vh]  border-t border-transparent  '>
+				<iframe
+					src='https://my.spline.design/computerlovecopy-297097b6007ecb2ac4e3cfffaecf66dd/'
+					frameBorder='0'
+					width='100%'
+					height='100%'
+					className='absolute'
+				/>
+				<nav className='flex items-center rounded-xl w-11/12 mx-auto mt-10  mb-16  bg-black2 backdrop-blur-xl	p-4  md:p-0	'>
 					<div className='flex w-full  justify-between items-center'>
 						<div className='h-full  md:pl-2'>
 							<img
@@ -34,7 +41,7 @@ export default function Navbar() {
 						/>
 					</div>
 				</nav>
-				{/* <Hero1 /> */}
+				<Hero1 />
 			</div>
 
 			<Outlet />
