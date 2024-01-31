@@ -1,5 +1,5 @@
-import Button from '../button/button.component';
-import Slider from 'slider-moon';
+// import Button from '../button/button.component';
+// import Slider from 'slider-moon';
 import 'slider-moon/dist/style.css';
 import './b.css';
 const data = [
