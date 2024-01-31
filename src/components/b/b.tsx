@@ -19,33 +19,33 @@ const data = [
 	'Infographics',
 	'Iconography',
 ];
-const datas = [
-	{
-		header: 'Branding guidelines',
-		content: 'Complete guidelines',
-		price: 800,
-	},
-	{
-		header: 'Website design',
-		content: 'Upto 8 screens',
-		price: 650,
-	},
-	{
-		header: 'Mobile app design',
-		content: 'Upto 8 screens',
-		price: 650,
-	},
-	{
-		header: 'Motion Graphics',
-		content: '30 sec Video',
-		price: 650,
-	},
-	{
-		header: 'Pitch decks',
-		content: '10 slides',
-		price: 650,
-	},
-];
+// const datas = [
+// 	{
+// 		header: 'Branding guidelines',
+// 		content: 'Complete guidelines',
+// 		price: 800,
+// 	},
+// 	{
+// 		header: 'Website design',
+// 		content: 'Upto 8 screens',
+// 		price: 650,
+// 	},
+// 	{
+// 		header: 'Mobile app design',
+// 		content: 'Upto 8 screens',
+// 		price: 650,
+// 	},
+// 	{
+// 		header: 'Motion Graphics',
+// 		content: '30 sec Video',
+// 		price: 650,
+// 	},
+// 	{
+// 		header: 'Pitch decks',
+// 		content: '10 slides',
+// 		price: 650,
+// 	},
+// ];
 export default function Bis() {
 	return (
 		<section className='w-full flex flex-col gap-5 '>
