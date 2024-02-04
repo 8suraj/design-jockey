@@ -2,6 +2,7 @@ import m1 from '../../assets/svgs/membershipworks/m1.svg';
 import m2 from '../../assets/svgs/membershipworks/m2.svg';
 import m3 from '../../assets/svgs/membershipworks/m3.svg';
 import Button from '../button/button.component';
+import Header1 from '../header/header.component';
 const data = [
 	{
 		imgae: m1,
@@ -21,13 +22,14 @@ const data = [
 ];
 export default function MembershipWorks() {
 	return (
-		<section className='w-full '>
-			<div className='w-10/12  m-auto flex flex-col gap-5 '>
+		<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto '>
+			<div className='   flex flex-col gap-5 px-6 md:px-14 py-12 xl:px-4'>
 				<div className='flex w-full'>
 					<div className='lg:w-7/12 m1:w-full'>
-						<h1 className='text-color-primary md:text-left text-center  capitalize text-2xl md:text-4xl lg:text-5xl pt-4 pr-28 m1:pr-0'>
+						{/* <h1 className='text-color-primary md:text-left text-center  capitalize text-2xl md:text-4xl lg:text-5xl pt-4 pr-28 m1:pr-0'>
 							how membership works
-						</h1>
+						</h1> */}
+						<Header1 text='how membership works' />
 						<h4 className='text-white font-SFPro md:text-left text-center  m1:text-[.7rem] text-[.7rem]   md:text-[.7rem] pt-4'>
 							Perks so good you'll never need to go anywhere
 							else for your design. Seriously.

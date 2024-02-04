@@ -9,13 +9,16 @@ const data = [
 	"What if I don't like the design?",
 	'What if I only have a single request?',
 ];
+import Header1 from '../header/header.component';
 export default function Faq() {
 	return (
-		<section className='w-full '>
-			<div className='w-11/12  m-auto flex flex-col gap-8'>
-				<h1 className='text-color-primary md:text-left text-center uppercase text-4xl pt-4'>
-					Faqs
-				</h1>
+		<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto '>
+			<div className='  m-auto flex flex-col gap-8  px-6 md:px-14 py-12 xl:px-4'>
+				<Header1 text='Faqs' />
+				{/* Faqs
+					className='text-color-primary md:text-left text-center uppercase text-4xl pt-4'
+				</h1> */}
+
 				<div className='w-full flex flex-col gap-2'>
 					{' '}
 					{data.map((e) => (
@@ -31,8 +34,8 @@ interface FaqItemsProps {
 }
 const FaqItems = ({ content }: FaqItemsProps) => {
 	return (
-		<div className='flex justify-between bg-black3 rounded-2xl items-center px-8 py-8 m1:px-4  gap-2 m1:text-[.7rem] m2:text-[.8rem]  m3:text-[.85rem] md:text-[.9rem]'>
-			<span>{content}</span>
+		<div className='flex justify-between bg-black3 rounded-2xl items-center m2:px-8 py-8 m1:px-4  gap-2 m1:text-[.7rem] m2:text-[.8rem]  m3:text-[.85rem] md:text-[.9rem]'>
+			<span className=''>{content}</span>
 			<span className='text-base'>+</span>
 		</div>
 	);

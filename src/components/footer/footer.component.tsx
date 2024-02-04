@@ -1,11 +1,12 @@
 import logo from '../../assets/svgs/logo.svg';
 import enter from '../../assets/svgs/enter.svg';
-import logos from '../../assets/backgrounds/logos.png';
 import Button from '../button/button.component';
 export default function Footer() {
 	return (
-		<footer className=' w-full  bg-black2'>
-			<div className='flex flex-col  p-4 md:p-12 gap-6 md:gap-4 '>
+		<footer className=' xl:w-[80vw] 2xl:w-[80vw] mx-auto bg-black2 '>
+			<div className='flex flex-col gap-6 md:gap-4  px-6 md:px-14 py-12 xl:px-4'>
+				{/* px-4 md:px-12 py-12 xl:px-0 */}
+
 				<h1 className='text-left  w-full text-sm'>
 					sign up to <br className='md:hidden' /> our
 					newsletters
@@ -54,13 +55,6 @@ export default function Footer() {
 									onClick={(e) => console.log(e)}
 								/>
 							</div>
-							<div className='w-full h-6   justify-around px-3 md:flex hidden '>
-								<img
-									src={logos}
-									alt='logo'
-									className='h-full'
-								/>
-							</div>
 						</div>
 					</div>
 					<div className='flex md:w-6/12 w-full text-sm font-SFPro text-grey-light  m1:text-[.5rem] m2:text-[.6rem]  m3:text-[.7rem] '>
@@ -92,6 +86,7 @@ export default function Footer() {
 						</div>
 					</div>
 				</div>
+
 				<div className='flex flex-col gap-4'>
 					<div className='h-4 w-full bg-grey-dark md:h-2' />
 					<div className='w-full flex justify-between font-SFPro items-center md:hidden'>
@@ -99,12 +94,12 @@ export default function Footer() {
 							<img src={logo} alt='logo' />
 						</div>
 						<div className='m1:text-[.5rem] m2:text-[.6rem] m3:text-[.7rem]'>
-							2023 © DesignJockey
+							{new Date().getFullYear()} © DesignJockey
 						</div>
 					</div>
 					<div className='w-full flex justify-between font-SFPro m1:text-[.5rem] m2:text-[.6rem]  m3:text-[.7rem] '>
 						<span className='md:block hidden'>
-							2023 © DesignJockey
+							{new Date().getFullYear()} © DesignJockey
 						</span>
 						<div className='md:w-auto w-full flex  justify-between gap-3  '>
 							<span>Cookie Policy </span>

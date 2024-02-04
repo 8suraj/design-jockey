@@ -1,4 +1,5 @@
-// import Button from '../button/button.component';
+import Button from '../button/button.component';
+import Header1 from '../header/header.component';
 // import Slider from 'slider-moon';
 import 'slider-moon/dist/style.css';
 import './b.css';
@@ -19,45 +20,48 @@ const data = [
 	'Infographics',
 	'Iconography',
 ];
-// const datas = [
-// 	{
-// 		header: 'Branding guidelines',
-// 		content: 'Complete guidelines',
-// 		price: 800,
-// 	},
-// 	{
-// 		header: 'Website design',
-// 		content: 'Upto 8 screens',
-// 		price: 650,
-// 	},
-// 	{
-// 		header: 'Mobile app design',
-// 		content: 'Upto 8 screens',
-// 		price: 650,
-// 	},
-// 	{
-// 		header: 'Motion Graphics',
-// 		content: '30 sec Video',
-// 		price: 650,
-// 	},
-// 	{
-// 		header: 'Pitch decks',
-// 		content: '10 slides',
-// 		price: 650,
-// 	},
-// ];
+const datas = [
+	{
+		header: 'Branding guidelines',
+		content: 'Complete guidelines',
+		price: 800,
+	},
+	{
+		header: 'Website design',
+		content: 'Upto 8 screens',
+		price: 650,
+	},
+	{
+		header: 'Mobile app design',
+		content: 'Upto 8 screens',
+		price: 650,
+	},
+	{
+		header: 'Motion Graphics',
+		content: '30 sec Video',
+		price: 650,
+	},
+	{
+		header: 'Pitch decks',
+		content: '10 slides',
+		price: 650,
+	},
+];
 export default function Bis() {
 	return (
-		<section className='w-full flex flex-col gap-5 '>
-			<div className='w-11/12 mx-auto flex flex-col gap-4'>
-				<h1 className='text-color-primary md:text-left text-center uppercase text-4xl pt-4 m1:text-2xl'>
+		<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto flex flex-col gap-5  '>
+			<div className='  flex flex-col gap-4 px-6 md:px-14 py-12 xl:px-4'>
+				{/* <h1 className='text-color-primary md:text-left text-center capitalize text-4xl  m1:text-2xl'>
 					Buy Individually or subscribe
-				</h1>
-				{/* <div className='hidden lg:flex w-full m-auto  justify-center  gap-2 flex-row  '>
+				</h1> */}
+				<Header1 text='Buy Individually or subscribe' />
+				<div className='hidden lg:flex w-full m-auto  justify-center  gap-2 flex-row  '>
 					{datas.map((e) => (
-						<div className='bg-black3 rounded-lg text-[.7rem]    w-[19%]    md:pt-6  pt-4 capitalize  h-[18rem] flex flex-col justify-between'>
-							<div className='text-left p-4 h-32'>
-								<h1 className='text-xl'>{e.header}</h1>
+						<div className='bg-black3 rounded-lg text-[.7rem]    lg:w-[24%] xl:w-[19%]  1xl:w-[19.2%]    md:pt-6  pt-4 capitalize  h-[18rem] flex flex-col justify-between'>
+							<div className='text-left p-4 xl:p-2  h-36'>
+								<h1 className='lg:text-base	 xl:text-lg '>
+									{e.header}
+								</h1>
 								<span className='font-SFPro text-grey-light'>
 									{e.content}
 								</span>
@@ -67,12 +71,12 @@ export default function Bis() {
 							</p>
 							<Button
 								text='Add to cart'
-								className='bg-color-secondary rounded-lg  text-sm text-center   py-6 px-6  w-full '
+								className='bg-color-secondary rounded-lg  lg:text-[.7rem] xl:text-sm text-center   py-6 px-6  w-full border border-transparent '
 								onClick={(e1) => console.log(e1)}
 							/>
 						</div>
 					))}
-				</div> */}
+				</div>
 				{/* <div>
 					<Slider
 						slideClass={'my-scale'}
@@ -107,9 +111,9 @@ export default function Bis() {
 						</div>
 					</Slider>
 				</div> */}
-				<div className='w-full m-auto flex flex-col justify-center gap-2   sm:flex-row sm:flex-wrap '>
+				<div className='w-full m-auto flex flex-col justify-center gap-2   sm:flex-row sm:flex-wrap'>
 					{data.map((e) => (
-						<div className='bg-black3 rounded-lg text-[.7rem] p-2 w-full lg:w-[19%] md:w-[23%] sm:w-[22%] sm:h-24 md:text-left sm:p-4 md:pt-6 text-center pt-4 capitalize '>
+						<div className='bg-black3 rounded-lg text-[.65rem] 2xl:text-[.9rem]  w-full  sm:w-[23.4%] md:w-[23.5%] lg:w-[24%] xl:w-[19%]  1xl:w-[19.2%]  sm:h-24 2xl:h-36 md:text-left sm:p-4 md:py-6 2xl:py-6 sm:text-left text-center py-4 capitalize '>
 							<span className=''>{e}</span>
 						</div>
 					))}

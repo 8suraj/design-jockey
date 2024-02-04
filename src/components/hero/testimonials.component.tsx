@@ -3,17 +3,19 @@ import e2 from '../../assets/svgs/Ellipse2.svg';
 import e3 from '../../assets/svgs/Ellipse3.svg';
 import e4 from '../../assets/svgs/Ellipse4.svg';
 import m1 from '../../assets/svgs/user.jpg';
+import Header1 from '../header/header.component';
 export default function Hero2() {
 	return (
-		<section className='w-full px-2  py-4'>
-			<div className='flex flex-col gap-2'>
-				<div className='w-full h-full  m-auto bg-color-secondary rounded-lg flex flex-col md:flex-row   md:justify-around   p-4 md:p-16'>
-					<div className='m1:text-center md:text-left w-full md:w-[45%] lg:text-left '>
-						<h1 className='text-color-primary capitalize m1:text-[1.5rem] m2:text-[1.65rem] sm:text-[1.8rem] md:text-[1.9rem] lg:text-[2.5rem]'>
+		<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto  '>
+			<div className='flex flex-col gap-2 px-4 md:px-12 py-12 xl:px-0 '>
+				<div className='w-full h-full  m-auto bg-color-secondary rounded-lg flex flex-col md:flex-row   md:justify-around   p-4 md:p-10 lg:p-16 '>
+					<div className='m1:text-center md:text-left w-full md:w-[48%] lg:w-[45%] lg:text-left '>
+						{/* <h1 className='text-color-primary capitalize m1:text-[1.5rem] m2:text-[1.65rem] sm:text-[1.8rem] md:text-[1.9rem] lg:text-[2.4rem] xl:text-[2.5rem]'>
 							what our friends has to say
-						</h1>
+						</h1> */}
+						<Header1 text='what our friends has to say' />
 					</div>
-					<div className='w-full md:w-[45%] md:px-8 lg:px-12 px-3 flex flex-col gap-10   m1:items-center md:items-start'>
+					<div className='w-full md:w-[45%] md:px-6 lg:px-12 px-3 flex flex-col gap-10   m1:items-center md:items-start '>
 						<p className=' text-center font-SFPro md:text-left   m1:text-[.7rem] m2:text-[.75rem] sm:text-[.8rem] md:text-[.7rem] lg:text-[1rem]'>
 							Designjockey replaces unreliable freelancers
 							and expensive agencies for one flat monthly

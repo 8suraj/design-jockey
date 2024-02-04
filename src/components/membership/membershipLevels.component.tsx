@@ -43,13 +43,15 @@ const datas = [
 		bt: 'Buy now',
 	},
 ];
+import Header1 from '../header/header.component.tsx';
 export default function MembershipLevels() {
 	return (
-		<section className='w-full  '>
-			<div className='w-11/12  m-auto flex flex-col gap-2'>
-				<h1 className='text-color-primary md:text-left text-center capitalize text-2xl md:text-4xl pt-4'>
-					membership levels
-				</h1>
+		<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto  '>
+			<div className='  m-auto flex flex-col gap-2 px-6 md:px-14 py-12 xl:px-4'>
+				<Header1 text='membership levels' />
+				{/* membership levels
+					className='text-color-primary md:text-left text-center capitalize text-2xl md:text-4xl pt-4'
+				</h1> */}
 				<h4 className='text-white font-SFPro md:text-left text-center  m1:text-[.6rem] text-[.6rem]   md:text-[.7rem] pt-4'>
 					choose a plan that’s right for you
 				</h4>
