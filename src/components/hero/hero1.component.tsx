@@ -1,16 +1,18 @@
 import Button from '../button/button.component.tsx';
 import Header1 from '../header/header.component.tsx';
+
 export default function Hero1() {
 	return (
 		<section className='w-full   px-6 md:px-14 py-12 xl:px-4 flex  justify-center  centerrr  left-[50%] lg:top-[50%] top-[60%]'>
 			<div className='w-full bg-black2 backdrop-blur-xl rounded-xl p-8 h-full gap-12 flex flex-col  items-center || md:gap-4 md:p-6  md:justify-between md:items-start md:min-h-[18rem]	'>
 				<div className='flex justify-between text-[.64rem] font-SFPro w-full || md:hidden'>
 					<span>
-						Delhi, <br /> India 01:19
+						Delhi, <br /> India{' '}
+						<span id='MyClockDisplay'></span>
 					</span>
 					<span>
 						+1 202-754-8500 <br />
-						Info@teamkarimganj.com
+						Info@designjockey.com
 					</span>
 				</div>
 				<div className='text-center flex flex-col  items-center gap-8	|| md:hidden	'>
@@ -52,11 +54,12 @@ export default function Hero1() {
 						One flat subscription for all your design needs.
 					</p>
 					<span>
-						Delhi, <br /> India 01:19
+						Delhi, <br /> India{' '}
+						<span id='MyClockDisplay'></span>
 					</span>
 					<span>
 						+1 202-754-8500 <br />
-						Info@teamkarimganj.com
+						Info@designjockey.com
 					</span>
 				</div>
 			</div>
