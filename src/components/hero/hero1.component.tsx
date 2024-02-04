@@ -13,7 +13,7 @@ export default function Hero1() {
 						Info@teamkarimganj.com
 					</span>
 				</div>
-				<div className='text-center flex flex-col  items-center gap-8	 || md:hidden	'>
+				<div className='text-center flex flex-col  items-center gap-8	|| md:hidden	'>
 					{/* <h1 className='text-color-primary md:text-3xl text-2xl '>
 						Subscribe <br className='m3:hidden' />
 						To Design
@@ -30,11 +30,11 @@ export default function Hero1() {
 				</div>
 				<div className='hidden || w-full md:flex md:flex-row md:justify-between md:items-start'>
 					<div className='text-center flex flex-col  items-center gap-8	 	'>
-						{/* <h1 className='text-color-primary text-4xl'>
+						<h1 className='text-color-primary text-center md:text-left  capitalize  text-[1.5rem] m3:text-[1.7rem] md:text-[2.3rem] lg:text-[2.9rem] '>
 							Subscribe <br className='' />
 							To Design
-						</h1> */}
-						<Header1 text='Subscribe To Design' />
+						</h1>
+						{/* <Header1 text='Subscribe To Design' /> */}
 						<p className='text-sm  font-SFPro || md:hidden'>
 							One flat subscription for all your design
 							needs.
