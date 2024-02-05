@@ -1,5 +1,5 @@
 import Button from '../button/button.component';
-import Header1 from '../header/header.component';
+import H1 from '../header/header.component';
 // import Slider from 'slider-moon';
 import 'slider-moon/dist/style.css';
 import './b.css';
@@ -54,7 +54,10 @@ export default function Bis() {
 				{/* <h1 className='text-color-primary md:text-left text-center capitalize text-4xl  m1:text-2xl'>
 					Buy Individually or subscribe
 				</h1> */}
-				<Header1 text='Buy Individually or subscribe' />
+				<H1 text='Buy Individually or subscribe' />
+				<p className='small_text header_perks'>
+					choose a plan that’s right for you
+				</p>
 				<div className='hidden lg:flex w-full m-auto  justify-center  gap-2 flex-row  '>
 					{datas.map((e) => (
 						<div className='bg-black3 rounded-lg text-[.7rem]    lg:w-[24%] xl:w-[19%]  1xl:w-[19.2%]    md:pt-6  pt-4 capitalize  h-[18rem] flex flex-col justify-between'>
@@ -62,7 +65,7 @@ export default function Bis() {
 								<h1 className='lg:text-base	 xl:text-lg '>
 									{e.header}
 								</h1>
-								<span className='font-SFPro text-grey-light'>
+								<span className='small_text1 text-grey-light'>
 									{e.content}
 								</span>
 							</div>
@@ -71,7 +74,7 @@ export default function Bis() {
 							</p>
 							<Button
 								text='Add to cart'
-								className='bg-color-secondary rounded-lg  lg:text-[.7rem] xl:text-sm text-center   py-6 px-6  w-full border border-transparent '
+								className='bg-color-secondary     min-h-[5rem]  w-full  '
 								onClick={(e1) => console.log(e1)}
 							/>
 						</div>
@@ -113,7 +116,7 @@ export default function Bis() {
 				</div> */}
 				<div className='w-full m-auto flex flex-col justify-center gap-2   sm:flex-row sm:flex-wrap'>
 					{data.map((e) => (
-						<div className='bg-black3 rounded-lg text-[.65rem] 2xl:text-[.9rem]  w-full  sm:w-[23.4%] md:w-[23.5%] lg:w-[24%] xl:w-[19%]  1xl:w-[19.2%]  sm:h-24 2xl:h-36 md:text-left sm:p-4 md:py-6 2xl:py-6 sm:text-left text-center py-4 capitalize '>
+						<div className='bg-black3 rounded-lg m1:text-[.75rem] text-[.75rem] sm:text-[.8rem]  md:text-[.93rem] lg:text-[1rem]  w-full  sm:w-[23.4%] md:w-[23.5%] lg:w-[24%] xl:w-[19%]  1xl:w-[19.2%]  sm:h-24 2xl:h-36 md:text-left sm:p-4 md:py-6 2xl:py-6 sm:text-left text-center py-4 capitalize '>
 							<span className=''>{e}</span>
 						</div>
 					))}

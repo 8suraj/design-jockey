@@ -1,3 +1,4 @@
+import styles from './button.module.css';
 type ButtonProps = {
 	text: string;
 	className: string;
@@ -10,14 +11,14 @@ type ButtonProps = {
 
 export default function Button({
 	text,
-	className,
+	className = '',
 	type = 'button',
 	disabled,
 	onClick,
 }: ButtonProps) {
 	return (
 		<button
-			className={className}
+			className={`${className} ${styles.btn_default} `}
 			{...{ disabled, type, onClick }}>
 			{text}
 		</button>

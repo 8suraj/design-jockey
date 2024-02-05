@@ -1,6 +1,6 @@
 import product from './product.png';
 import Button from '../button/button.component';
-import Header1 from '../header/header.component';
+import H1 from '../header/header.component';
 export default function Products() {
 	return (
 		<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto '>
@@ -10,12 +10,12 @@ export default function Products() {
 						{/* <h1 className='text-color-primary md:text-left text-center  capitalize text-2xl md:text-4xl lg:text-5xl pt-4 pr-28 m1:pr-0'>
 							off the shelf
 						</h1> */}
-						<Header1 text='off the shelf' />
+						<H1 text='off the shelf' />
 					</div>
 					<div className='lg:flex hidden w-5/12 h-fit justify-end '>
 						<Button
 							text='show all'
-							className='bg-color-secondary rounded-lg  text-sm text-center   py-6 px-6 lg:w-5/12 xl:w-4/12 w-10/12 '
+							className='bg-color-secondary btn_base '
 							onClick={(e) => console.log(e)}
 						/>
 					</div>
@@ -39,7 +39,7 @@ export default function Products() {
 				<div className=' w-full flex justify-center lg:hidden'>
 					<Button
 						text='show all'
-						className='bg-color-secondary rounded-lg  text-sm text-center   py-6 px-6 lg:w-5/12 xl:w-4/12 w-10/12 '
+						className='bg-color-secondary btn_base '
 						onClick={(e) => console.log(e)}
 					/>
 				</div>

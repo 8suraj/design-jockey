@@ -5,7 +5,7 @@ import m4 from '../../assets/svgs/membership/4.svg';
 import m5 from '../../assets/svgs/membership/5.svg';
 import m6 from '../../assets/svgs/membership/6.svg';
 import Button from '../button/button.component';
-import Header1 from '../header/header.component';
+import H1 from '../header/header.component';
 const data = [
 	{
 		imgae: m1,
@@ -50,19 +50,16 @@ export default function MembershipBenefits() {
 			<div className='  m-auto flex flex-col gap-5 px-6 md:px-14 py-12 xl:px-4'>
 				<div className='flex w-full'>
 					<div className='lg:w-7/12 m1:w-full'>
-						{/* <h1 className='text-color-primary md:text-left text-center  capitalize text-2xl md:text-4xl lg:text-5xl pt-4 pr-28 m1:pr-0'>
-							Membership benefits
-						</h1> */}
-						<Header1 text='Membership benefits' />
-						<h4 className='text-white font-SFPro md:text-left text-center  m1:text-[.7rem] text-[.7rem]   md:text-[.7rem] pt-4'>
+						<H1 text='Membership benefits' />
+						<p className='small_text header_perks pt-4'>
 							Perks so good you'll never need to go anywhere
 							else for your design. Seriously.
-						</h4>
+						</p>
 					</div>
 					<div className='lg:flex hidden w-5/12 h-fit justify-end '>
 						<Button
 							text='Add on'
-							className='bg-color-secondary rounded-lg  text-sm text-center   py-6 px-6 lg:w-5/12 xl:w-4/12 w-10/12 '
+							className='bg-color-secondary btn_base '
 							onClick={(e) => console.log(e)}
 						/>
 					</div>
@@ -80,7 +77,7 @@ export default function MembershipBenefits() {
 							<h3 className='text-center text-sm  '>
 								{e.header}
 							</h3>
-							<p className='text-center font-SFPro m1:text-[.7rem] text-[.7rem]   md:text-[.8rem] m1:px-0 lg:px-12 2xl:px-16 py-2'>
+							<p className='text-center small_text1 m1:px-0 lg:px-12 2xl:px-16 py-2'>
 								{e.content}
 							</p>
 						</div>
@@ -89,7 +86,7 @@ export default function MembershipBenefits() {
 				<div className=' w-full flex justify-center lg:hidden'>
 					<Button
 						text='Add on'
-						className='bg-color-secondary rounded-lg  text-sm text-center   py-6 px-6 lg:w-5/12 xl:w-4/12 w-10/12 '
+						className='bg-color-secondary btn_base '
 						onClick={(e) => console.log(e)}
 					/>
 				</div>

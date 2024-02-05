@@ -3,7 +3,7 @@ import e2 from '../../assets/svgs/Ellipse2.svg';
 import e3 from '../../assets/svgs/Ellipse3.svg';
 import e4 from '../../assets/svgs/Ellipse4.svg';
 import m1 from '../../assets/svgs/user.jpg';
-import Header1 from '../header/header.component';
+import H1 from '../header/header.component';
 export default function Hero2() {
 	return (
 		<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto  '>
@@ -13,10 +13,10 @@ export default function Hero2() {
 						{/* <h1 className='text-color-primary capitalize m1:text-[1.5rem] m2:text-[1.65rem] sm:text-[1.8rem] md:text-[1.9rem] lg:text-[2.4rem] xl:text-[2.5rem]'>
 							what our friends has to say
 						</h1> */}
-						<Header1 text='what our friends has to say' />
+						<H1 text='what our friends has to say' />
 					</div>
 					<div className='w-full md:w-[45%] md:px-6 lg:px-12 px-3 flex flex-col gap-10   m1:items-center md:items-start '>
-						<p className=' text-center font-SFPro md:text-left   m1:text-[.7rem] m2:text-[.75rem] sm:text-[.8rem] md:text-[.7rem] lg:text-[1rem]'>
+						<p className=' text-center  md:text-left   small_text1'>
 							Designjockey replaces unreliable freelancers
 							and expensive agencies for one flat monthly
 							fee, with designs delivered so fast that it

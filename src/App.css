@@ -1,1 +1,14 @@
+.small_text {
+	@apply m1:text-[.75rem] text-[.75rem] sm:text-[.8rem]  md:text-[.93rem] lg:text-[1rem]  font-SFPro;
+}
 
+.small_text.header_perks {
+	@apply text-white  md:text-left text-center;
+}
+
+.small_text1 {
+	@apply m1:text-[.65rem] text-[.65rem]   md:text-[.75rem] font-SFPro;
+}
+.btn_base {
+	@apply min-w-[11rem] min-h-[5rem];
+}

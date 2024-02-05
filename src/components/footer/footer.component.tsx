@@ -5,8 +5,6 @@ export default function Footer() {
 	return (
 		<footer className=' xl:w-[80vw] 2xl:w-[80vw] mx-auto bg-black2 '>
 			<div className='flex flex-col gap-6 md:gap-4  px-6 md:px-14 py-12 xl:px-4'>
-				{/* px-4 md:px-12 py-12 xl:px-0 */}
-
 				<h1 className='text-left  w-full text-sm'>
 					sign up to <br className='md:hidden' /> our
 					newsletters
@@ -51,13 +49,13 @@ export default function Footer() {
 								</div>
 								<Button
 									text='Get started'
-									className='bg-black-light rounded-lg  text-sm text-center    py-6  md:w-10/12 w-full '
+									className='bg-black-light btn_base w-full '
 									onClick={(e) => console.log(e)}
 								/>
 							</div>
 						</div>
 					</div>
-					<div className='flex md:w-6/12 w-full text-sm font-SFPro text-grey-light  m1:text-[.5rem] m2:text-[.6rem]  m3:text-[.7rem] '>
+					<div className='flex md:w-6/12 w-full  font-SFPro text-grey-light  small_text1 '>
 						<div className='flex w-full justify-between'>
 							<div className='flex flex-col'>
 								<h3 className='font-MExtended text-white pb-3'>
