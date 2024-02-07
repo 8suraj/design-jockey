@@ -14,7 +14,7 @@
 }
 
 .OP1 {
-	animation: OPS 3s cubic-bezier(0.69, 0.04, 0.77, 0.54) 1;
+	animation: OPS 3s ease-in 1;
 }
 @keyframes OPS {
 	0% {
