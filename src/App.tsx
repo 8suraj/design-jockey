@@ -6,15 +6,12 @@ import {
 	RouterProvider,
 	Route,
 } from 'react-router-dom';
-// const Footer = lazy(
-// 	() => import('./components/footer/footer.component.tsx')
-// );
+import { Player } from '@lottiefiles/react-lottie-player';
 const Navbar = lazy(
 	() => import('./components/navbar/navbar.component.tsx')
 );
-// const Membership = lazy(
-// 	() => import('./components/mem/mem.component.tsx')
-// );
+import animation from './Frame_2_1.json';
+
 const Home = lazy(
 	() => import('./pages/home/home.router.jsx')
 );
@@ -34,7 +31,20 @@ const routes = createBrowserRouter(
 function App() {
 	return (
 		<>
-			<Suspense fallback={<div>Loading...</div>}>
+			<Suspense
+				fallback={
+					<div className='w-[100vw] h-[100vh] flex items-center justify-center '>
+						{' '}
+						<div className=' w-[30vw] mx-auto'>
+							<Player
+								src={animation}
+								className='player'
+								loop
+								autoplay
+							/>
+						</div>
+					</div>
+				}>
 				<RouterProvider router={routes} />
 			</Suspense>
 		</>
