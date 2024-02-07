@@ -3,7 +3,7 @@ import H1 from '../header/header.component.tsx';
 
 export default function Hero1() {
 	return (
-		<section className='w-full   px-6 md:px-14 py-12 xl:px-4 flex  justify-center  centerrr  left-[50%] lg:top-[50%] top-[60%]'>
+		<section className='w-full   px-6 md:px-14 py-12 xl:px-4 flex  justify-center  centerrr  left-[50%] lg:top-[60%] top-[50%]'>
 			<div className='w-full bg-black2 backdrop-blur-xl rounded-xl p-8 h-full gap-12 flex flex-col  items-center || md:gap-4 md:p-6  md:justify-between md:items-start md:min-h-[18rem]	'>
 				<div className='flex justify-between text-[.64rem] font-SFPro w-full || md:hidden'>
 					<span className='small_text1'>
