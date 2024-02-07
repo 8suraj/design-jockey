@@ -10,7 +10,7 @@ import { useState } from 'react';
 export default function Navbar() {
 	const [isLoaded, setIsLoaded] = useState(false);
 	const handleImageLoaded = () => {
-		setIsLoaded(true);
+		setTimeout(() => setIsLoaded(true), 1000);
 	};
 
 	return (
@@ -23,7 +23,6 @@ export default function Navbar() {
 					width='100%'
 					height='100%'
 					onLoad={handleImageLoaded}
-					// style={{ opacity: isLoaded ? 1 : 0 }}
 					className={`${
 						isLoaded ? 'OP1' : ''
 					} absolute left-0 top-0 `}
@@ -31,12 +30,9 @@ export default function Navbar() {
 
 				<div
 					className={`${
-						isLoaded ? 'OP2' : ''
-					} w-full h-full flex items-center justify-center absolute left-0 top-0   `}>
-					<div
-						className={`${
-							isLoaded ? 'OP2' : ''
-						} w-fit h-[40vh]  mx-auto`}>
+						isLoaded ? 'OP2 hidden' : ''
+					} w-full h-full flex items-center justify-center absolute left-0 top-0 `}>
+					<div className={`w-fit h-[40vh]  mx-auto`}>
 						<DotLoader color='#36d7b7' />
 					</div>
 				</div>
