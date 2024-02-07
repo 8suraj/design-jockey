@@ -7,10 +7,10 @@ import {
 	Route,
 } from 'react-router-dom';
 import { Player } from '@lottiefiles/react-lottie-player';
+import animation from './Frame_2_1.json';
 const Navbar = lazy(
 	() => import('./components/navbar/navbar.component.tsx')
 );
-import animation from './Frame_2_1.json';
 
 const Home = lazy(
 	() => import('./pages/home/home.router.jsx')

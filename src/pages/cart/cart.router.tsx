@@ -6,40 +6,43 @@ import humburger from '../../assets/svgs/humburger.svg';
 
 import Button from '../../components/button/button.component';
 import Footer from '../../components/footer/footer.component';
+import { Link } from 'react-router-dom';
 export default function Cart() {
 	return (
 		<>
 			<div className='w-full bg-black-light pt-10'>
-				<nav className='flex items-center rounded-xl w-11/12 mx-auto  bg-black  backdrop-blur-xl mb-16	p-4  md:p-0	'>
-					<div className='flex w-full  justify-between items-center'>
-						<div className='h-full  md:pl-2'>
-							<img
-								src={logo}
-								alt='logo'
-								className='w-8 md:w-10 '
+				<div className='xl:w-[80vw] 2xl:w-[80vw] mx-auto'>
+					<nav className='flex items-center rounded-xl     bg-black2 backdrop-blur-xl	p-4  md:p-0	'>
+						<div className='flex w-full  justify-between items-center'>
+							<Link className='h-full  md:pl-2' to='/'>
+								<img
+									src={logo}
+									alt='logo'
+									className='w-8 md:w-10 '
+								/>
+							</Link>
+							<ul className=' text-color-primary items-center gap-4 m1:text-[.65rem] text-[.65rem]   md:text-[.75rem] hidden md:flex'>
+								<Link to='/cart'>store </Link>
+								<Link to=''> work </Link>
+								<Link to=''>serices</Link>
+								<Link to=''>plans </Link>
+								<Link to='/cart'>cart</Link>
+							</ul>
+							<div className='md:hidden '>
+								<img src={humburger} alt='logo' />
+							</div>
+							<Button
+								text='login'
+								className='btn_base  bg-black4  hidden md:block '
+								onClick={(e) => console.log(e)}
 							/>
 						</div>
-						<ul className=' text-color-primary items-center gap-4 md:text-sm lg:text-lg xl:text-xl hidden md:flex'>
-							<li>store </li>
-							<li> work </li>
-							<li>serices</li>
-							<li>plans </li>
-							<li>cart</li>
-						</ul>
-						<div className='md:hidden '>
-							<img src={humburger} alt='logo' />
-						</div>
-						<Button
-							text='login'
-							className=' rounded-lg  text-sm text-center  bg-black4 capitalize hidden md:block md:py-4 md:px-10 lg:py-6 lg:px-14 xl:py-8 xl:px-16'
-							onClick={(e) => console.log(e)}
-						/>
-					</div>
-				</nav>
-				<section className=' h-screen '>
+					</nav>
+				</div>
+				<section className=' xl:w-[80vw] 2xl:w-[80vw] h-screen mx-auto '>
 					<div className='flex flex-col gap-32 '>
 						<div className='flex  justify-center py-4 flex-col items-center'>
-							<div className='md:flex m1:hidden justify-between w-11/12 text-[.6rem]  px-4 py-2'>
+							<div className='md:flex m1:hidden justify-between w-11/12 m1:text-[.75rem] text-[.75rem] sm:text-[.8rem]  md:text-[.93rem] lg:text-[1rem]  px-4 py-2'>
 								<div className='w-6/12'>Product</div>
 								<div className='md:w-2/12'>Price</div>
 								<div className='md:w-2/12'>Quantity</div>
@@ -49,7 +52,7 @@ export default function Cart() {
 							</div>
 							<ProductItem />
 						</div>
-						<div className='flex flex-col gap-6 md:w-6/12 w-11/12 mx-auto items-center'>
+						<div className='flex flex-col gap-6 md:w-6/12 w-11/12 mx-auto items-center m1:text-[.75rem] text-[.75rem] sm:text-[.8rem]  md:text-[.93rem] lg:text-[1rem]'>
 							<h1 className='text-color-primary capitalize'>
 								Cart totals
 							</h1>
