@@ -23,8 +23,8 @@ const data = [
 export default function MembershipWorks() {
 	return (
 		<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto '>
-			<div className='   flex flex-col gap-5 px-6 md:px-14 py-12 xl:px-4'>
-				<div className='flex w-full'>
+			<div className='   flex flex-col gap-12 px-6 md:px-14 py-12 xl:px-4'>
+				<div className='flex w-full '>
 					<div className='lg:w-7/12 m1:w-full'>
 						<H1 text='how membership works' />
 						<h4 className='small_text header_perks pt-4'>

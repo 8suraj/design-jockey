@@ -50,18 +50,20 @@ const datas = [
 export default function Bis() {
 	return (
 		<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto flex flex-col gap-5  '>
-			<div className='  flex flex-col gap-4 px-6 md:px-14 py-12 xl:px-4'>
+			<div className='  flex flex-col gap-12 px-6 md:px-14 py-12 xl:px-4'>
 				{/* <h1 className='text-color-primary md:text-left text-center capitalize text-4xl  m1:text-2xl'>
 					Buy Individually or subscribe
 				</h1> */}
-				<H1 text='Buy Individually or subscribe' />
-				<p className='small_text header_perks'>
-					choose a plan that’s right for you
-				</p>
+				<div>
+					<H1 text='Buy Individually or subscribe' />
+					<p className='small_text header_perks'>
+						choose a plan that’s right for you
+					</p>
+				</div>
 				<div className='hidden lg:flex w-full m-auto  justify-center  gap-2 flex-row  '>
 					{datas.map((e) => (
-						<div className='bg-black3 rounded-lg text-[.7rem]    lg:w-[24%] xl:w-[19%]  1xl:w-[19.2%]    md:pt-6  pt-4 capitalize  h-[18rem] flex flex-col justify-between'>
-							<div className='text-left p-4 xl:p-2  h-36'>
+						<div className='bg-black3 rounded-lg text-[.7rem]    lg:w-[24%] xl:w-[19%]  1xl:w-[19.2%]    md:pt-6  pt-6 capitalize  h-[18rem] flex flex-col justify-between'>
+							<div className='text-left  px-6  h-36'>
 								<h1 className='lg:text-base	 xl:text-lg '>
 									{e.header}
 								</h1>
@@ -69,7 +71,7 @@ export default function Bis() {
 									{e.content}
 								</span>
 							</div>
-							<p className='text-left p-4 text-xl'>
+							<p className='text-left px-6 py-4 text-xl'>
 								{`$${e.price}`}
 							</p>
 							<Button

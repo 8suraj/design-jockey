@@ -4,14 +4,13 @@ import humburger from '../../assets/svgs/humburger.svg';
 import Button from '../button/button.component';
 import Hero1 from '../hero/hero1.component';
 import './hero1.css';
-import { Player } from '@lottiefiles/react-lottie-player';
-import animation from '../../Frame_2_1.json';
+import { DotLoader } from 'react-spinners';
 import { useState } from 'react';
 
 export default function Navbar() {
 	const [isLoaded, setIsLoaded] = useState(false);
 	const handleImageLoaded = () => {
-		setTimeout(() => setIsLoaded(true), 1500);
+		setIsLoaded(true);
 	};
 
 	return (
@@ -24,24 +23,23 @@ export default function Navbar() {
 					width='100%'
 					height='100%'
 					onLoad={handleImageLoaded}
-					style={{ opacity: isLoaded ? 1 : 0 }}
-					className='absolute left-0 top-0 transition-opacity duration-500'
+					// style={{ opacity: isLoaded ? 1 : 0 }}
+					className={`${
+						isLoaded ? 'OP1' : ''
+					} absolute left-0 top-0 `}
 				/>
-				{!isLoaded ? (
-					<div className='w-full h-full flex items-center justify-center absolute left-0 top-0 '>
-						{' '}
-						<div className=' w-[30vw] mx-auto'>
-							<Player
-								src={animation}
-								className='player'
-								loop
-								autoplay
-							/>
-						</div>
+
+				<div
+					className={`${
+						isLoaded ? 'OP2' : ''
+					} w-full h-full flex items-center justify-center absolute left-0 top-0   `}>
+					<div
+						className={`${
+							isLoaded ? 'OP2' : ''
+						} w-fit h-[40vh]  mx-auto`}>
+						<DotLoader color='#36d7b7' />
 					</div>
-				) : (
-					''
-				)}
+				</div>
 
 				<nav className='flex items-center rounded-xl     bg-black2 backdrop-blur-xl	p-4  md:p-0	'>
 					<div className='flex w-full  justify-between items-center'>

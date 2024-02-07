@@ -16,10 +16,6 @@ export default function Hero1() {
 					</span>
 				</div>
 				<div className='text-center flex flex-col  items-center gap-8	|| md:hidden	'>
-					{/* <h1 className='text-color-primary md:text-3xl text-2xl '>
-						Subscribe <br className='m3:hidden' />
-						To Design
-					</h1> */}
 					<H1 text='Subscribe To Design' />
 					<p className='small_text || md:hidden'>
 						One flat subscription for all your design needs.
@@ -47,11 +43,12 @@ export default function Hero1() {
 					</p>
 					<span className='small_text1'>
 						Delhi, <br /> India{' '}
+						{new Date().toLocaleTimeString()}
 						<span id='MyClockDisplay'></span>
 					</span>
 					<span className='small_text1'>
 						+1 202-754-8500 <br />
-						Info@designjockey.com
+						info@designjockey.com
 					</span>
 				</div>
 			</div>

@@ -64,7 +64,6 @@ export default function Footer() {
 								<span>Security</span>
 								<span>Offshore</span>
 								<span>Industry</span>
-								<span>Emergency</span>
 							</div>
 							<div className='flex flex-col'>
 								<h3 className='font-MExtended  text-white pb-3'>

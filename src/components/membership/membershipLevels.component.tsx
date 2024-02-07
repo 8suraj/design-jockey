@@ -208,12 +208,14 @@ const MembershipItem = ({
 const MembershipLevels = () => {
 	return (
 		<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto'>
-			<div className='m-auto flex flex-col gap-2 px-6 md:px-14 py-12 xl:px-4'>
-				<H1 text='membership levels' />
+			<div className='m-auto flex flex-col gap-12 px-6 md:px-14 py-12 xl:px-4'>
+				<div>
+					<H1 text='membership levels' />
 
-				<p className='small_text header_perks pt-4'>
-					choose a plan that’s right for you
-				</p>
+					<p className='small_text header_perks pt-2'>
+						choose a plan that’s right for you
+					</p>
+				</div>
 
 				<div className='flex flex-col ctnr gap-3'>
 					{datas.map((data, index) => (
@@ -229,7 +231,7 @@ const MembershipLevels = () => {
 					))}
 
 					<div className='m4 '>
-						<div className='flex flex-col  xl:flex-row justify-center items-center lg:items-start xl:items-center lg:justify-around  bg-black3 rounded-2xl  px-4 py-8 lg:px-12  gap-4 lg:gap-8 h-full'>
+						<div className='flex flex-col  xl:flex-row justify-center items-center lg:items-start xl:items-center lg:justify-around  bg-black3 rounded-2xl  px-4 py-5 lg:px-12  gap-4 lg:gap-8 h-full '>
 							<div className='flex flex-col lg:items-start items-center w-9/12 '>
 								<h1 className='text-xl md:text-3xl    '>
 									Website
