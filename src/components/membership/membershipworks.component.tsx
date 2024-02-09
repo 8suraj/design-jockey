@@ -72,12 +72,12 @@ export default function MembershipWorks() {
 						</div>
 					))}
 				</div>
-				<div className='sm:hidden block  w-[100vw]  '>
+				<div className='sm:hidden block  w-[100vw] '>
 					<Slider {...settings}>
 						{data.map((e, index) => (
 							<div
 								key={index}
-								className='flex flex-col gap-2 h-[50vh]   px-1'>
+								className='flex flex-col gap-2    px-1'>
 								<div className='rounded-full bg-color-primary flex items-center justify-center h-16 m1:h-20 p-4 lg:h-[7.5rem] xl:h-[8.5rem] lg:p-6'>
 									<img
 										src={e.imgae}
