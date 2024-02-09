@@ -36,7 +36,7 @@ export default function Footer() {
 						I have read and accept the Terms & Privacy
 					</label>
 				</div>
-				<div className='flex md:flex-row flex-col gap-6 md:gap-4 m1:text-[.5rem] m2:text-[.6rem]  m3:text-[.7rem] '>
+				<div className='flex md:flex-row flex-col gap-6 md:gap-4 m1:text-[.5rem] m2:text-[.6rem]  m3:text-[.7rem]  justify-between '>
 					<div className='md:w-6/12  w-full  '>
 						<div className='w-full flex flex-col md:gap-2  '>
 							<div className='flex w-full items-center justify-around gap-4'>
@@ -55,7 +55,7 @@ export default function Footer() {
 							</div>
 						</div>
 					</div>
-					<div className='flex md:w-6/12 w-full  font-SFPro text-grey-light  small_text1 '>
+					<div className='flex md:w-5/12 w-full  font-SFPro text-grey-light  small_text1 '>
 						<div className='flex w-full justify-between'>
 							<div className='flex flex-col'>
 								<h3 className='font-MExtended text-white pb-3'>

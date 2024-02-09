@@ -179,10 +179,10 @@ const MembershipItem = ({
 	bt,
 }: MembershipItemsProps) => {
 	return (
-		<div className='flex flex-col justify-center lg:items-start lg:justify-around bg-black3 rounded-2xl items-center px-4 py-8 lg:px-12 gap-4 lg:gap-2 h-full w-full'>
+		<div className='flex flex-col justify-center lg:items-start lg:justify-around bg-black3 rounded-2xl items-center px-4 py-12 lg:px-12 gap-4 lg:gap-2 h-full w-full'>
 			<h1 className='text-xl md:text-3xl'>{plan}</h1>
 			<div className='flex flex-col gap-1 items-center md:block font-SFPro m1:text-[.6rem] text-[.6rem] lg:text-[1rem] '>
-				<ul className='small_text list-disc list-inside xl:text-[1rem] m1:pl-5 lg:pl-0'>
+				<ul className='small_text list-disc list-outside xl:text-[1rem] m1:pl-5 lg:pl-4 '>
 					{content1?.map((e) => (
 						<li key={e} className=''>
 							{e}
@@ -231,7 +231,7 @@ const MembershipLevels = () => {
 					))}
 
 					<div className='m4 '>
-						<div className='flex flex-col  xl:flex-row justify-center items-center lg:items-start xl:items-center lg:justify-around  bg-black3 rounded-2xl  px-4 py-5 lg:px-12  gap-4 lg:gap-8 h-full '>
+						<div className='flex flex-col  xl:flex-row justify-center items-center lg:items-start xl:items-center lg:justify-around  bg-black3 rounded-2xl  px-4 py-12 lg:px-12  gap-4 lg:gap-8 h-full '>
 							<div className='flex flex-col lg:items-start items-center w-9/12 '>
 								<h1 className='text-xl md:text-3xl    '>
 									Website
@@ -259,7 +259,7 @@ const MembershipLevels = () => {
 							</div>
 							<Button
 								text='Add on'
-								className='bg-color-secondary btn_base '
+								className='bg-color-secondary btn_base lg:w-[39%] w-full '
 								onClick={(e) => console.log(e)}
 							/>
 						</div>
@@ -270,7 +270,7 @@ const MembershipLevels = () => {
 								What’s included:
 							</h1>
 
-							<ul className=' list-disc  list-inside small_text'>
+							<ul className=' list-disc  list-outside small_text  pl-4'>
 								<li>
 									Unlimited briefs (One request at a time)
 								</li>
@@ -282,8 +282,8 @@ const MembershipLevels = () => {
 						</div>
 					</div>
 					<div className='m6'>
-						<div className='flex flex-col lg:flex-row  justify-center lg:items-start lg:justify-around  bg-black3 rounded-2xl items-center px-4 py-8 lg:px-12  gap-4 lg:gap-2 h-full'>
-							<div className='flex flex-col  gap-4'>
+						<div className='w-full flex flex-col lg:flex-row  justify-center lg:items-start lg:justify-between  bg-black3 rounded-2xl items-center px-12 py-12   h-full'>
+							<div className='flex flex-col  gap-4    '>
 								<h1 className='text-xl md:text-3xl m1:text-center lg:text-start'>
 									Book a call
 								</h1>
@@ -295,11 +295,13 @@ const MembershipLevels = () => {
 								</div>
 							</div>
 
-							<Button
-								text='Book a call'
-								className='bg-black btn_base'
-								onClick={(e) => console.log(e)}
-							/>
+							<div className=''>
+								<Button
+									text='Book a call'
+									className='bg-black btn_base  w-[17rem]'
+									onClick={(e) => console.log(e)}
+								/>
+							</div>
 						</div>
 					</div>
 				</div>

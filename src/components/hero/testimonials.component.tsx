@@ -1,10 +1,48 @@
+import { useState } from 'react';
 import e1 from '../../assets/svgs/Ellipse1.svg';
 import e2 from '../../assets/svgs/Ellipse2.svg';
 import e3 from '../../assets/svgs/Ellipse3.svg';
 import e4 from '../../assets/svgs/Ellipse4.svg';
 import m1 from '../../assets/svgs/user.jpg';
 import H1 from '../header/header.component';
+const data = [
+	{
+		image: e1,
+		header:
+			'Design is everything, and these guys have nailed it.',
+		name: 'Priyam Dey',
+		companyName: 'Jockey',
+	},
+	{
+		image: e2,
+		header:
+			'Design is everything, and these guys have nailed it.',
+		name: 'Sam Paul',
+		companyName: 'Jockey',
+	},
+	{
+		image: e3,
+		header:
+			'Design is everything, and these guys have nailed it.',
+		name: 'Arjun Das',
+		companyName: 'Jockey',
+	},
+	{
+		image: e4,
+		header:
+			'Design is everything, and these guys have nailed it.',
+		name: 'Prosenjit Sharma',
+		companyName: 'Jockey',
+	},
+];
+interface data {
+	image: string;
+	header: string;
+}
 export default function Hero2() {
+	const [activeTestimonial, setActiveTestimonial] =
+		useState(data[0]);
+
 	return (
 		<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto  '>
 			<div className='flex flex-col gap-2 px-4 md:px-12 py-12 xl:px-0 '>
@@ -24,24 +62,37 @@ export default function Hero2() {
 						</p>
 						<div className='relative   h-12 m1:w-[10.7rem] lg:w-[12.5]'>
 							<img
-								src={e4}
+								src={data[3].image}
 								alt=''
-								className='absolute m1:w-[3.2rem] lg:w-[3.8rem] m1:left-[7.5rem] lg:left-[8.7rem]'
+								className='absolute m1:w-[3.2rem] lg:w-[3.8rem] m1:left-[7.5rem] lg:left-[8.7rem] cursor-pointer hover:scale-110 hover:z-20'
+								onClick={() =>
+									setActiveTestimonial(data[3])
+								}
+							/>
+
+							<img
+								src={data[2].image}
+								alt=''
+								className='absolute m1:w-[3.2rem] lg:w-[3.8rem] m1:left-[5rem] lg:left-[5.8rem] cursor-pointer hover:scale-110 hover:z-20'
+								onClick={() =>
+									setActiveTestimonial(data[2])
+								}
 							/>
 							<img
-								src={e3}
+								src={data[1].image}
 								alt=''
-								className='absolute m1:w-[3.2rem] lg:w-[3.8rem] m1:left-[5rem] lg:left-[5.8rem]'
+								className='absolute m1:w-[3.2rem] lg:w-[3.8rem] m1:left-[2.5rem] lg:left-[2.9rem] cursor-pointer hover:scale-110 hover:z-20'
+								onClick={() =>
+									setActiveTestimonial(data[1])
+								}
 							/>
 							<img
-								src={e2}
+								src={data[0].image}
 								alt=''
-								className='absolute m1:w-[3.2rem] lg:w-[3.8rem] m1:left-[2.5rem] lg:left-[2.9rem]'
-							/>
-							<img
-								src={e1}
-								alt=''
-								className='absolute m1:w-[3.2rem] lg:w-[3.8rem]  '
+								className='absolute m1:w-[3.2rem] lg:w-[3.8rem]  cursor-pointer hover:scale-110 hover:z-20'
+								onClick={() =>
+									setActiveTestimonial(data[0])
+								}
 							/>
 						</div>
 					</div>
@@ -53,22 +104,24 @@ export default function Hero2() {
 								"
 							</h1>
 							<h1 className='text-[#C4FE01] lg:text-2xl text-lg capitalize '>
-								Design is everything, and these guys have
-								nailed it.
+								{activeTestimonial.header ||
+									'Design is everything, and these guys have nailed it.'}
 							</h1>
 						</div>
 						<div className='flex gap-4 pl-4 lg:pl-8'>
 							<div>
 								<img
-									src={m1}
+									src={activeTestimonial.image || m1}
 									alt=''
 									className='rounded-full w-12 h-12 object-cover'
 								/>
 							</div>
 							<div>
-								<h1 className='text-md'>Hrishiraj</h1>
+								<h1 className='text-md'>
+									{activeTestimonial.name || 'Hrishiraj'}
+								</h1>
 								<p className='font-SFPro text-grey-light text-[.7rem]'>
-									BTC
+									{activeTestimonial.companyName || ''}
 								</p>
 							</div>
 						</div>
