@@ -7,9 +7,7 @@ import { useState } from 'react';
 export default function Hero1() {
 	const [isLoaded, setIsLoaded] = useState(false);
 	const handleImageLoaded = () => {
-		setTimeout(() => {
-			setIsLoaded(true);
-		}, 1000);
+		setIsLoaded(true);
 	};
 	return (
 		<>
