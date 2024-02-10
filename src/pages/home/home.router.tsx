@@ -1,16 +1,46 @@
-import Faq from '../../components/faq/faq.component';
-import Footer from '../../components/footer/footer.component';
-import MembershipLevels from '../../components/membership/membershipLevels.component';
-import MembershipBenefits from '../../components/membership/membershipBenefits.component';
-import Bis from '../../components/b/b';
+// import Faq from '../../components/faq/faq.component';
+// import Footer from '../../components/footer/footer.component';
+// import MembershipLevels from '../../components/membership/membershipLevels.component';
+// import MembershipBenefits from '../../components/membership/membershipBenefits.component';
+// import Bis from '../../components/b/b';
 import Products from '../../components/products/products.component';
-import Hero2 from '../../components/hero/testimonials.component';
 import ScrollCarousel from 'scroll-carousel-react';
-import MembershipWorks from '../../components/membership/membershipworks.component';
 import s1 from './1.svg';
 import s3 from './3.svg';
 import s4 from './7.svg';
 import Hero1 from '../../components/hero/hero1.component';
+import { lazy, Suspense } from 'react';
+import { Player } from '@lottiefiles/react-lottie-player';
+import animation from '../../Frame_2_1.json';
+const MembershipWorks = lazy(
+	() =>
+		import(
+			'../../components/membership/membershipworks.component'
+		)
+);
+const Hero2 = lazy(
+	() =>
+		import('../../components/hero/testimonials.component')
+);
+const Bis = lazy(() => import('../../components/b/b'));
+const MembershipBenefits = lazy(
+	() =>
+		import(
+			'../../components/membership/membershipBenefits.component'
+		)
+);
+const MembershipLevels = lazy(
+	() =>
+		import(
+			'../../components/membership/membershipLevels.component'
+		)
+);
+const Footer = lazy(
+	() => import('../../components/footer/footer.component')
+);
+const Faq = lazy(
+	() => import('../../components/faq/faq.component')
+);
 export default function Home() {
 	return (
 		<>
@@ -53,14 +83,29 @@ export default function Home() {
 					</div>
 				))}
 			</ScrollCarousel>
-			<MembershipWorks />
-			<Products />
-			<MembershipBenefits />
-			<Hero2 />
-			<Bis />
-			<MembershipLevels />
-			<Faq />
-			<Footer />
+			<Suspense
+				fallback={
+					<div className='w-[100vw] h-[100vh] flex items-center justify-center '>
+						{' '}
+						<div className=' w-[30vw] mx-auto'>
+							<Player
+								src={animation}
+								className='player'
+								loop
+								autoplay
+							/>
+						</div>
+					</div>
+				}>
+				<MembershipWorks />
+				<Products />
+				<MembershipBenefits />
+				<Hero2 />
+				<Bis />
+				<MembershipLevels />
+				<Faq />
+				<Footer />
+			</Suspense>
 		</>
 	);
 }
