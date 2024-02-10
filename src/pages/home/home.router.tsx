@@ -2,7 +2,7 @@ import ScrollCarousel from 'scroll-carousel-react';
 import s1 from './1.svg';
 import s3 from './3.svg';
 import s4 from './7.svg';
-import Hero1 from '../../components/hero/hero1.component';
+// import Hero1 from '../../components/hero/hero1.component';
 import { lazy, Suspense } from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
 import animation from '../../Frame_2_1.json';
@@ -44,7 +44,7 @@ const Footer = lazy(
 export default function Home() {
 	return (
 		<>
-			<Hero1 />
+			{/* <Hero1 /> */}
 			<ScrollCarousel
 				autoplay
 				autoplaySpeed={8}
