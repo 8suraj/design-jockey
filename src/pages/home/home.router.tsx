@@ -1,9 +1,3 @@
-// import Faq from '../../components/faq/faq.component';
-// import Footer from '../../components/footer/footer.component';
-// import MembershipLevels from '../../components/membership/membershipLevels.component';
-// import MembershipBenefits from '../../components/membership/membershipBenefits.component';
-// import Bis from '../../components/b/b';
-import Products from '../../components/products/products.component';
 import ScrollCarousel from 'scroll-carousel-react';
 import s1 from './1.svg';
 import s3 from './3.svg';
@@ -18,29 +12,35 @@ const MembershipWorks = lazy(
 			'../../components/membership/membershipworks.component'
 		)
 );
-const Hero2 = lazy(
+const Products = lazy(
 	() =>
-		import('../../components/hero/testimonials.component')
+		import('../../components/products/products.component')
 );
-const Bis = lazy(() => import('../../components/b/b'));
 const MembershipBenefits = lazy(
 	() =>
 		import(
 			'../../components/membership/membershipBenefits.component'
 		)
 );
+const Bis = lazy(() => import('../../components/b/b'));
+const Hero2 = lazy(
+	() =>
+		import('../../components/hero/testimonials.component')
+);
+
 const MembershipLevels = lazy(
 	() =>
 		import(
 			'../../components/membership/membershipLevels.component'
 		)
 );
-const Footer = lazy(
-	() => import('../../components/footer/footer.component')
-);
 const Faq = lazy(
 	() => import('../../components/faq/faq.component')
 );
+const Footer = lazy(
+	() => import('../../components/footer/footer.component')
+);
+
 export default function Home() {
 	return (
 		<>

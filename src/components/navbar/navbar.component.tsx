@@ -8,7 +8,7 @@ import { useState, useEffect } from 'react';
 
 export default function Navbar() {
 	const [isSticky, setIsSticky] = useState<boolean>(false);
-	const [clicked, setClicked] = useState<boolean>();
+	const [clicked, setClicked] = useState<boolean>(false);
 	useEffect(() => {
 		const handleScroll = () => {
 			const offset = window.scrollY;
@@ -58,15 +58,33 @@ export default function Navbar() {
 							/>
 						</Link>
 						<ul className=' text-color-primary items-center gap-4 m1:text-[.65rem] text-[.65rem]   md:text-[.75rem] hidden lg:flex'>
-							<Link to='/cart'>store </Link>
-							<Link to=''> work </Link>
+							<Link
+								to='/cart'
+								onClick={() => {
+									setClicked(!clicked);
+								}}>
+								store
+							</Link>
+							<Link
+								to=''
+								onClick={() => {
+									setClicked(!clicked);
+								}}>
+								work
+							</Link>
 							<HashLink smooth to={'/#services'}>
 								services
 							</HashLink>
 							<HashLink smooth to={'/#plans'}>
-								plans{' '}
+								plans
 							</HashLink>
-							<Link to='/cart'>cart</Link>
+							<Link
+								to='/cart'
+								onClick={() => {
+									setClicked(!clicked);
+								}}>
+								cart
+							</Link>
 						</ul>
 						<div className='lg:hidden '>
 							<img src={humburger} alt='logo' />

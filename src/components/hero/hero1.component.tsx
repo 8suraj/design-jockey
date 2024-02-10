@@ -13,7 +13,7 @@ export default function Hero1() {
 	};
 	return (
 		<>
-			<div className=' hero1 h-[100vh]    '>
+			<div className=' hero1 h-[100vh]  w-full  '>
 				<div className='absolute left-0 top-0 bottom-0 right-0   '>
 					<Spline
 						scene='https://prod.spline.design/ghpLJFrupStMBOFF/scene.splinecode'
