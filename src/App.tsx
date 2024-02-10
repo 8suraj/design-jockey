@@ -8,7 +8,12 @@ import {
 } from 'react-router-dom';
 import { Player } from '@lottiefiles/react-lottie-player';
 import animation from './Frame_2_1.json';
-import { Cart, Home } from './pages/index.ts';
+const Home = lazy(
+	() => import('./pages/home/home.router.tsx')
+);
+const Cart = lazy(
+	() => import('./pages/cart/cart.router.tsx')
+);
 const Navbar = lazy(
 	() => import('./components/navbar/navbar.component.tsx')
 );
