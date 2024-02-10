@@ -10,9 +10,11 @@ import MembershipWorks from '../../components/membership/membershipworks.compone
 import s1 from './1.svg';
 import s3 from './3.svg';
 import s4 from './7.svg';
+import Hero1 from '../../components/hero/hero1.component';
 export default function Home() {
 	return (
 		<>
+			<Hero1 />
 			<ScrollCarousel
 				autoplay
 				autoplaySpeed={8}

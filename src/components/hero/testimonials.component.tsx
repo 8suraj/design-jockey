@@ -45,7 +45,7 @@ export default function Hero2() {
 
 	return (
 		<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto  '>
-			<div className='flex flex-col gap-2 px-4 md:px-12 py-12 xl:px-0 '>
+			<div className='flex flex-col gap-2 px-4 md:px-12 pt-12 xl:px-0 '>
 				<div className='w-full h-full  m-auto bg-color-secondary rounded-lg flex flex-col md:flex-row   md:justify-around   p-4 md:p-10 lg:p-16 '>
 					<div className='m1:text-center md:text-left w-full md:w-[48%] lg:w-[45%] lg:text-left '>
 						{/* <h1 className='text-color-primary capitalize m1:text-[1.5rem] m2:text-[1.65rem] sm:text-[1.8rem] md:text-[1.9rem] lg:text-[2.4rem] xl:text-[2.5rem]'>
@@ -126,31 +126,31 @@ export default function Hero2() {
 							</div>
 						</div>
 					</div>
-					<div className='bg-[#191919] text-grey-light rounded-lg p-4 md:p-6 text-sm text-center md:text-left flex flex-col gap-4 lg:w-[40%]'>
+					<div className='bg-[#191919] text-grey-light rounded-lg p-4 md:p-6 text-sm text-left md:text-left flex flex-col gap-4 lg:w-[40%]'>
 						<div>
-							<h1 className='m1:text-[.7rem] lg:text-sm'>
+							<h1 className='m1:text-[.7rem] lg:text-sm leading-6'>
 								No meetings
 							</h1>
-							<p className='font-SFPro text-[.6rem]'>
+							<p className='font-SFPro text-[.6rem] leading-3'>
 								Don't like meetings? We don't either; so
 								much so that we've outlawed them completely.
 							</p>
 						</div>
 						<div>
-							<h1 className='m1:text-[.7rem] lg:text-sm'>
+							<h1 className='m1:text-[.7rem] lg:text-sm leading-6'>
 								Easy dashboard
 							</h1>
-							<p className='font-SFPro text-[.6rem]'>
+							<p className='font-SFPro text-[.6rem] leading-3'>
 								Manage your design board using Trello. View
 								active, queued and completed tasks with
 								ease.
 							</p>
 						</div>
 						<div>
-							<h1 className='m1:text-[.7rem] lg:text-sm'>
+							<h1 className='m1:text-[.65rem] lg:text-sm leading-6'>
 								Invite unlimited team members
 							</h1>
-							<p className='font-SFPro text-[.6rem]'>
+							<p className='font-SFPro text-[.6rem] leading-3'>
 								Invite your entire team, so anyone can
 								submit requests and track their progress.
 							</p>

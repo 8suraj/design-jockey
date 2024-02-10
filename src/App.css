@@ -7,7 +7,7 @@
 }
 
 .small_text1 {
-	@apply m1:text-[.65rem] text-[.65rem]   md:text-[.75rem] font-SFPro;
+	@apply m1:text-[.75rem] text-[.75rem]   md:text-[.75rem] font-SFPro leading-4 font-normal;
 }
 .btn_base {
 	@apply min-w-[11rem] min-h-[5rem];

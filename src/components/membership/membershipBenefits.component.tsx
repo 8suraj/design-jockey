@@ -66,15 +66,15 @@ export default function MembershipBenefits() {
 						/>
 					</div>
 				</div>
-				<div className='flex flex-col gap-12 flex-wrap w-full sm:flex-row justify-center'>
-					<div className='flex flex-col gap-12 flex-wrap w-full sm:flex-row justify-center items-start sm:gap-12 md:gap-2 lg:gap-2 	'>
+				<div className='flex flex-col gap-8 md:gap-12 flex-wrap w-full sm:flex-row justify-center '>
+					<div className='flex flex-col gap-8 flex-wrap w-full sm:flex-row justify-center items-start sm:gap-8 md:gap-2 lg:gap-2 '>
 						{data1.map((e) => (
-							<div className='flex flex-col justify-center gap-6    w-full  md:w-[32%]  lg:w-[32.5%]'>
-								<div className='rounded-full border-color-primary border-8 flex items-center justify-center h-28 m1:h-24 p-4 lg:h-[7.5rem] xl:h-[8.5rem] lg:p-6  '>
+							<div className='flex flex-col justify-center gap-4  md:gap-6    w-full  md:w-[32%]  lg:w-[32.5%]'>
+								<div className=' w-full    h-fit   '>
 									<img
 										src={e.imgae}
 										alt=''
-										className='h-full  '
+										className='h-full  w-full'
 									/>
 								</div>
 								<div>
@@ -88,14 +88,14 @@ export default function MembershipBenefits() {
 							</div>
 						))}
 					</div>
-					<div className='flex flex-col gap-12 flex-wrap w-full sm:flex-row justify-center sm:gap-12 md:gap-2 lg:gap-2 items-start	'>
+					<div className='flex flex-col gap-8 flex-wrap w-full sm:flex-row justify-center sm:gap-8 md:gap-2 lg:gap-2 items-start 	'>
 						{data2.map((e) => (
-							<div className='flex flex-col justify-center gap-6   w-full  md:w-[32%]  lg:w-[32.5%] '>
-								<div className='rounded-full border-color-primary border-8 flex items-center justify-center h-28 m1:h-24 p-4 lg:h-[7.5rem] xl:h-[8.5rem] lg:p-6  '>
+							<div className='flex flex-col justify-center gap-4  md:gap-6    w-full  md:w-[32%]  lg:w-[32.5%] '>
+								<div className='w-full    h-fit'>
 									<img
 										src={e.imgae}
 										alt=''
-										className='h-full  '
+										className=' w-full '
 									/>
 								</div>
 								<div>

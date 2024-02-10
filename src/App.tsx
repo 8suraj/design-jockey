@@ -23,8 +23,8 @@ const routes = createBrowserRouter(
 		<>
 			<Route path='/' element={<Navbar />}>
 				<Route path='/' element={<Home />} />
+				<Route path='/cart' element={<Cart />} />
 			</Route>
-			<Route path='/cart' element={<Cart />} />
 		</>
 	)
 );
