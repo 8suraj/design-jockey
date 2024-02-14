@@ -4,7 +4,7 @@ import Spline from '@splinetool/react-spline';
 import { useState } from 'react';
 import { PuffLoader } from 'react-spinners';
 export default function Hero1() {
-	const [isLoaded, setIsLoaded] = useState(true);
+	const [isLoaded, setIsLoaded] = useState(false);
 	const handleImageLoaded = () => {
 		setIsLoaded(true);
 	};
@@ -12,13 +12,13 @@ export default function Hero1() {
 		<>
 			<div className=' hero1 h-[100vh]  w-full  '>
 				<div className='absolute left-0 top-0 bottom-0 right-0   '>
-					{/* <Spline
+					<Spline
 						scene='https://prod.spline.design/vEByxlHa0a4Jvxsi/scene.splinecode'
 						onLoad={handleImageLoaded}
 						className={`${
 							isLoaded ? 'OP1' : 'hidden'
 						} absolute left-0 top-0  bottom-0 right-0`}
-					/> */}
+					/>
 				</div>
 				<div
 					className={`${
