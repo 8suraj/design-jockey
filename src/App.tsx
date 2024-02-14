@@ -6,8 +6,9 @@ import {
 	RouterProvider,
 	Route,
 } from 'react-router-dom';
-import { Player } from '@lottiefiles/react-lottie-player';
-import animation from './Frame_2_1.json';
+// import { Player } from '@lottiefiles/react-lottie-player';
+// import animation from './Frame_2_1.json';
+import { PuffLoader } from 'react-spinners';
 const Home = lazy(
 	() => import('./pages/home/home.router.tsx')
 );
@@ -34,15 +35,7 @@ function App() {
 			<Suspense
 				fallback={
 					<div className='w-[100vw] h-[100vh] flex items-center justify-center '>
-						{' '}
-						<div className=' w-[30vw] mx-auto'>
-							<Player
-								src={animation}
-								className='player'
-								loop
-								autoplay
-							/>
-						</div>
+						<PuffLoader color='#C4FE01' />
 					</div>
 				}>
 				<RouterProvider router={routes} />

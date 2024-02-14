@@ -1,12 +1,16 @@
-@media only screen and (min-width: 769px) {
+@media (min-width: 1024px) {
+	/* .htr {
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	} */
 }
-.centerrr {
+/* .centerrr {
 	position: absolute;
-	/* top: 50%;
-	left: 50%; */
+	 top: 50%;
+	left: 50%; 
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
-}
+} */
 .centerrr1 {
 	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);

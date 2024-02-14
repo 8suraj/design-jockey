@@ -1,11 +1,10 @@
 import Button from '../button/button.component.tsx';
 import H1 from '../header/header.component.tsx';
-import { Player } from '@lottiefiles/react-lottie-player';
-import animation from '../../Frame_2_1.json';
 import Spline from '@splinetool/react-spline';
 import { useState } from 'react';
+import { PuffLoader } from 'react-spinners';
 export default function Hero1() {
-	const [isLoaded, setIsLoaded] = useState(false);
+	const [isLoaded, setIsLoaded] = useState(true);
 	const handleImageLoaded = () => {
 		setIsLoaded(true);
 	};
@@ -13,29 +12,22 @@ export default function Hero1() {
 		<>
 			<div className=' hero1 h-[100vh]  w-full  '>
 				<div className='absolute left-0 top-0 bottom-0 right-0   '>
-					<Spline
-						scene='https://prod.spline.design/ghpLJFrupStMBOFF/scene.splinecode'
+					{/* <Spline
+						scene='https://prod.spline.design/vEByxlHa0a4Jvxsi/scene.splinecode'
 						onLoad={handleImageLoaded}
 						className={`${
 							isLoaded ? 'OP1' : 'hidden'
 						} absolute left-0 top-0  bottom-0 right-0`}
-					/>
+					/> */}
 				</div>
 				<div
 					className={`${
 						isLoaded ? 'OP2 hidden ' : ''
 					} w-full h-full flex items-center justify-center absolute left-0 top-0  `}>
-					<div className=' w-[30vw] mx-auto'>
-						<Player
-							src={animation}
-							className='player'
-							loop
-							autoplay
-						/>
-					</div>
+					<PuffLoader color='#C4FE01' />
 				</div>
 				{isLoaded ? (
-					<section className='xl:w-[80vw] 2xl:w-[80vw]  mx-auto px-6 md:px-14 py-12 xl:px-4 w-full   p-6  flex  justify-center   centerrr  left-[50%] top-[55%] lg:top-[60%] '>
+					<section className='xl:w-[80vw] 2xl:w-[80vw]  mx-auto px-6 md:px-14 xl:px-4 w-full     flex  justify-center absolute  -translate-x-1/2   left-[50%] top-[25%] lg:top-[50%] lg:-translate-y-1/2'>
 						<div className=' w-full bg-black2 backdrop-blur-xl rounded-xl p-6 h-full gap-12 flex flex-col  items-center || md:gap-4 md:p-6  md:justify-between md:items-start md:min-h-[16rem]	'>
 							<div className='flex justify-between text-[.64rem] font-SFPro w-full || md:hidden'>
 								<span className='small_text1'>
@@ -47,7 +39,7 @@ export default function Hero1() {
 									info@designjockey.com
 								</span>
 							</div>
-							<div className='text-center flex flex-col  items-center gap-8	|| md:hidden	'>
+							<div className='text-center flex flex-col  items-center gap-8	|| md:hidden '>
 								<H1 text='Subscribe To Design' />
 								<p className='small_text || md:hidden'>
 									One flat subscription for all your design
@@ -60,7 +52,7 @@ export default function Hero1() {
 								/>
 							</div>
 							<div className='hidden || w-full md:flex md:flex-row md:justify-between md:items-start '>
-								<div className='text-center flex flex-col  	w-4/12 	'>
+								<div className='text-center flex flex-col  	w-6/12 	'>
 									<H1 text='Subscribe To Design' />
 								</div>
 

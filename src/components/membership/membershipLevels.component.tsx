@@ -1,6 +1,7 @@
 import './membership.css';
 import Button from '../button/button.component.tsx';
 import H1 from '../header/header.component.tsx';
+import dot from './dot.svg';
 const datas = [
 	{
 		plan: 'Starter',
@@ -179,20 +180,25 @@ const MembershipItem = ({
 	bt,
 }: MembershipItemsProps) => {
 	return (
-		<div className='flex flex-col justify-center lg:items-start lg:justify-around bg-black3 rounded-2xl items-center px-4 py-12 lg:px-12 gap-4 lg:gap-2 h-full w-full'>
+		<div className='flex flex-col justify-center lg:items-start lg:justify-around bg-black3 rounded-2xl items-center px-4 pt-8 pb-4 lg:px-12 gap-4 lg:gap-2 h-full w-full '>
 			<h1 className='text-xl md:text-3xl'>{plan}</h1>
-			<div className='flex flex-col gap-1 items-center md:block font-SFPro m1:text-[.6rem] text-[.6rem] lg:text-[1rem] '>
-				<ul className='small_text list-disc list-outside xl:text-[1rem] m1:pl-5 lg:pl-4 '>
+			<div className='flex flex-col gap-1 items-center md:block font-SFPro m1:text-[.6rem] text-[.6rem] lg:text-[1rem]  '>
+				<div className='small_text  xl:text-[1rem]  flex flex-col items-center'>
 					{content1?.map((e) => (
-						<li key={e} className=''>
-							{e}
-						</li>
+						<div
+							key={e}
+							className='flex items-center gap-2'>
+							<span>
+								<img src={dot} alt='' />
+							</span>
+							<span>{e}</span>
+						</div>
 					))}
-				</ul>
+				</div>
 			</div>
 			<div className='flex flex-col gap-1 items-center lg:items-start'>
 				<h1 className='text-2xl md:text-3xl'>${price}/m</h1>
-				<span className='small_text text-grey-light'>
+				<span className='small_text text-grey-light pb-3'>
 					{content2}
 				</span>
 			</div>
@@ -271,16 +277,41 @@ const MembershipLevels = () => {
 								<h1 className='text-xl md:text-3xl m1:text-center lg:text-start  '>
 									What’s included:
 								</h1>
-
-								<ul className=' list-disc  list-outside small_text  pl-4'>
-									<li>
-										Unlimited briefs (One request at a time)
-									</li>
-									<li>Unlimited brands</li>
-									<li>Unlimited file request</li>
-									<li>Easy payments</li>
-									<li>Pause or cancel anytime.</li>
-								</ul>
+								<div className='small_text  xl:text-[1rem] border '>
+									<div className='flex items-center gap-2'>
+										<span>
+											<img src={dot} alt='' />
+										</span>
+										<span>
+											Unlimited briefs (One request at a
+											time)
+										</span>
+									</div>
+									<div className='flex items-center gap-2'>
+										<span>
+											<img src={dot} alt='' />
+										</span>
+										<span>Unlimited brands</span>
+									</div>
+									<div className='flex items-center gap-2'>
+										<span>
+											<img src={dot} alt='' />
+										</span>
+										<span>Unlimited file request</span>
+									</div>
+									<div className='flex items-center gap-2'>
+										<span>
+											<img src={dot} alt='' />
+										</span>
+										<span>Easy payments</span>
+									</div>
+									<div className='flex items-center gap-2'>
+										<span>
+											<img src={dot} alt='' />
+										</span>
+										<span>Pause or cancel anytime.</span>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div className='m6'>

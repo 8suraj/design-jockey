@@ -78,10 +78,10 @@ export default function MembershipBenefits() {
 									/>
 								</div>
 								<div>
-									<h3 className='text-center text-sm  '>
+									<h3 className='text-center text-sm '>
 										{e.header}
 									</h3>
-									<p className='text-center small_text1 m1:px-0 lg:px-12 2xl:px-16 '>
+									<p className='text-center small_text1 m1:px-0  2xl:px-16 '>
 										{e.content}
 									</p>
 								</div>
@@ -102,7 +102,7 @@ export default function MembershipBenefits() {
 									<h3 className='text-center text-sm  '>
 										{e.header}
 									</h3>
-									<p className='text-center small_text1 m1:px-0 lg:px-12 2xl:px-16 '>
+									<p className='text-center small_text1  m1:px-0  2xl:px-16 '>
 										{e.content}
 									</p>
 								</div>
