@@ -9,13 +9,11 @@ import PEPSI from '../../assets/BW/PEPSI.png';
 import TRUEVOGUE from '../../assets/BW/TRUEVOGUE.png';
 import VANR from '../../assets/BW/VANR.png';
 import Hero1 from '../../components/hero/hero1.component';
-// import Bis from '../../components/b/b';
 import Faq from '../../components/faq/faq.component';
 import Footer from '../../components/footer/footer.component';
 import Hero2 from '../../components/hero/testimonials.component';
 import MembershipBenefits from '../../components/membership/membershipBenefits.component';
 import MembershipLevels from '../../components/membership/membershipLevels.component';
-// import MembershipWorks from '../../components/membership/membershipworks.component';
 import Products from '../../components/products/products.component';
 
 export default function Home() {
