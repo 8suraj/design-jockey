@@ -8,7 +8,7 @@ import Faq from '../../components/faq/faq.component';
 import Footer from '../../components/footer/footer.component';
 import Hero2 from '../../components/hero/testimonials.component';
 import MembershipBenefits from '../../components/membership/membershipBenefits.component';
-// import MembershipLevels from '../../components/membership/membershipLevels.component';
+import MembershipLevels from '../../components/membership/membershipLevels.component';
 // import MembershipWorks from '../../components/membership/membershipworks.component';
 import Products from '../../components/products/products.component';
 
@@ -59,7 +59,7 @@ export default function Home() {
 			<MembershipBenefits />
 			<Hero2 />
 			{/* <Bis /> */}
-			{/* <MembershipLevels /> */}
+			<MembershipLevels />
 			<Faq />
 			<Footer />
 		</>

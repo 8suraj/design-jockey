@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1083px) {
+@media (min-width: 1080px) {
 	.ctnr {
 		display: grid;
 		grid-auto-columns: 1fr;
@@ -27,6 +27,16 @@
 	}
 	.m4 {
 		grid-area: m4;
+	}
+	.cx {
+		display: none;
+	}
+}
+@media (max-width: 1079px) {
+	.ctnr {
+		display: none;
+	}
+	.cx {
 	}
 }
 

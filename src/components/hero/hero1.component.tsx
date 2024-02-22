@@ -4,7 +4,7 @@ import Spline from '@splinetool/react-spline';
 import { useState } from 'react';
 import { PuffLoader } from 'react-spinners';
 export default function Hero1() {
-	const [isLoaded, setIsLoaded] = useState(false);
+	const [isLoaded, setIsLoaded] = useState(true);
 	const handleImageLoaded = () => {
 		setIsLoaded(true);
 	};
@@ -12,13 +12,13 @@ export default function Hero1() {
 		<>
 			<div className=' hero1 h-[100vh]  w-full  '>
 				<div className='absolute left-0 top-0 bottom-0 right-0   '>
-					<Spline
+					{/* <Spline
 						scene='https://prod.spline.design/vEByxlHa0a4Jvxsi/scene.splinecode'
 						onLoad={handleImageLoaded}
 						className={`${
 							isLoaded ? 'OP1' : 'hidden'
 						} absolute left-0 top-0  bottom-0 right-0`}
-					/>
+					/> */}
 				</div>
 				<div
 					className={`${
@@ -30,11 +30,11 @@ export default function Hero1() {
 					<section className='xl:w-[80vw] 2xl:w-[80vw]  mx-auto px-6 md:px-14 xl:px-4 w-full     flex  justify-center absolute  -translate-x-1/2   left-[50%] top-[25%] lg:top-[50%] lg:-translate-y-1/2'>
 						<div className=' w-full bg-black2 backdrop-blur-xl rounded-xl p-6 h-full gap-12 flex flex-col  items-center || md:gap-4 md:p-6  md:justify-between md:items-start md:min-h-[16rem]	'>
 							<div className='flex justify-between text-[.64rem] font-SFPro w-full || md:hidden'>
-								<span className='small_text1'>
+								<span className='text-[.6rem]'>
 									Delhi, <br /> India{' '}
 									<span id='MyClockDisplay'></span>
 								</span>
-								<span className='small_text1'>
+								<span className='text-[.6rem]'>
 									+91 872 396 3206 <br />
 									info@designjockey.com
 								</span>
