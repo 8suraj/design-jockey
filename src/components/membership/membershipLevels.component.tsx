@@ -2,7 +2,8 @@
 import './membership.css';
 import Button from '../button/button.component.tsx';
 import H1 from '../header/header.component.tsx';
-import dot from './dot.svg';
+import { useEffect } from 'react';
+
 const datas = [
 	{
 		plan: 'Starter',
@@ -48,37 +49,6 @@ const datas = [
 		tenure: 'Paid yearly',
 		buyType: 'Buy now',
 	},
-	// {
-	// 	plan: 'Website Development',
-	// 	price: '625',
-	// 	facilities: [
-	// 		'Get a better website faster with Website development.',
-	// 	],
-	// 	tenure: 'Requires subscription',
-	// 	buyType: 'Add on',
-	// },
-	// {
-	// 	plan: 'What’s included:',
-	// 	price: '',
-	// 	facilities: [
-	// 'Unlimited briefs (One request at a time) ',
-	// 'Unlimited brands',
-	// 'Unlimited file request',
-	// 'Easy payments',
-	// 'Pause or cancel anytime.',
-	// 	],
-	// 	tenure: '',
-	// 	buyType: '',
-	// },
-	// {
-	// 	plan: 'Book a call',
-	// 	price: '',
-	// 	facilities: [
-	// 		'Learn more about how DesignJockey works and how it can help you.',
-	// 	],
-	// 	tenure: '',
-	// 	buyType: 'Book a call',
-	// },
 ];
 
 interface MembershipItemsProps {
@@ -128,7 +98,7 @@ const MembershipItem1 = ({
 			{buyType ? (
 				<Button
 					text={buyType}
-					className='bg-color-secondary btn_base w-full'
+					className='bg-color-secondary btn_base w-full '
 					onClick={(e) => console.log(e)}
 				/>
 			) : (
@@ -146,25 +116,16 @@ const MembershipItem = ({
 	buyType,
 }: MembershipItemsProps) => {
 	return (
-		<div className='flex flex-col justify-center lg:items-start lg:justify-around bg-black3 rounded-2xl items-center px-4 pt-8 pb-4 lg:px-12 gap-4 lg:gap-2 h-full w-full '>
+		<div className='flex flex-col justify-center lg:items-start lg:justify-around bg-black3 rounded-2xl items-center p-4 pt-8   lg:p-8 gap-4 lg:gap-2 h-full w-full '>
 			<h1 className='text-xl md:text-3xl text-center'>
 				{plan}
 			</h1>
-			<div className='flex flex-col gap-1 items-center md:block font-SFPro m1:text-[.6rem] text-[.6rem] lg:text-[1rem]  '>
-				<div className='small_text  xl:text-[1rem]  flex flex-col items-center'>
+			<div className='small_text  font-SFPro  flex flex-col items-start pl-3 '>
+				<ul className='flex flex-col  gap-2 list-disc	list-outside  '>
 					{facilities?.length > 0
-						? facilities?.map((e) => (
-								<div
-									key={e}
-									className='flex items-center gap-2'>
-									<span>
-										<img src={dot} alt='' />
-									</span>
-									<span>{e}</span>
-								</div>
-						  ))
+						? facilities?.map((e) => <li>{e}</li>)
 						: ''}
-				</div>
+				</ul>
 			</div>
 			<div className='flex flex-col gap-1 items-center lg:items-start'>
 				{price ? (
@@ -185,7 +146,7 @@ const MembershipItem = ({
 			{buyType ? (
 				<Button
 					text={buyType}
-					className='bg-color-secondary btn_base w-full'
+					className='bg-color-secondary btn_base   min-w-full max-w-full   pxd'
 					onClick={(e) => console.log(e)}
 				/>
 			) : (
@@ -196,6 +157,19 @@ const MembershipItem = ({
 };
 
 const MembershipLevels = () => {
+	// const [cwidth, setCWidth] = useState(0);
+	useEffect(() => {
+		const q = document.getElementsByClassName('pxd');
+		if (q?.length > 0) {
+			// setCWidth(q[0].clientWidth / 16);
+			const p = document.getElementsByClassName('vv');
+			for (const i of p) {
+				(i as HTMLElement).style.width = `${
+					(q[0] as HTMLElement).clientWidth
+				}px`;
+			}
+		}
+	}, []);
 	return (
 		<>
 			<div id='plans' className='py-16 ' />
@@ -292,18 +266,13 @@ const MembershipLevels = () => {
 							</div>
 						))}
 
-						<div className='m4 '>
-							<div className='flex flex-col  xl:flex-row justify-center items-center lg:items-start xl:items-center lg:justify-around  bg-black3 rounded-2xl  px-4 py-12 lg:px-12  gap-4 lg:gap-8 h-full '>
-								<div className='flex flex-col lg:items-start items-center w-9/12 '>
+						<div className='m4  w-full bg-black3 rounded-2xl '>
+							<div className='flex  flex-row justify-between items-center      p-4 pt-8   lg:p-12  gap-4 lg:gap-2 h-full  '>
+								<div className='flex flex-col items-start    '>
 									<h1 className='text-xl md:text-3xl    '>
-										Website
-										<span className='hidden xl:inline'>
-											Development
-										</span>
+										Website Development
 									</h1>
-									<h1 className='text-xl md:text-3xl xl:hidden '>
-										Development
-									</h1>
+
 									<div className='flex flex-col gap-1 items-center    '>
 										<span className=' block text-center small_text'>
 											Get a better website faster with
@@ -311,7 +280,7 @@ const MembershipLevels = () => {
 										</span>
 									</div>
 								</div>
-								<div className='flex flex-col gap-1 items-center md:items-start'>
+								<div className='flex flex-col gap-1 items-center '>
 									<h1 className='text-2xl lg:text-3xl'>
 										$625/m
 									</h1>
@@ -321,60 +290,41 @@ const MembershipLevels = () => {
 								</div>
 								<Button
 									text='Add on'
-									className='bg-color-secondary btn_base lg:w-[39%] w-full '
+									className='bg-color-secondary btn_base  vv'
 									onClick={(e) => console.log(e)}
 								/>
 							</div>
 						</div>
 						<div className='m5'>
-							<div className='flex flex-col justify-center items-center lg:items-start lg:justify-around  bg-black3 rounded-2xl  px-4 py-8 lg:px-12  gap-4 lg:gap-2 h-full'>
+							<div className='flex flex-col  items-center lg:items-start   bg-black3 rounded-2xl  p-4 pt-8  gap-4 lg:gap-2 lg:p-8  h-full '>
 								<h1 className='text-xl md:text-3xl m1:text-center lg:text-start  '>
 									What’s included:
 								</h1>
-								<div className='small_text  xl:text-[1rem] border '>
-									<div className='flex items-center gap-2'>
-										<span>
-											<img src={dot} alt='' />
-										</span>
-										<span>
+								<div className='small_text  font-SFPro  flex flex-col items-start pl-4  '>
+									<ul className='flex flex-col  gap-2 list-disc	list-outside '>
+										<li>
 											Unlimited briefs (One request at a
 											time)
-										</span>
-									</div>
-									<div className='flex items-center gap-2'>
-										<span>
-											<img src={dot} alt='' />
-										</span>
-										<span>Unlimited brands</span>
-									</div>
-									<div className='flex items-center gap-2'>
-										<span>
-											<img src={dot} alt='' />
-										</span>
-										<span>Unlimited file request</span>
-									</div>
-									<div className='flex items-center gap-2'>
-										<span>
-											<img src={dot} alt='' />
-										</span>
-										<span>Easy payments</span>
-									</div>
-									<div className='flex items-center gap-2'>
-										<span>
-											<img src={dot} alt='' />
-										</span>
-										<span>Pause or cancel anytime.</span>
-									</div>
+										</li>
+										{[
+											'Unlimited brands',
+											'Unlimited file request',
+											'Easy payments',
+											'Pause or cancel anytime.',
+										].map((e) => (
+											<li>{e}</li>
+										))}
+									</ul>
 								</div>
 							</div>
 						</div>
 						<div className='m6'>
-							<div className='w-full flex flex-col lg:flex-row  justify-center lg:items-start lg:justify-between  bg-black3 rounded-2xl items-center px-12 py-12   h-full'>
-								<div className='flex flex-col  gap-4    '>
+							<div className='flex flex-row  bg-black3 rounded-2xl  h-full w-full p-4 pt-8   lg:py-8  lg:px-12'>
+								<div className='flex flex-col  gap-4 '>
 									<h1 className='text-xl md:text-3xl m1:text-center lg:text-start'>
 										Book a call
 									</h1>
-									<div className='flex flex-col gap-1 items-center md:block small_text '>
+									<div className='flex flex-col gap-1 items-center md:block small_text pr-24'>
 										<span className=' block m1:text-center lg:text-start '>
 											Learn more about how DesignJockey
 											works and how it can help you.
@@ -385,7 +335,7 @@ const MembershipLevels = () => {
 								<div className=''>
 									<Button
 										text='Book a call'
-										className='bg-black btn_base  w-[17rem]'
+										className='bg-black btn_base vv'
 										onClick={(e) => console.log(e)}
 									/>
 								</div>

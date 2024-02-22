@@ -1,7 +1,13 @@
 import ScrollCarousel from 'scroll-carousel-react';
-import s1 from './1.svg';
-import s3 from './3.svg';
-import s4 from './7.svg';
+import AVON from '../../assets/BW/AVON.png';
+import DLF from '../../assets/BW/DLF.png';
+import EMAAR from '../../assets/BW/EMAAR.png';
+import KAIZEN from '../../assets/BW/KAIZEN.png';
+import KORRAI from '../../assets/BW/KORRAI.png';
+import LUPIN from '../../assets/BW/LUPIN.png';
+import PEPSI from '../../assets/BW/PEPSI.png';
+import TRUEVOGUE from '../../assets/BW/TRUEVOGUE.png';
+import VANR from '../../assets/BW/VANR.png';
 import Hero1 from '../../components/hero/hero1.component';
 // import Bis from '../../components/b/b';
 import Faq from '../../components/faq/faq.component';
@@ -24,33 +30,20 @@ export default function Home() {
 				margin={100}
 				onReady={() => {}}>
 				{[
-					s1,
-					s3,
-					s4,
-					s1,
-					s3,
-					s4,
-					s1,
-					s3,
-					s4,
-					s1,
-					s3,
-					s4,
-					s1,
-					s3,
-					s4,
-					s1,
-					s3,
-					s4,
+					AVON,
+					DLF,
+					EMAAR,
+					KAIZEN,
+					KORRAI,
+					LUPIN,
+					PEPSI,
+					TRUEVOGUE,
+					VANR,
 				].map((item, index) => (
 					<div
 						key={index}
 						className=' w-24 h-20 flex items-center  '>
-						<img
-							src={item}
-							alt=''
-							className='	aspect-[3/2] mix-blend-color-burn	w-24'
-						/>
+						<img src={item} alt='' className='	w-24' />
 					</div>
 				))}
 			</ScrollCarousel>
