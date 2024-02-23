@@ -66,8 +66,8 @@ export default function MembershipBenefits() {
 						/>
 					</div>
 				</div>
-				<div className='flex flex-col gap-8 md:gap-12 flex-wrap w-full sm:flex-row justify-center '>
-					<div className='flex flex-col gap-8 flex-wrap w-full sm:flex-row justify-center items-start sm:gap-8 md:gap-2 lg:gap-2 '>
+				<div className='flex flex-col gap-8  sm:gap-16 md:gap-12 flex-wrap w-full sm:flex-row justify-center '>
+					<div className='flex flex-col gap-8 flex-wrap w-full sm:flex-row justify-center items-start sm:gap-16 md:gap-2 lg:gap-2 '>
 						{data1.map((e) => (
 							<div className='flex flex-col justify-center gap-4  md:gap-6    w-full  md:w-[32%]  lg:w-[32.5%]'>
 								<div className=' w-full    h-fit   '>
@@ -88,7 +88,7 @@ export default function MembershipBenefits() {
 							</div>
 						))}
 					</div>
-					<div className='flex flex-col gap-8 flex-wrap w-full sm:flex-row justify-center sm:gap-8 md:gap-2 lg:gap-2 items-start 	'>
+					<div className='flex flex-col gap-8 flex-wrap w-full sm:flex-row justify-center sm:gap-16 md:gap-2 lg:gap-2 items-start 	'>
 						{data2.map((e) => (
 							<div className='flex flex-col justify-center gap-4  md:gap-6    w-full  md:w-[32%]  lg:w-[32.5%] '>
 								<div className='w-full    h-fit'>
@@ -109,13 +109,13 @@ export default function MembershipBenefits() {
 							</div>
 						))}
 					</div>
-				</div>
-				<div className=' w-full flex justify-center lg:hidden'>
-					<Button
-						text='Add on'
-						className='bg-color-secondary btn_base '
-						onClick={(e) => console.log(e)}
-					/>
+					<div className=' w-full flex justify-center lg:hidden'>
+						<Button
+							text='See Plans'
+							className='bg-color-secondary btn_base w-full '
+							onClick={(e) => console.log(e)}
+						/>
+					</div>
 				</div>
 			</div>
 		</section>

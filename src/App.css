@@ -10,7 +10,7 @@
 	@apply m1:text-[.75rem] text-[.9rem]   md:text-[.75rem] font-SFPro leading-4 font-normal;
 }
 .btn_base {
-	@apply min-w-[8rem]  min-h-[4rem] lg:min-w-[9rem] lg:min-h-[4rem] xl:min-h-[5rem] xl:min-w-[11rem];
+	@apply min-w-[8rem]  min-h-[4rem] lg:min-w-[9rem] lg:min-h-[4rem] xl:min-h-[5rem] xl:min-w-[11rem] p-5;
 }
 
 .OP1 {

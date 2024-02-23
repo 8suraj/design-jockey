@@ -44,8 +44,8 @@ export default function MembershipWorks() {
 		<>
 			<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto '>
 				<div className='m-auto flex flex-col gap-12  md:px-14 py-12 xl:px-4'>
-					<div className='flex w-full px-6'>
-						<div className='lg:w-7/12 m1:w-full'>
+					<div className='flex w-full  '>
+						<div className='lg:w-8/12 m1:w-full '>
 							<H1 text='how membership works' />
 							<h4 className='small_text header_perks pt-4'>
 								Perks so good you'll never need to go

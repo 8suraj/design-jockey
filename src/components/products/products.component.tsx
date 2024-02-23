@@ -39,7 +39,7 @@ export default function Products() {
 				<div className=' w-full flex justify-center lg:hidden'>
 					<Button
 						text='show all'
-						className='bg-color-secondary btn_base '
+						className='bg-color-secondary btn_base w-full '
 						onClick={(e) => console.log(e)}
 					/>
 				</div>

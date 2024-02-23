@@ -45,12 +45,9 @@ export default function Hero2() {
 
 	return (
 		<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto  '>
-			<div className='flex flex-col gap-2 px-4 md:px-12 pt-12 xl:px-0 '>
-				<div className='w-full h-full  m-auto bg-color-secondary rounded-lg flex flex-col md:flex-row   md:justify-around   p-4 md:p-10 lg:p-16 '>
+			<div className='flex flex-col gap-2 px-6 md:px-14 py-12 xl:px-4 '>
+				<div className='w-full h-full  m-auto bg-color-secondary rounded-lg flex flex-col md:flex-row   md:justify-around   p-4 md:p-10 lg:p-10 '>
 					<div className='m1:text-center md:text-left w-full md:w-[48%] lg:w-[50%] xl:w-[48%] lg:text-left '>
-						{/* <h1 className='text-color-primary capitalize m1:text-[1.5rem] m2:text-[1.65rem] sm:text-[1.8rem] md:text-[1.9rem] lg:text-[2.4rem] xl:text-[2.5rem]'>
-							what our friends has to say
-						</h1> */}
 						<H1 text='what our friends has to say' />
 					</div>
 					<div className='w-full md:w-[45%] md:px-6 lg:px-8 xl:px-12 px-3 flex flex-col gap-10 py-1  m1:items-center md:items-start '>

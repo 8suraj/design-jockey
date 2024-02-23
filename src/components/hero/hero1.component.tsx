@@ -27,11 +27,11 @@ export default function Hero1() {
 					<PuffLoader color='#C4FE01' />
 				</div>
 				{isLoaded ? (
-					<section className='xl:w-[80vw] 2xl:w-[80vw]  mx-auto px-6 md:px-14 xl:px-4 w-full     flex  justify-center absolute  -translate-x-1/2   left-[50%] top-[25%] lg:top-[50%] lg:-translate-y-1/2'>
-						<div className=' w-full bg-black2 backdrop-blur-xl rounded-xl p-6 h-full gap-12 flex flex-col  items-center || md:gap-4 md:p-6  md:justify-between md:items-start md:min-h-[16rem]	'>
-							<div className='flex justify-between text-[.64rem] font-SFPro w-full || md:hidden'>
+					<section className='xl:w-[80vw] 2xl:w-[80vw]  mx-auto px-6 md:px-14 xl:px-4 w-full     flex  justify-center absolute  -translate-x-1/2   left-[50%] top-[25%] m3:top-[35%] lg:top-[50%] lg:-translate-y-1/2'>
+						<div className=' w-full bg-black2 backdrop-blur-xl rounded-xl p-6 h-full gap-12 flex flex-col  items-center || md:gap-4 md:p-6  md:justify-between md:items-start md:min-h-[18rem]	'>
+							<div className='flex justify-between text-[.64rem] font-SFPro w-full  md:hidden'>
 								<span className='text-[.6rem]'>
-									Delhi, <br /> India{' '}
+									Delhi, <br /> India
 									<span id='MyClockDisplay'></span>
 								</span>
 								<span className='text-[.6rem]'>
@@ -39,15 +39,15 @@ export default function Hero1() {
 									info@designjockey.com
 								</span>
 							</div>
-							<div className='text-center flex flex-col  items-center gap-8	|| md:hidden '>
+							<div className='text-center flex flex-col  w-full gap-8 md:hidden '>
 								<H1 text='Subscribe To Design' />
-								<p className='small_text || md:hidden'>
+								<p className='small_text md:hidden'>
 									One flat subscription for all your design
 									needs.
 								</p>
 								<Button
 									text='See Plans'
-									className='bg-color-secondary btn_base  md:hidden  '
+									className='bg-color-secondary btn_base  md:hidden w-full  '
 									onClick={(e) => console.log(e)}
 								/>
 							</div>
@@ -74,7 +74,7 @@ export default function Hero1() {
 										minute: 'numeric',
 										hour12: true,
 									})}
-									<span id='MyClockDisplay'></span>
+									{/* <span id='MyClockDisplay'></span> */}
 								</span>
 								<span className='small_text1'>
 									+91 872 396 3206 <br />

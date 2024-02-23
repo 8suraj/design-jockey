@@ -6,9 +6,9 @@ import {
 	RouterProvider,
 	Route,
 } from 'react-router-dom';
-// import { Player } from '@lottiefiles/react-lottie-player';
-// import animation from './Frame_2_1.json';
+
 import { PuffLoader } from 'react-spinners';
+import NotFound from './pages/notFound/notFound.router.tsx';
 const Home = lazy(
 	() => import('./pages/home/home.router.tsx')
 );
@@ -25,6 +25,7 @@ const routes = createBrowserRouter(
 			<Route path='/' element={<Navbar />}>
 				<Route path='/' element={<Home />} />
 				<Route path='/cart' element={<Cart />} />
+				<Route path='*' element={<NotFound />} />
 			</Route>
 		</>
 	)

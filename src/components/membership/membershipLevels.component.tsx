@@ -67,7 +67,7 @@ const MembershipItem1 = ({
 	buyType,
 }: MembershipItemsProps) => {
 	return (
-		<div className='text-left flex flex-col justify-center   lg:justify-around bg-black3 rounded-2xl items-center p-4 pt-8  gap-4 lg:gap-2 lg:p-8 || w-full sm:w-[48%] md:w-[48%] min-h-[18rem] lg:items-start'>
+		<div className='text-left flex flex-col justify-center   lg:justify-around bg-black3 rounded-2xl items-center p-4 pt-8  gap-4 lg:gap-2 lg:p-8 || w-full sm:w-[48%] md:w-[49%] min-h-[18rem] lg:items-start'>
 			<div className='flex flex-col gap-4 lg:gap-2  '>
 				<h1 className='text-xl md:text-3xl  '>{plan}</h1>
 
@@ -169,6 +169,11 @@ const MembershipLevels = () => {
 				}px`;
 			}
 		}
+		const w = document.getElementsByClassName('cg');
+		const a = document.getElementsByClassName('cy');
+		(a[0] as HTMLElement).style.height = `${
+			(w[0] as HTMLElement).clientHeight
+		}px`;
 	}, []);
 	return (
 		<>
@@ -186,7 +191,7 @@ const MembershipLevels = () => {
 						{datas.map((data: MembershipItemsProps) => (
 							<MembershipItem1 {...data} />
 						))}
-						<div className='flex flex-col justify-between lg:items-start lg:p-8 lg:justify-between bg-black3 rounded-2xl items-center p-4 pt-8 gap-4 lg:gap-2 || w-full sm:w-[48%] md:w-[48%] min-h-[18rem]'>
+						<div className='flex flex-col justify-between lg:items-start lg:p-8 lg:justify-between bg-black3 rounded-2xl items-center p-4 pt-8 gap-4 lg:gap-2 || w-full sm:w-[48%] md:w-[49%] min-h-[18rem]'>
 							<div className='flex flex-col justify-center lg:items-start  lg:justify-between bg-black3 rounded-2xl items-center  gap-4 lg:gap-2 || w-full'>
 								<h1 className='text-xl md:text-3xl text-center lg:text-left'>
 									Website Development
@@ -214,7 +219,7 @@ const MembershipLevels = () => {
 								onClick={(e) => console.log(e)}
 							/>
 						</div>
-						<div className='text-left flex flex-col justify-center   lg:justify-around bg-black3 rounded-2xl items-center lg:items-start p-4 py-8  gap-4 lg:gap-2 lg:p-8 || w-full sm:w-[48%] md:w-[48%] h-fit lg:min-h-[20rem]'>
+						<div className='text-left flex flex-col justify-center   lg:justify-around bg-black3 rounded-2xl items-center lg:items-start p-4 py-8  gap-4 lg:gap-2 lg:p-8 || w-full sm:w-[48%] md:w-[49%] h-fit lg:min-h-[20rem] cg'>
 							<div className='flex flex-col gap-4 lg:gap-2  items-start '>
 								<h1 className='text-xl md:text-3xl '>
 									What’s <br /> included:
@@ -238,7 +243,7 @@ const MembershipLevels = () => {
 								</div>
 							</div>
 						</div>
-						<div className='flex flex-col justify-center lg:items-start lg:justify-between bg-black3 rounded-2xl items-center lg:p-8  p-4 pt-8  gap-4 lg:gap-2 || w-full sm:w-[48%] md:w-[48%] h-fit lg:min-h-[20rem]'>
+						<div className='flex flex-col justify-between lg:items-start lg:justify-between bg-black3 rounded-2xl items-center lg:p-8  p-4 pt-8  gap-4 lg:gap-2 || w-full sm:w-[48%] md:w-[49%] h-fit lg:min-h-[20rem] cy'>
 							<div className='flex flex-col justify-center lg:items-start lg:justify-between bg-black3 rounded-2xl items-center  gap-4 lg:gap-2 || w-full '>
 								<h1 className='text-xl md:text-3xl text-center lg:text-left'>
 									Book a call

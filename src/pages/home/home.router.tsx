@@ -15,7 +15,9 @@ import Hero2 from '../../components/hero/testimonials.component';
 import MembershipBenefits from '../../components/membership/membershipBenefits.component';
 import MembershipLevels from '../../components/membership/membershipLevels.component';
 import Products from '../../components/products/products.component';
-
+// import Bis from '../../components/b/b';
+// import MembershipWorks from '../../components/membership/membershipworks.component';
+import ww from '../../assets/ww.gif';
 export default function Home() {
 	return (
 		<>
@@ -45,6 +47,9 @@ export default function Home() {
 					</div>
 				))}
 			</ScrollCarousel>
+			<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto'>
+				<img src={ww} className='w-full ' />
+			</section>
 			{/* <MembershipWorks /> */}
 			<Products />
 			<MembershipBenefits />

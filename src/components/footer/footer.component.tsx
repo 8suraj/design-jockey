@@ -3,7 +3,7 @@ import enter from '../../assets/svgs/enter.svg';
 import Button from '../button/button.component';
 export default function Footer() {
 	return (
-		<footer className=' xl:w-[80vw] 2xl:w-[80vw] mx-auto bg-black2 '>
+		<footer className=' xl:w-[80vw] 2xl:w-[80vw] mx-auto bg-black '>
 			<div className='flex flex-col gap-6 md:gap-4  px-6 md:px-14 py-12 xl:px-4'>
 				<h1 className='text-left  w-full text-sm'>
 					sign up to <br className='md:hidden' /> our
@@ -48,7 +48,7 @@ export default function Footer() {
 									<img
 										src={logo}
 										alt='logo'
-										className='w-5/12'
+										className='w-[70%]'
 									/>
 								</div>
 								<Button
