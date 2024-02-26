@@ -6,28 +6,40 @@ import {
 	RouterProvider,
 	Route,
 } from 'react-router-dom';
-
 import { PuffLoader } from 'react-spinners';
-import NotFound from './pages/notFound/notFound.router.tsx';
-import Product from './pages/product/product.router.tsx';
+
+const NotFound = lazy(
+	() => import('./pages/notFound/notFound.router.tsx')
+);
+const ProductPage = lazy(
+	() => import('./pages/product/product.router.tsx')
+);
+
+const Products = lazy(
+	() => import('./pages/products/products.router.tsx')
+);
 const Home = lazy(
 	() => import('./pages/home/home.router.tsx')
 );
 const Cart = lazy(
 	() => import('./pages/cart/cart.router.tsx')
 );
-const Navbar = lazy(
-	() => import('./components/navbar/navbar.component.tsx')
+const MainLayout = lazy(
+	() => import('./pages/layout/layout.router.tsx')
 );
 
 const routes = createBrowserRouter(
 	createRoutesFromElements(
 		<>
-			<Route path='/' element={<Navbar />}>
+			<Route path='/' element={<MainLayout />}>
 				<Route path='/' element={<Home />} />
 				<Route path='/cart' element={<Cart />} />
 				<Route path='*' element={<NotFound />} />
-				<Route path='product/:id' element={<Product />} />
+				<Route path='products' element={<Products />} />
+				<Route
+					path='products/:id'
+					element={<ProductPage />}
+				/>
 			</Route>
 		</>
 	)

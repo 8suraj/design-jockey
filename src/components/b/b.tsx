@@ -68,9 +68,12 @@ export default function Bis() {
 				<div className='  flex flex-col gap-6 md:gap-2 '>
 					<div className='flex w-full px-6 md:px-14  xl:px-4'>
 						<div className='lg:w-7/12 m1:w-full'>
-							<H1 text='Buy Individually or subscribe' />
+							<H1 text='Buy one-off or subscribe' />
 							<p className='small_text header_perks pt-4'>
-								choose a plan that’s right for you
+								Choose a plan that fits your needs - Basic
+								for individuals or Advanced for larger teams
+								- with the option to make a one-time
+								purchase or subscribe.
 							</p>
 						</div>
 						<div className='lg:flex hidden w-5/12 h-fit justify-end '>

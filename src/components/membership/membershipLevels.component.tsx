@@ -9,12 +9,12 @@ const datas = [
 		plan: 'Starter',
 		price: '833',
 		facilities: [
-			'Updating in every 48 Hrs',
-			'1 pause per month',
-			'No minimum commitment. ',
+			'Updates every 48 hours.',
+			'1 pause allowed per month.',
+			'No minimum commitment;  ',
 			'pause or cancel anytime.',
-			'Source file ownership',
-			'Dedicated designer',
+			'Ownership of source files.',
+			'Dedicated designer.',
 		],
 
 		tenure: 'Paid monthly',
@@ -25,12 +25,12 @@ const datas = [
 		plan: 'Core',
 		price: '933',
 		facilities: [
-			'Updating in every 24 Hrs',
-			'2 pause per month',
-			'No minimum commitment. ',
+			'Updates once daily.',
+			'1 pause allowed per month.',
+			'No minimum commitment; ',
 			'pause or cancel anytime.',
-			'Source file ownership',
-			'Dedicated designer',
+			'Ownership of source files.',
+			'Dedicated designer.',
 		],
 		tenure: 'Paid quarterly',
 		buyType: 'Buy now',
@@ -39,12 +39,12 @@ const datas = [
 		plan: 'Growth',
 		price: '1033',
 		facilities: [
-			'Updating in every 4 Hrs',
-			'2 pause per month',
-			'No minimum commitment. ',
+			'Updates twice daily.',
+			'2 pause allowed per month.',
+			'No minimum commitment;',
 			'pause or cancel anytime.',
-			'Source file ownership',
-			'Dedicated designer',
+			'Ownership of source files.',
+			'Dedicated designer.',
 		],
 		tenure: 'Paid yearly',
 		buyType: 'Buy now',
@@ -177,14 +177,16 @@ const MembershipLevels = () => {
 	}, []);
 	return (
 		<>
-			<div id='plans' className='py-16 ' />
+			<div id='plans' className='py-4 md:py-10 ' />
 			<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto'>
 				<div className='m-auto flex flex-col gap-12 px-6 md:px-14 pb-12 xl:px-4'>
 					<div>
-						<H1 text='membership levels' />
+						<H1 text='Membership Tiers' />
 
 						<p className='small_text header_perks pt-2'>
-							choose a plan that’s right for you
+							Choose the plan that fits you best. Our
+							diverse range of plans ensures an option
+							tailored just for you.
 						</p>
 					</div>
 					<div className='flex  flex-wrap w-full gap-2 justify-center cx'>
@@ -198,8 +200,8 @@ const MembershipLevels = () => {
 								</h1>
 								<div className='flex flex-col gap-1 items-center md:block font-SFPro m1:text-[.6rem] text-[.6rem] lg:text-[1rem]  text-center lg:items-start'>
 									<div className='small_text  xl:text-[1rem]  flex flex-col items-center lg:text-left'>
-										Get a better website faster with Website
-										development.
+										Build your website faster with our
+										website development service.
 									</div>
 								</div>
 								<div className='flex flex-col gap-1 items-center lg:items-start  '>
@@ -251,7 +253,7 @@ const MembershipLevels = () => {
 								<div className='flex flex-col gap-1 items-center md:block font-SFPro m1:text-[.6rem] text-[.6rem] lg:text-[1rem]  text-center lg:text-left'>
 									<div className='small_text  xl:text-[1rem]  flex flex-col items-center lg:items-start'>
 										Learn more about how DesignJockey works
-										and how it can help you.
+										and how it benefits you.
 									</div>
 								</div>
 							</div>
@@ -280,8 +282,8 @@ const MembershipLevels = () => {
 
 									<div className='flex flex-col gap-1 items-center    '>
 										<span className=' block text-center small_text'>
-											Get a better website faster with
-											Website development.
+											Build your website faster with our
+											website development service.
 										</span>
 									</div>
 								</div>
@@ -332,7 +334,7 @@ const MembershipLevels = () => {
 									<div className='flex flex-col gap-1 items-center md:block small_text pr-24'>
 										<span className=' block m1:text-center lg:text-start '>
 											Learn more about how DesignJockey
-											works and how it can help you.
+											works and how it benefits you.
 										</span>
 									</div>
 								</div>

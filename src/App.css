@@ -68,3 +68,8 @@
 ::-webkit-scrollbar-thumb:hover {
 	background: #c4fe01;
 }
+
+.centerrr1 {
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}

@@ -45,17 +45,18 @@ export default function Hero2() {
 
 	return (
 		<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto  '>
-			<div className='flex flex-col gap-2 px-6 md:px-14 py-12 xl:px-4 '>
+			<div className='flex flex-col gap-2 px-6 md:px-14 py-4 md:py-10 xl:px-4 '>
 				<div className='w-full h-full  m-auto bg-color-secondary rounded-lg flex flex-col md:flex-row   md:justify-around   p-4 md:p-10 lg:p-10 '>
 					<div className='m1:text-center md:text-left w-full md:w-[48%] lg:w-[50%] xl:w-[48%] lg:text-left '>
-						<H1 text='what our friends has to say' />
+						<H1 text="Here's what our friends have to say." />
 					</div>
 					<div className='w-full md:w-[45%] md:px-6 lg:px-8 xl:px-12 px-3 flex flex-col gap-10 py-1  m1:items-center md:items-start '>
 						<p className=' text-center  md:text-left   small_text1'>
-							Designjockey replaces unreliable freelancers
-							and expensive agencies for one flat monthly
-							fee, with designs delivered so fast that it
-							will blow your mind.
+							DesignJockey is a service that can provide you
+							with amazing designs for a fixed monthly fee.
+							It eliminates the need for freelancers and
+							agencies, so you can get all the design work
+							you need in one place.
 						</p>
 						<div className='relative   h-12 m1:w-[10.7rem] lg:w-[12.5]'>
 							<img
@@ -126,30 +127,30 @@ export default function Hero2() {
 					<div className='bg-[#191919] text-grey-light rounded-lg p-4 md:p-6 text-sm text-left md:text-left flex flex-col gap-4 lg:w-[40%]'>
 						<div>
 							<h1 className='m1:text-[.7rem] lg:text-sm leading-6'>
-								No meetings
+								Skip the meetings
 							</h1>
 							<p className='font-SFPro text-[.6rem] leading-3'>
-								Don't like meetings? We don't either; so
-								much so that we've outlawed them completely.
+								Meetings not your thing? Same here. That's
+								why you won't find any on our schedule.
 							</p>
 						</div>
 						<div>
 							<h1 className='m1:text-[.7rem] lg:text-sm leading-6'>
-								Easy dashboard
+								One dashboard
 							</h1>
 							<p className='font-SFPro text-[.6rem] leading-3'>
-								Manage your design board using Trello. View
+								Effortless dashboard navigation. View
 								active, queued and completed tasks with
 								ease.
 							</p>
 						</div>
 						<div>
 							<h1 className='m1:text-[.65rem] lg:text-sm leading-6'>
-								Invite unlimited team members
+								Invite team members
 							</h1>
 							<p className='font-SFPro text-[.6rem] leading-3'>
-								Invite your entire team, so anyone can
-								submit requests and track their progress.
+								Invite as many team members as you need to
+								request and monitor progress seamlessly.
 							</p>
 						</div>
 					</div>

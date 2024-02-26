@@ -11,17 +11,17 @@ const data = [
 	{
 		imgae: m1,
 		content:
-			'Signup and subscribe to a plan and get an unlimited request access',
+			'Sign up, subscribe, and enjoy unlimited request access',
 	},
 	{
 		imgae: m2,
 		content:
-			'Receive your designs within the predefined timeline of your design request. Monday to friday',
+			'Get your designs within the set timeline for your requests, Monday to Friday',
 	},
 	{
 		imgae: m3,
 		content:
-			'Unlimited revisions until you’re 100% satisfied',
+			"Enjoy unlimited revisions until you're completely satisfied",
 	},
 ];
 
@@ -43,7 +43,7 @@ export default function MembershipWorks() {
 	return (
 		<>
 			<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto '>
-				<div className='m-auto flex flex-col gap-12  md:px-14 py-12 xl:px-4'>
+				<div className='m-auto flex flex-col gap-12  md:px-14 py-4 md:py-10 xl:px-4'>
 					<div className='flex w-full  '>
 						<div className='lg:w-8/12 m1:w-full '>
 							<H1 text='how membership works' />

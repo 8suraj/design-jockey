@@ -11,19 +11,19 @@ const data1 = [
 		imgae: m1,
 		header: 'Unlimited Requests',
 		content:
-			'Signup and subscribe to a plan and get an unlimited request access ',
+			'Submit as many design requests as you like without any restrictions or extra charges. ',
 	},
 	{
 		imgae: m2,
 		header: 'Fixed Monthly Rate',
 		content:
-			'Signup and subscribe to a plan and get an unlimited request access ',
+			'Keep your design expenses predictable. No surprises, just reliable fixed monthly rate. ',
 	},
 	{
 		imgae: m3,
-		header: 'Quick Response',
+		header: 'Quick Turnaround',
 		content:
-			'Signup and subscribe to a plan and get an unlimited request access ',
+			'Fast, efficient design solutions tailored to your needs. Get quick results without the wait. ',
 	},
 ];
 const data2 = [
@@ -31,31 +31,32 @@ const data2 = [
 		imgae: m4,
 		header: 'One Dashboard',
 		content:
-			'Signup and subscribe to a plan and get an unlimited request access ',
+			'Stay on top of your tasks with ease using our all-in-one dashboard.',
 	},
 	{
 		imgae: m5,
 		header: 'Top Tier Quality',
 		content:
-			'Signup and subscribe to a plan and get an unlimited request access ',
+			'Guaranteed top-notch quality every step of the way for excellent results.',
 	},
 	{
 		imgae: m6,
 		header: 'Tailored Service',
 		content:
-			'Signup and subscribe to a plan and get an unlimited request access ',
+			'Experience personalized service specifically designed for you.',
 	},
 ];
 export default function MembershipBenefits() {
 	return (
 		<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto '>
-			<div className='  m-auto flex flex-col gap-12 px-6 md:px-14 py-12 xl:px-4'>
+			<div className='  m-auto flex flex-col gap-12 px-6 md:px-14 py-4 md:py-10 xl:px-4'>
 				<div className='flex w-full'>
 					<div className='lg:w-7/12 m1:w-full'>
 						<H1 text='Membership benefits' />
 						<p className='small_text header_perks pt-4'>
-							Perks so good you'll never need to go anywhere
-							else for your design. Seriously.
+							Benefits so compelling, you'll never want to
+							look elsewhere for your design needs. No
+							kidding.
 						</p>
 					</div>
 					<div className='lg:flex hidden w-5/12 h-fit justify-end '>

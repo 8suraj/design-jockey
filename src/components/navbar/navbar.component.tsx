@@ -1,31 +1,13 @@
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import logo from '../../assets/svgs/logo.svg';
 import humburger from '../../assets/svgs/humburger.svg';
 import Button from '../button/button.component';
-import './hero1.css';
 import { useState, useEffect } from 'react';
 
 export default function Navbar() {
-	// const [isSticky, setIsSticky] = useState<boolean>(false);
 	const [clicked, setClicked] = useState<boolean>(false);
-	// useEffect(() => {
-	// 	const handleScroll = () => {
-	// 		const offset = window.scrollY;
-	// 		const threshold = 0;
-	// 		if (offset > threshold) {
-	// 			setIsSticky(true);
-	// 		} else {
-	// 			setIsSticky(false);
-	// 		}
-	// 	};
 
-	// 	window.addEventListener('scroll', handleScroll);
-
-	// 	return () => {
-	// 		window.removeEventListener('scroll', handleScroll);
-	// 	};
-	// }, []);
 	useEffect(() => {
 		setTimeout(() => {
 			window.scrollTo({
@@ -38,7 +20,7 @@ export default function Navbar() {
 	return (
 		<>
 			<div
-				className={` fixed left-[50%] top-[.4rem] centerrr1 px-6 md:px-14 py-6 xl:px-4 w-full  xl:w-[80vw] 2xl:w-[80vw]  z-20 `}>
+				className={` fixed left-[50%] top-[.4rem] centerrr1 px-6 md:px-14 lg:px-0 py-6 xl:px-0 w-full  xl:w-[80vw] 2xl:w-[80vw] lg:w-[80vw] z-20 `}>
 				<nav className='w-full   p-4 lg:p-0 flex items-center rounded-xl     bg-black2 backdrop-blur-xl '>
 					<div className='flex w-full  justify-between items-center '>
 						<Link
@@ -55,7 +37,7 @@ export default function Navbar() {
 						</Link>
 						<ul className=' text-color-primary items-center gap-4 m1:text-[.65rem] text-[.65rem]   md:text-[.75rem] hidden lg:flex'>
 							<Link
-								to='/cart'
+								to='/products'
 								onClick={() => {
 									setClicked(!clicked);
 								}}>
@@ -93,7 +75,6 @@ export default function Navbar() {
 					</div>
 				</nav>
 			</div>
-			<Outlet />
 		</>
 	);
 }
