@@ -1,13 +1,13 @@
 import Button from '../button/button.component.tsx';
 import H1 from '../header/header.component.tsx';
-import Spline from '@splinetool/react-spline';
+// import Spline from '@splinetool/react-spline';
 import { useState } from 'react';
 import { PuffLoader } from 'react-spinners';
 export default function Hero1() {
-	const [isLoaded, setIsLoaded] = useState(true);
-	const handleImageLoaded = () => {
-		setIsLoaded(true);
-	};
+	const [isLoaded] = useState(true);
+	// const handleImageLoaded = () => {
+	// 	setIsLoaded(true);
+	// };
 	return (
 		<>
 			<div className=' hero1 h-[100vh]  w-full  '>
