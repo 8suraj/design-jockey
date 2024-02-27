@@ -33,9 +33,9 @@ export default function Products() {
 					<PuffLoader color='#C4FE01' />
 				</div>
 				{isLoaded ? (
-					<section className=' xl:w-[80vw] 2xl:w-[80vw]  mx-auto px-6 md:px-14 xl:px-0 w-full     flex  justify-center absolute  -translate-x-1/2   left-[50%] top-[25%] m3:top-[35%] lg:top-[50%] lg:-translate-y-1/2'>
-						<div className=' w-full bg-black2 backdrop-blur-xl rounded-xl p-6 h-full gap-12 flex flex-col  items-center || md:gap-4 md:p-6  md:justify-between md:items-start md:min-h-[18rem]	'>
-							<div className='text-center flex flex-col  w-full gap-8 md:hidden '>
+					<section className='centerrr1  xl:w-[80vw] 2xl:w-[80vw] px-6 md:px-14  xl:px-4 w-full   mx-auto     flex  justify-center absolute  -translate-x-1/2   left-[50%] top-[25%] m3:top-[25%] lg:top-[50%] lg:-translate-y-1/2 '>
+						<div className=' w-full bg-black2 backdrop-blur-xl rounded-xl p-6 h-full gap-12 flex flex-col  items-center || md:gap-4 md:p-6   md:justify-between md:items-start md:min-h-[18rem] 	'>
+							<div className='flex justify-between text-[.64rem] font-SFPro w-full  md:hidden'>
 								<H1 text='Design and more' />
 								<p className='small_text md:hidden'>
 									One flat subscription for all your design

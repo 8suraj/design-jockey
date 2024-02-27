@@ -177,9 +177,9 @@ const MembershipLevels = () => {
 	}, []);
 	return (
 		<>
-			<div id='plans' className='py-4 md:py-10 ' />
+			<div id='plans' className=' ' />
 			<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto'>
-				<div className='m-auto flex flex-col gap-12 px-6 md:px-14 pb-12 xl:px-4'>
+				<div className='m-auto flex flex-col gap-12 px-6 md:px-14  xl:px-4  py-[3rem] md:py-10'>
 					<div>
 						<H1 text='Membership Tiers' />
 
@@ -193,7 +193,7 @@ const MembershipLevels = () => {
 						{datas.map((data: MembershipItemsProps) => (
 							<MembershipItem1 {...data} />
 						))}
-						<div className='flex flex-col justify-between lg:items-start lg:p-8 lg:justify-between bg-black3 rounded-2xl items-center p-4 pt-8 gap-4 lg:gap-2 || w-full sm:w-[48%] md:w-[49%] min-h-[18rem]'>
+						<div className='flex flex-col justify-between lg:items-start lg:p-8  lg:justify-between bg-black3 rounded-2xl items-center p-4 pt-8 gap-4 lg:gap-2 || w-full sm:w-[48%] md:w-[49%] min-h-[18rem]'>
 							<div className='flex flex-col justify-center lg:items-start  lg:justify-between bg-black3 rounded-2xl items-center  gap-4 lg:gap-2 || w-full'>
 								<h1 className='text-xl md:text-3xl text-center lg:text-left'>
 									Website Development
@@ -274,7 +274,7 @@ const MembershipLevels = () => {
 						))}
 
 						<div className='m4  w-full bg-black3 rounded-2xl '>
-							<div className='flex  flex-row justify-between items-center      p-4 pt-8   lg:p-12  gap-4 lg:gap-2 h-full  '>
+							<div className='flex  flex-row justify-between items-center      p-4 pt-8   lg:p-8  gap-4 lg:gap-2 h-full  '>
 								<div className='flex flex-col items-start    '>
 									<h1 className='text-xl md:text-3xl    '>
 										Website Development
@@ -326,7 +326,7 @@ const MembershipLevels = () => {
 							</div>
 						</div>
 						<div className='m6'>
-							<div className='flex flex-row  bg-black3 rounded-2xl  h-full w-full p-4 pt-8   lg:py-8  lg:px-12'>
+							<div className='flex flex-row  bg-black3 rounded-2xl  h-full w-full p-4 pt-8   lg:py-8  lg:px-8'>
 								<div className='flex flex-col  gap-4 '>
 									<h1 className='text-xl md:text-3xl m1:text-center lg:text-start'>
 										Book a call

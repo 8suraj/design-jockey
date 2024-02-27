@@ -13,7 +13,11 @@ export default function ProductItem({
 	return (
 		<div className='rounded-xl overflow-hidden  h-[25rem] relative ccx cursor-pointer w-full '>
 			<Link to={`${index}`} className='z-2'>
-				<img src={image} alt='' className='object-cover	' />
+				<img
+					src={image}
+					alt=''
+					className='object-fill	w-full'
+				/>
 			</Link>
 			<div className='absolute z-2 bottom-0 ccvv rounded-xl left-0 right-0 '>
 				<div className='bg-black2 backdrop-blur-xl rounded-xl'>

@@ -5,7 +5,7 @@ export default function Footer() {
 	return (
 		<footer className='  bg-black '>
 			<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto'>
-				<div className='flex flex-col gap-6 md:gap-4  px-6 md:px-14 py-12 xl:px-4'>
+				<div className='flex flex-col gap-6 md:gap-4  px-6 md:px-14 py-10 xl:px-4 '>
 					<h1 className='text-left  w-full text-sm'>
 						sign up to <br className='md:hidden' /> our
 						newsletters
@@ -90,7 +90,7 @@ export default function Footer() {
 					</div>
 
 					<div className='flex flex-col gap-4'>
-						<div className='h-4 w-full bg-grey-dark md:h-2' />
+						<div className='h-1 w-full bg-grey-dark md:h-2' />
 						<div className='w-full flex justify-between font-SFPro items-center md:hidden'>
 							<div>
 								<img src={logo} alt='logo' />

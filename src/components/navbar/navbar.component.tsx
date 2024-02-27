@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import logo from '../../assets/svgs/logo.svg';
+import cross from '../../assets/svgs/cross.svg';
 import humburger from '../../assets/svgs/humburger.svg';
 import Button from '../button/button.component';
 import { useState, useEffect } from 'react';
 
 export default function Navbar() {
 	const [clicked, setClicked] = useState<boolean>(false);
-
+	const [mobileMenu, setMobileMenu] =
+		useState<boolean>(false);
 	useEffect(() => {
 		setTimeout(() => {
 			window.scrollTo({
@@ -19,9 +21,8 @@ export default function Navbar() {
 	}, [clicked]);
 	return (
 		<>
-			<div
-				className={` fixed left-[50%] top-[.4rem] centerrr1 px-6 md:px-14 lg:px-0 py-6 xl:px-0 w-full  xl:w-[80vw] 2xl:w-[80vw] lg:w-[80vw] z-20 `}>
-				<nav className='w-full   p-4 lg:p-0 flex items-center rounded-xl     bg-black2 backdrop-blur-xl '>
+			<div className=' fixed left-[50%] top-[.4rem] centerrr1  xl:w-[80vw] 2xl:w-[80vw]  z-[100] px-6 md:px-14  xl:px-4 w-full  '>
+				<nav className='w-full   p-4 px-6 lg:p-0 flex items-center rounded-xl     bg-black2 backdrop-blur-xl   '>
 					<div className='flex w-full  justify-between items-center '>
 						<Link
 							className='h-full  lg:pl-4'
@@ -64,8 +65,14 @@ export default function Navbar() {
 								cart
 							</Link>
 						</ul>
-						<div className='lg:hidden '>
-							<img src={humburger} alt='logo' />
+						<div
+							className='lg:hidden '
+							onClick={() => setMobileMenu(!mobileMenu)}>
+							{!mobileMenu ? (
+								<img src={humburger} alt='logo' />
+							) : (
+								<img src={cross} alt='logo' />
+							)}
 						</div>
 						<Button
 							text='login'
@@ -74,7 +81,64 @@ export default function Navbar() {
 						/>
 					</div>
 				</nav>
+
+				{mobileMenu ? (
+					<div className='  z-[100]  pt-6  lg:hidden '>
+						<div className='bg-black2 backdrop-blur-xl w-full  rounded-xl '>
+							<ul className=' text-color-primary   flex flex-col '>
+								<Link
+									to='/products'
+									className=' p-4  pt-8 m2:py-6 m2:pt-12 w-full text-center text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
+									onClick={() => {
+										setClicked(!clicked);
+									}}>
+									store
+								</Link>
+								<Link
+									to=''
+									className='p-4 py-5  m2:py-6 w-full text-center text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
+									onClick={() => {
+										setClicked(!clicked);
+									}}>
+									work
+								</Link>
+								<HashLink
+									className='p-4 py-5 m2:py-6 w-full text-center text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
+									smooth
+									to={'/#services'}>
+									services
+								</HashLink>
+								<HashLink
+									className='p-4 py-5 m2:py-6 w-full text-center text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
+									smooth
+									to={'/#plans'}>
+									plans
+								</HashLink>
+								<Link
+									className='p-4 py-5 m2:py-6 w-full text-center text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
+									to='/cart'
+									onClick={() => {
+										setClicked(!clicked);
+									}}>
+									cart
+								</Link>
+								<div className=' pt-5 m2:pt-6 w-full'>
+									<button
+										className='w-full btn_base  rounded-lg capitalize bg-black4  text-white  text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
+										onClick={(e) => console.log(e)}>
+										login
+									</button>
+								</div>
+							</ul>
+						</div>
+					</div>
+				) : (
+					''
+				)}
 			</div>
+			{/* <div className='absolute left-0 right-0 top-0 bottom-0 bg-black2 backdrop-blur z-20 '>
+				asd
+			</div> */}
 		</>
 	);
 }

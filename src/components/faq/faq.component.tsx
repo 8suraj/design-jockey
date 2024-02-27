@@ -77,7 +77,7 @@ const FaqItems = ({ content }: FaqItemsProps) => {
 export default function Faq() {
 	return (
 		<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto '>
-			<div className='  m-auto flex flex-col gap-8  px-6 md:px-14 py-12 xl:px-4 '>
+			<div className='  m-auto flex flex-col gap-8  px-6 md:px-14  xl:px-4 py-4 pb-[6rem] md:py-10 md:pb-20'>
 				<H1 text='FAQs' />
 				<div className='w-full flex flex-col gap-2'>
 					{' '}

@@ -1,3 +1,4 @@
+import { HashLink } from 'react-router-hash-link';
 import m1 from '../../assets/svgs/membership/1.svg';
 import m2 from '../../assets/svgs/membership/2.svg';
 import m3 from '../../assets/svgs/membership/3.svg';
@@ -49,7 +50,7 @@ const data2 = [
 export default function MembershipBenefits() {
 	return (
 		<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto '>
-			<div className='  m-auto flex flex-col gap-12 px-6 md:px-14 py-4 md:py-10 xl:px-4'>
+			<div className='  m-auto flex flex-col gap-12 px-6 md:px-14 py-[3rem] md:py-10  xl:px-4'>
 				<div className='flex w-full'>
 					<div className='lg:w-7/12 m1:w-full'>
 						<H1 text='Membership benefits' />
@@ -59,13 +60,16 @@ export default function MembershipBenefits() {
 							kidding.
 						</p>
 					</div>
-					<div className='lg:flex hidden w-5/12 h-fit justify-end '>
+					<HashLink
+						className='lg:flex hidden w-5/12 h-fit justify-end '
+						smooth
+						to={'/#plans'}>
 						<Button
 							text='See Plans'
-							className='bg-color-secondary btn_base '
+							className='bg-color-secondary btn_base  '
 							onClick={(e) => console.log(e)}
 						/>
-					</div>
+					</HashLink>
 				</div>
 				<div className='flex flex-col gap-8  sm:gap-16 md:gap-12 flex-wrap w-full sm:flex-row justify-center '>
 					<div className='flex flex-col gap-8 flex-wrap w-full sm:flex-row justify-center items-start sm:gap-16 md:gap-2 lg:gap-2 '>
@@ -110,13 +114,16 @@ export default function MembershipBenefits() {
 							</div>
 						))}
 					</div>
-					<div className=' w-full flex justify-center lg:hidden'>
+					<HashLink
+						className=' w-full flex justify-center lg:hidden'
+						smooth
+						to={'/#plans'}>
 						<Button
 							text='See Plans'
-							className='bg-color-secondary btn_base w-full '
+							className='bg-color-secondary btn_base w-[50%] '
 							onClick={(e) => console.log(e)}
 						/>
-					</div>
+					</HashLink>
 				</div>
 			</div>
 		</section>

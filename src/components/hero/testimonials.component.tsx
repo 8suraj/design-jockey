@@ -44,8 +44,8 @@ export default function Hero2() {
 		useState(data[0]);
 
 	return (
-		<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto  '>
-			<div className='flex flex-col gap-2 px-6 md:px-14 py-4 md:py-10 xl:px-4 '>
+		<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto   '>
+			<div className='flex flex-col gap-2 px-6 md:px-14 py-[3rem] md:py-10 xl:px-4 '>
 				<div className='w-full h-full  m-auto bg-color-secondary rounded-lg flex flex-col md:flex-row   md:justify-around   p-4 md:p-10 lg:p-10 '>
 					<div className='m1:text-center md:text-left w-full md:w-[48%] lg:w-[50%] xl:w-[48%] lg:text-left '>
 						<H1 text="Here's what our friends have to say." />
