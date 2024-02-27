@@ -58,15 +58,15 @@ export default function ProductItem({
 	index,
 }: ProductItemProps) {
 	useEffect(() => {
-		const q = document.getElementsByClassName('ccx');
-		if (q?.length > 0) {
-			const p = document.getElementsByClassName('ccvv');
-			for (const i of p) {
-				(i as HTMLElement).style.width = `${
-					(q[0] as HTMLElement).clientWidth
-				}px`;
-			}
-		}
+		// const q = document.getElementsByClassName('ccx');
+		// if (q?.length > 0) {
+		// 	const p = document.getElementsByClassName('ccvv');
+		// 	for (const i of p) {
+		// 		(i as HTMLElement).style.width = `${
+		// 			(q[0] as HTMLElement).clientWidth
+		// 		}px`;
+		// 	}
+		// }
 		// const w = document.getElementsByClassName('ccvv');
 		// // const a = document.getElementsByClassName('cy');
 		// (a[0] as HTMLElement).style.width = `${
@@ -74,11 +74,11 @@ export default function ProductItem({
 		// }px`;
 	}, []);
 	return (
-		<div className='rounded-xl overflow-hidden  h-[25rem] relative ccx cursor-pointer'>
+		<div className='rounded-xl overflow-hidden  h-[25rem] relative ccx cursor-pointer w-full '>
 			<Link to={`${index}`} className='z-2'>
 				<img src={image} alt='' className='object-cover	' />
 			</Link>
-			<div className='absolute z-2 bottom-0 ccvv rounded-xl '>
+			<div className='absolute z-2 bottom-0 ccvv rounded-xl left-0 right-0 '>
 				<div className='bg-black2 backdrop-blur-xl rounded-xl'>
 					<div className='lg:px-8 px-4 '>
 						<div className='text-left    '>

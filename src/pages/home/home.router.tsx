@@ -60,9 +60,6 @@ export default function Home() {
 				<div className=' flex flex-col gap-5 px-6 md:px-14 py-12 xl:px-4'>
 					<div className='flex w-full'>
 						<div className='lg:w-7/12 m1:w-full'>
-							{/* <h1 className='text-color-primary md:text-left text-center  capitalize text-2xl md:text-4xl lg:text-5xl pt-4 pr-28 m1:pr-0'>
-							off the shelf
-						</h1> */}
 							<H1 text='Off-the-rack' />
 						</div>
 						<div className='lg:flex hidden w-5/12 h-fit justify-end '>
