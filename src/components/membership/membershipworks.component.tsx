@@ -1,4 +1,3 @@
-import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import m1 from '../../assets/svgs/membershipworks/m1.svg';
@@ -6,6 +5,7 @@ import m2 from '../../assets/svgs/membershipworks/m2.svg';
 import m3 from '../../assets/svgs/membershipworks/m3.svg';
 import Button from '../button/button.component';
 import H1 from '../header/header.component';
+import { HashLink } from 'react-router-hash-link';
 
 const data = [
 	{
@@ -26,24 +26,10 @@ const data = [
 ];
 
 export default function MembershipWorks() {
-	const settings = {
-		className: 'center',
-		centerMode: true,
-		infinite: true,
-		speed: 2000,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		autoplay: true,
-		// speed: 2000,
-		// autoplaySpeed: 2000,
-		// cssEase: 'linear',
-	};
-
 	return (
 		<>
 			<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto '>
-				<div className='m-auto flex flex-col gap-12  md:px-14 py-4 md:py-10 xl:px-4'>
+				<div className='m-auto flex flex-col gap-12  md:px-14 py-[3rem] md:py-10 xl:px-4'>
 					<div className='flex w-full  '>
 						<div className='lg:w-8/12 m1:w-full '>
 							<H1 text='how membership works' />
@@ -52,15 +38,17 @@ export default function MembershipWorks() {
 								anywhere else for your design. Seriously.
 							</h4>
 						</div>
-						<div className='lg:flex hidden w-5/12 h-fit justify-end'>
+						<HashLink
+							to={'/#plans'}
+							className='lg:flex hidden w-5/12 h-fit justify-end'>
 							<Button
 								text='See Plans'
 								className='bg-color-secondary btn_base'
 								onClick={(e) => console.log(e)}
 							/>
-						</div>
+						</HashLink>
 					</div>
-					<div className='sm:flex flex-col gap-5 flex-wrap w-full sm:flex-row justify-center sm:gap-1 lg:gap-2 	hidden'>
+					<div className='md:flex flex-col gap-5 flex-wrap w-full sm:flex-row justify-center sm:gap-1 lg:gap-2 	hidden'>
 						{data.map((e) => (
 							<div className='flex flex-col  gap-2   w-full sm:w-[49%] md:w-[49%]  lg:w-[32.5%] '>
 								<div className='w-full flex items-center justify-center   '>
@@ -77,33 +65,37 @@ export default function MembershipWorks() {
 							</div>
 						))}
 					</div>
-					<div className='sm:hidden block  w-[100vw] '>
-						<Slider {...settings}>
+					<div className='md:hidden   w-full snap-x snap-mandatory '>
+						<div className='flex flex-row  gap-2 overflow-x-scroll snap-x snap-mandatory cc px-[16%]  '>
 							{data.map((e, index) => (
-								<div
-									key={index}
-									className='flex flex-col gap-2    px-1'>
-									<div className='rounded-full bg-color-primary flex items-center justify-center h-16 m1:h-20  lg:h-[7.5rem] xl:h-[8.5rem] '>
-										<img
-											src={e.imgae}
-											alt=''
-											className='w-full h-full'
-										/>
+								<div className='w-[65vw] flex-shrink-0  '>
+									<div
+										key={index}
+										className='flex flex-col gap-2    lg:px-1 '>
+										<div className='rounded-full bg-color-primary flex items-center justify-center h-16 m1:h-20  sm:h-[7.5rem] xl:h-[8.5rem] '>
+											<img
+												src={e.imgae}
+												alt=''
+												className='w-full h-full'
+											/>
+										</div>
+										<p className='text-center small_text1 m1:px-0 lg:px-12 2xl:px-16 py-2'>
+											{e.content}
+										</p>
 									</div>
-									<p className='text-center small_text1 m1:px-0 lg:px-12 2xl:px-16 py-2'>
-										{e.content}
-									</p>
 								</div>
 							))}
-						</Slider>
+						</div>
 					</div>
-					<div className='w-full flex justify-center lg:hidden'>
+					<HashLink
+						to={'/#plans'}
+						className='w-full flex justify-center lg:hidden '>
 						<Button
-							text='Add on'
-							className='bg-color-secondary btn_base'
+							text='See Plans'
+							className='bg-color-secondary btn_base w-full mx-12 sm:w-[65vw]'
 							onClick={(e) => console.log(e)}
 						/>
-					</div>
+					</HashLink>
 				</div>
 			</section>
 		</>

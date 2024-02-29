@@ -26,6 +26,14 @@
 		url('./assets/font/SFPRODISPLAYREGULAR.OTF')
 			format('opentype');
 }
+@font-face {
+	font-family: 'SF Pro';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Monument Extended'),
+		url('./assets/font/SFPRODISPLAYBOLD.OTF')
+			format('opentype');
+}
 
 :root {
 	@apply font-normal text-xl leading-normal bg-black text-white;

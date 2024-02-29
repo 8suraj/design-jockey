@@ -261,7 +261,11 @@ const MembershipLevels = () => {
 							<Button
 								text='book a call'
 								className='bg-black btn_base w-full'
-								onClick={(e) => console.log(e)}
+								onClick={() =>
+									window.open(
+										'https://calendly.com/info-designjockey/45min'
+									)
+								}
 							/>
 						</div>
 					</div>
@@ -343,7 +347,11 @@ const MembershipLevels = () => {
 									<Button
 										text='Book a call'
 										className='bg-black btn_base vv'
-										onClick={(e) => console.log(e)}
+										onClick={() =>
+											window.open(
+												'https://calendly.com/info-designjockey/45min'
+											)
+										}
 									/>
 								</div>
 							</div>

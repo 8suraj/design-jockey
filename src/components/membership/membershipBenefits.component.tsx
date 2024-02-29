@@ -56,8 +56,9 @@ export default function MembershipBenefits() {
 						<H1 text='Membership benefits' />
 						<p className='small_text header_perks pt-4'>
 							Benefits so compelling, you'll never want to
-							look elsewhere for your design needs. No
-							kidding.
+							look elsewhere{' '}
+							<br className='hidden sm:block md:hidden' />{' '}
+							for your design needs. No kidding.
 						</p>
 					</div>
 					<HashLink
@@ -74,7 +75,7 @@ export default function MembershipBenefits() {
 				<div className='flex flex-col gap-8  sm:gap-16 md:gap-12 flex-wrap w-full sm:flex-row justify-center '>
 					<div className='flex flex-col gap-8 flex-wrap w-full sm:flex-row justify-center items-start sm:gap-16 md:gap-2 lg:gap-2 '>
 						{data1.map((e) => (
-							<div className='flex flex-col justify-center gap-4  md:gap-6    w-full  md:w-[32%]  lg:w-[32.5%]'>
+							<div className='flex flex-col justify-center gap-8  md:gap-6    w-full  md:w-[32%]  lg:w-[32.5%]'>
 								<div className=' w-full    h-fit   '>
 									<img
 										src={e.imgae}
@@ -86,7 +87,7 @@ export default function MembershipBenefits() {
 									<h3 className='text-center text-sm '>
 										{e.header}
 									</h3>
-									<p className='text-center small_text1 m1:px-0  2xl:px-16 '>
+									<p className='text-center small_text1 m1:px-0  sm:px-28 lg:px-0 2xl:px-16 '>
 										{e.content}
 									</p>
 								</div>
@@ -95,7 +96,7 @@ export default function MembershipBenefits() {
 					</div>
 					<div className='flex flex-col gap-8 flex-wrap w-full sm:flex-row justify-center sm:gap-16 md:gap-2 lg:gap-2 items-start 	'>
 						{data2.map((e) => (
-							<div className='flex flex-col justify-center gap-4  md:gap-6    w-full  md:w-[32%]  lg:w-[32.5%] '>
+							<div className='flex flex-col justify-center gap-8  md:gap-6    w-full  md:w-[32%]  lg:w-[32.5%] '>
 								<div className='w-full    h-fit'>
 									<img
 										src={e.imgae}
@@ -107,7 +108,7 @@ export default function MembershipBenefits() {
 									<h3 className='text-center text-sm  '>
 										{e.header}
 									</h3>
-									<p className='text-center small_text1  m1:px-0  2xl:px-16 '>
+									<p className='text-center small_text1  m1:px-0 sm:px-28 lg:px-0  2xl:px-16 '>
 										{e.content}
 									</p>
 								</div>
@@ -120,7 +121,7 @@ export default function MembershipBenefits() {
 						to={'/#plans'}>
 						<Button
 							text='See Plans'
-							className='bg-color-secondary btn_base w-[50%] '
+							className='bg-color-secondary btn_base w-full mx-12 sm:w-[65vw] '
 							onClick={(e) => console.log(e)}
 						/>
 					</HashLink>

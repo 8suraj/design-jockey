@@ -3,11 +3,10 @@ import H1 from '../../components/header/header.component.tsx';
 import Spline from '@splinetool/react-spline';
 import { useState } from 'react';
 import { PuffLoader } from 'react-spinners';
-import w from '../../assets/product/w.png';
-import q from '../../assets/product/q.png';
-import e from '../../assets/product/e.png';
+import a from '../../assets/product/a.png';
 import ProductItem from '../../components/products/products.component.tsx';
-const img = [w, q, e];
+import { HashLink } from 'react-router-hash-link';
+const img = [a, a, a];
 export default function Products() {
 	const [isLoaded, setIsLoaded] = useState(true);
 	const handleImageLoaded = () => {
@@ -34,29 +33,32 @@ export default function Products() {
 				</div>
 				{isLoaded ? (
 					<section className='centerrr1  xl:w-[80vw] 2xl:w-[80vw] px-6 md:px-14  xl:px-4 w-full   mx-auto     flex  justify-center absolute  -translate-x-1/2   left-[50%] top-[25%] m3:top-[25%] lg:top-[50%] lg:-translate-y-1/2 '>
-						<div className=' w-full bg-black2 backdrop-blur-xl rounded-xl p-6 h-full gap-12 flex flex-col  items-center || md:gap-4 md:p-6   md:justify-between md:items-start md:min-h-[18rem] 	'>
-							<div className='flex justify-between text-[.64rem] font-SFPro w-full  md:hidden'>
+						<div className=' w-full bg-black2 backdrop-blur-xl rounded-xl p-6 h-full gap-6 flex flex-col  items-center || md:gap-4 md:p-6   md:justify-between md:items-start md:min-h-[15rem] 	'>
+							<div className='text-center flex flex-col  w-full gap-4 md:hidden  '>
 								<H1 text='Design and more' />
 								<p className='small_text md:hidden'>
 									One flat subscription for all your design
 									needs.
 								</p>
-								<Button
-									text='See Plans'
-									className='bg-color-secondary btn_base  md:hidden w-full  '
-									onClick={(e) => console.log(e)}
-								/>
+								<HashLink smooth to={'/#plans'}>
+									<Button
+										text='See plans'
+										className='bg-color-secondary btn_base  md:hidden w-full mt-4  '
+										onClick={(e) => console.log(e)}
+									/>
+								</HashLink>
 							</div>
 							<div className='hidden || w-full md:flex md:flex-row md:justify-between md:items-start '>
-								<div className='text-center flex flex-col  	w-6/12 	'>
+								<div className='text-center flex flex-col  	w-[55%] 	'>
 									<H1 text='Design and more' />
 								</div>
-
-								<Button
-									text='See Plans'
-									className='btn_base bg-color-secondary  '
-									onClick={(e) => console.log(e)}
-								/>
+								<HashLink smooth to={'/#plans'}>
+									<Button
+										text='See plans'
+										className='btn_base bg-color-secondary  '
+										onClick={(e) => console.log(e)}
+									/>
+								</HashLink>
 							</div>
 							<div className='hidden || text-[.64rem] font-SFPro  w-full md:flex justify-between '>
 								<p className='small_text  font-SFPro '>
@@ -71,7 +73,7 @@ export default function Products() {
 				)}
 			</div>
 			<div className='xl:w-[80vw] 2xl:w-[80vw] mx-auto'>
-				<div className='flex flex-col lg:grid grid-cols-3 gap-4 py-24 items-center px-4'>
+				<div className='flex flex-col lg:grid grid-cols-3 gap-4 py-24 items-center lg:px-4  '>
 					{img?.map((e, i) => (
 						<ProductItem image={e} index={i} />
 					))}

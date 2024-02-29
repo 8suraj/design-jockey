@@ -7,6 +7,10 @@ import {
 	Route,
 } from 'react-router-dom';
 import { PuffLoader } from 'react-spinners';
+const Terms = lazy(() => import('./pages/terms/terms.tsx'));
+const PrivacyPolicy = lazy(
+	() => import('./pages/privacyPolicy/privacyPolicy.tsx')
+);
 
 const NotFound = lazy(
 	() => import('./pages/notFound/notFound.router.tsx')
@@ -40,6 +44,11 @@ const routes = createBrowserRouter(
 					path='products/:id'
 					element={<ProductPage />}
 				/>
+				<Route
+					path='privacy-policy'
+					element={<PrivacyPolicy />}
+				/>
+				<Route path='terms' element={<Terms />} />
 			</Route>
 		</>
 	)

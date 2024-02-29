@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { PuffLoader } from 'react-spinners';
 import { HashLink } from 'react-router-hash-link';
 export default function Hero1() {
-	const [isLoaded, setIsLoaded] = useState(true);
+	const [isLoaded, setIsLoaded] = useState(false);
 	const handleImageLoaded = () => {
 		setIsLoaded(true);
 	};
@@ -40,7 +40,7 @@ export default function Hero1() {
 									info@designjockey.com
 								</span>
 							</div>
-							<div className='text-center flex flex-col  w-full gap-8 md:hidden '>
+							<div className='text-center flex flex-col  w-full gap-4 md:hidden  '>
 								<H1 text='One Subscription, Limitless Designs' />
 								<p className='small_text md:hidden'>
 									Get all your design requirements covered
@@ -48,8 +48,8 @@ export default function Hero1() {
 								</p>
 								<HashLink smooth to={'/#plans'}>
 									<Button
-										text='See Plans'
-										className='bg-color-secondary btn_base  md:hidden w-full  '
+										text='Book a call'
+										className='bg-color-secondary btn_base  md:hidden w-full mt-4  '
 										onClick={(e) => console.log(e)}
 									/>
 								</HashLink>
@@ -60,7 +60,7 @@ export default function Hero1() {
 								</div>
 								<HashLink smooth to={'/#plans'}>
 									<Button
-										text='See Plans'
+										text='Book a call'
 										className='btn_base bg-color-secondary  '
 										onClick={(e) => console.log(e)}
 									/>

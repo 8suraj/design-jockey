@@ -1,6 +1,7 @@
 import logo from '../../assets/svgs/logo.svg';
 import enter from '../../assets/svgs/enter.svg';
 import Button from '../button/button.component';
+import { Link } from 'react-router-dom';
 export default function Footer() {
 	return (
 		<footer className='  bg-black '>
@@ -106,8 +107,10 @@ export default function Footer() {
 							<div className='md:w-auto w-full flex  justify-between gap-3  '>
 								<span>Cookie Policy </span>
 								<span>Disclaimer</span>
-								<span>Privacy Policy</span>
-								<span>Terms of Service</span>
+								<Link to='privacy-policy'>
+									Privacy Policy
+								</Link>
+								<Link to='terms'>Terms of Service</Link>
 							</div>
 						</div>
 					</div>

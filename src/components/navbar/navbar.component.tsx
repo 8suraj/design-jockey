@@ -22,7 +22,7 @@ export default function Navbar() {
 	return (
 		<>
 			<div className=' fixed left-[50%] top-[.4rem] centerrr1  xl:w-[80vw] 2xl:w-[80vw]  z-[100] px-6 md:px-14  xl:px-4 w-full  '>
-				<nav className='w-full   p-4 px-6 lg:p-0 flex items-center rounded-xl     bg-black2 backdrop-blur-xl   '>
+				<nav className='w-full mt-8   p-4 px-6 lg:p-0 flex items-center rounded-xl     bg-black2 backdrop-blur-xl    '>
 					<div className='flex w-full  justify-between items-center '>
 						<Link
 							className='h-full  lg:pl-4'
@@ -91,6 +91,7 @@ export default function Navbar() {
 									className=' p-4  pt-8 m2:py-6 m2:pt-12 w-full text-center text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
 									onClick={() => {
 										setClicked(!clicked);
+										setMobileMenu(false);
 									}}>
 									store
 								</Link>
@@ -99,19 +100,22 @@ export default function Navbar() {
 									className='p-4 py-5  m2:py-6 w-full text-center text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
 									onClick={() => {
 										setClicked(!clicked);
+										setMobileMenu(false);
 									}}>
 									work
 								</Link>
 								<HashLink
 									className='p-4 py-5 m2:py-6 w-full text-center text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
 									smooth
-									to={'/#services'}>
+									to={'/#services'}
+									onClick={() => setMobileMenu(false)}>
 									services
 								</HashLink>
 								<HashLink
 									className='p-4 py-5 m2:py-6 w-full text-center text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
 									smooth
-									to={'/#plans'}>
+									to={'/#plans'}
+									onClick={() => setMobileMenu(false)}>
 									plans
 								</HashLink>
 								<Link
@@ -119,13 +123,17 @@ export default function Navbar() {
 									to='/cart'
 									onClick={() => {
 										setClicked(!clicked);
+										setMobileMenu(false);
 									}}>
 									cart
 								</Link>
-								<div className=' pt-5 m2:pt-6 w-full'>
+								<div className=' pt-5 m2:pt-6 w-full p-4'>
 									<button
-										className='w-full btn_base  rounded-lg capitalize bg-black4  text-white  text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
-										onClick={(e) => console.log(e)}>
+										className='w-full btn_base  rounded-lg capitalize bg-black4  text-white  '
+										onClick={(e) => {
+											console.log(e);
+											setMobileMenu(false);
+										}}>
 										login
 									</button>
 								</div>

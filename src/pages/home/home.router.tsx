@@ -11,17 +11,17 @@ import Faq from '../../components/faq/faq.component';
 import Hero2 from '../../components/hero/testimonials.component';
 import MembershipBenefits from '../../components/membership/membershipBenefits.component';
 import MembershipLevels from '../../components/membership/membershipLevels.component';
-// import Bis from '../../components/b/b';
-// import MembershipWorks from '../../components/membership/membershipworks.component';
+
+import MembershipWorks from '../../components/membership/membershipworks.component';
 import ww from '../../assets/ww.gif';
-import Button from '../../components/button/button.component';
-import w from '../../assets/product/w.png';
-import q from '../../assets/product/q.png';
-import e from '../../assets/product/e.png';
-import ProductItem from '../../components/products/products.component';
-import H1 from '../../components/header/header.component';
-import { Link } from 'react-router-dom';
-const img = [w, q, e];
+// import Button from '../../components/button/button.component';
+
+// import a from '../../assets/product/a.png';
+// import ProductItem from '../../components/products/products.component';
+// import H1 from '../../components/header/header.component';
+// import { Link } from 'react-router-dom';
+import CreativeServices from '../../components/creativeServices/creativeServices';
+// const img = [a, a, a, a, a];
 export default function Home() {
 	return (
 		<>
@@ -52,8 +52,9 @@ export default function Home() {
 			<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto xl:px-4  '>
 				<img src={ww} className='w-full ' />
 			</section>
-			<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto '>
-				<div className=' flex flex-col gap-12 px-6 md:px-14  xl:px-4  py-[3rem] pt-[6rem] md:pt-20 md:pb-10 '>
+			<MembershipWorks />
+			{/* <section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto  '>
+				<div className=' flex flex-col gap-12  md:px-14  xl:px-4  py-[3rem] pt-[6rem] md:pt-20 md:pb-10 '>
 					<div className='flex w-full '>
 						<div className='lg:w-7/12 m1:w-full '>
 							<H1 text='Off-the-rack' />
@@ -68,26 +69,35 @@ export default function Home() {
 							/>
 						</Link>
 					</div>
+				</div>
+			</section> */}
 
-					<div className='flex flex-col lg:grid grid-cols-3 gap-4  items-center  '>
+			{/* <div className=' flex-col lg:grid grid-cols-3 gap-4  items-center hidden '>
 						{img?.map((e, i) => (
 							<ProductItem image={e} index={i} />
 						))}
-					</div>
-					<Link
-						className='  flex justify-center lg:hidden'
-						to='/products'>
-						<Button
-							text='show all'
-							className='bg-color-secondary btn_base w-[50%] '
-							onClick={(e) => console.log(e)}
-						/>
-					</Link>
+					</div> */}
+			{/* <div className='w-full max-w-xl lg:max-w-full ml-[10vw] block  lg:w-[89.5vw]  '>
+				<div className='flex flex-row  gap-4 overflow-x-scroll snap-x snap-mandatory cc px-6 lg:px-0'>
+					{img?.map((e, i) => (
+						<ProductItem image={e} index={i} />
+					))}
 				</div>
-			</section>
+			</div>
+			<Link
+				className='  flex justify-center lg:hidden'
+				to='/products'>
+				<Button
+					text='show all'
+					className='bg-color-secondary btn_base w-[50%] '
+					onClick={(e) => console.log(e)}
+				/>
+			</Link> */}
+			{/* </div> */}
+
 			<MembershipBenefits />
 			<Hero2 />
-			{/* <Bis /> */}
+			<CreativeServices />
 			<MembershipLevels />
 			<Faq />
 		</>
