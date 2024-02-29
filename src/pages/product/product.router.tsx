@@ -3,6 +3,7 @@ import H1 from '../../components/header/header.component';
 import tick from './tick.svg';
 import Button from '../../components/button/button.component';
 import im1 from './a.png';
+import { useEffect } from 'react';
 const d = [
 	'Brand Logo',
 	'Typography',
@@ -15,6 +16,15 @@ const d = [
 	'Update every 48 hrs',
 ];
 export default function ProductPage() {
+	useEffect(() => {
+		setTimeout(() => {
+			window.scrollTo({
+				top: 0,
+				left: 100,
+				behavior: 'smooth',
+			});
+		}, 200);
+	}, []);
 	return (
 		<section className='py-4 md:py-10 '>
 			<div className=' hero1 h-[100vh]  w-full  '>
