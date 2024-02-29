@@ -77,7 +77,7 @@ export default function Navbar() {
 						<Button
 							text='login'
 							className='btn_base  bg-black4  hidden lg:block '
-							onClick={(e) => console.log(e)}
+							onClick={() => {}}
 						/>
 					</div>
 				</nav>

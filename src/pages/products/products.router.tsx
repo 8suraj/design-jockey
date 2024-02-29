@@ -44,7 +44,7 @@ export default function Products() {
 									<Button
 										text='See plans'
 										className='bg-color-secondary btn_base  md:hidden w-full mt-4  '
-										onClick={(e) => console.log(e)}
+										onClick={() => {}}
 									/>
 								</HashLink>
 							</div>
@@ -56,7 +56,7 @@ export default function Products() {
 									<Button
 										text='See plans'
 										className='btn_base bg-color-secondary  '
-										onClick={(e) => console.log(e)}
+										onClick={() => {}}
 									/>
 								</HashLink>
 							</div>

@@ -99,7 +99,7 @@ const MembershipItem1 = ({
 				<Button
 					text={buyType}
 					className='bg-color-secondary btn_base w-full '
-					onClick={(e) => console.log(e)}
+					onClick={() => {}}
 				/>
 			) : (
 				''
@@ -147,7 +147,7 @@ const MembershipItem = ({
 				<Button
 					text={buyType}
 					className='bg-color-secondary btn_base   min-w-full max-w-full   pxd'
-					onClick={(e) => console.log(e)}
+					onClick={() => {}}
 				/>
 			) : (
 				''
@@ -218,7 +218,7 @@ const MembershipLevels = () => {
 							<Button
 								text='Add on'
 								className='bg-color-secondary btn_base w-full'
-								onClick={(e) => console.log(e)}
+								onClick={() => {}}
 							/>
 						</div>
 						<div className='text-left flex flex-col justify-center   lg:justify-around bg-black3 rounded-2xl items-center lg:items-start p-4 py-8  gap-4 lg:gap-2 lg:p-8 || w-full sm:w-[48%] md:w-[49%] h-fit lg:min-h-[20rem] cg'>
@@ -302,7 +302,7 @@ const MembershipLevels = () => {
 								<Button
 									text='Add on'
 									className='bg-color-secondary btn_base  vv'
-									onClick={(e) => console.log(e)}
+									onClick={() => {}}
 								/>
 							</div>
 						</div>

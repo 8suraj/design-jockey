@@ -65,7 +65,7 @@ export default function Home() {
 							<Button
 								text='show all'
 								className='bg-color-secondary btn_base '
-								onClick={(e) => console.log(e)}
+								onClick={() => {}}
 							/>
 						</Link>
 					</div>
@@ -87,7 +87,7 @@ export default function Home() {
 						<Button
 							text='show all'
 							className='bg-color-secondary btn_base w-full mx-12 sm:w-[65vw] '
-							onClick={(e) => console.log(e)}
+							onClick={() => {}}
 						/>
 					</Link>
 				</div>

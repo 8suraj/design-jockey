@@ -50,7 +50,7 @@ export default function Hero1() {
 									<Button
 										text='Book a call'
 										className='bg-color-secondary btn_base  md:hidden w-full mt-4  '
-										onClick={(e) => console.log(e)}
+										onClick={() => {}}
 									/>
 								</HashLink>
 							</div>
@@ -62,7 +62,7 @@ export default function Hero1() {
 									<Button
 										text='Book a call'
 										className='btn_base bg-color-secondary  '
-										onClick={(e) => console.log(e)}
+										onClick={() => {}}
 									/>
 								</HashLink>
 							</div>

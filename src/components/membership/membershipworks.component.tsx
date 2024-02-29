@@ -44,7 +44,7 @@ export default function MembershipWorks() {
 							<Button
 								text='See Plans'
 								className='bg-color-secondary btn_base'
-								onClick={(e) => console.log(e)}
+								onClick={() => {}}
 							/>
 						</HashLink>
 					</div>
@@ -93,7 +93,7 @@ export default function MembershipWorks() {
 						<Button
 							text='See Plans'
 							className='bg-color-secondary btn_base w-full mx-12 sm:w-[65vw]'
-							onClick={(e) => console.log(e)}
+							onClick={() => {}}
 						/>
 					</HashLink>
 				</div>

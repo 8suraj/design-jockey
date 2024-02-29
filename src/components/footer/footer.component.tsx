@@ -56,7 +56,7 @@ export default function Footer() {
 									<Button
 										text='Get started'
 										className='bg-black-light btn_base w-full '
-										onClick={(e) => console.log(e)}
+										onClick={() => {}}
 									/>
 								</div>
 							</div>

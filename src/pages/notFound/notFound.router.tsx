@@ -10,7 +10,7 @@ export default function NotFound() {
 					<Button
 						text='Back to homepage'
 						className='bg-color-secondary btn_base w-full'
-						onClick={(e) => console.log(e)}
+						onClick={() => {}}
 					/>
 				</Link>
 			</div>

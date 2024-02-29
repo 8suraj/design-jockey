@@ -46,7 +46,7 @@ export default function Cart() {
 											<Button
 												text='apply'
 												className='bg-black rounded-lg w-full h-14 capitalize m1:text-[.75rem] text-[.75rem] sm:text-[.8rem]  md:text-[.78rem] lg:text-[.78rem] xl:text-[.93rem] '
-												onClick={(e) => console.log(e)}
+												onClick={() => {}}
 											/>
 										</div>
 									</div>
@@ -54,7 +54,7 @@ export default function Cart() {
 										<Button
 											text='buy'
 											className='bg-color-secondary rounded-lg  m1:text-[.75rem] text-[.75rem] sm:text-[.8rem]  md:text-[.78rem] lg:text-[.78rem] xl:text-[.93rem] text-center   py-6 px-6 w-full '
-											onClick={(e) => console.log(e)}
+											onClick={() => {}}
 										/>
 									</div>
 								</div>

@@ -36,7 +36,7 @@ export default function ProductItem({
 						<Button
 							text='Buy now'
 							className='bg-color-secondary btn_base   w-full  '
-							onClick={(e) => console.log(e)}
+							onClick={() => {}}
 						/>
 					</div>
 				</div>
