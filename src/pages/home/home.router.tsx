@@ -14,14 +14,14 @@ import MembershipLevels from '../../components/membership/membershipLevels.compo
 
 import MembershipWorks from '../../components/membership/membershipworks.component';
 import ww from '../../assets/ww.gif';
-// import Button from '../../components/button/button.component';
+import Button from '../../components/button/button.component';
 
-// import a from '../../assets/product/a.png';
-// import ProductItem from '../../components/products/products.component';
-// import H1 from '../../components/header/header.component';
-// import { Link } from 'react-router-dom';
+import a from '../../assets/product/a.png';
+import ProductItem from '../../components/products/products.component';
+import H1 from '../../components/header/header.component';
+import { Link } from 'react-router-dom';
 import CreativeServices from '../../components/creativeServices/creativeServices';
-// const img = [a, a, a, a, a];
+const img = [a, a, a];
 export default function Home() {
 	return (
 		<>
@@ -53,8 +53,8 @@ export default function Home() {
 				<img src={ww} className='w-full ' />
 			</section>
 			<MembershipWorks />
-			{/* <section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto  '>
-				<div className=' flex flex-col gap-12  md:px-14  xl:px-4  py-[3rem] pt-[6rem] md:pt-20 md:pb-10 '>
+			<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto  '>
+				<div className=' flex flex-col gap-12  md:px-14  xl:px-4  py-[3rem] md:py-10 md:pb-10 '>
 					<div className='flex w-full '>
 						<div className='lg:w-7/12 m1:w-full '>
 							<H1 text='Off-the-rack' />
@@ -69,30 +69,30 @@ export default function Home() {
 							/>
 						</Link>
 					</div>
-				</div>
-			</section> */}
-
-			{/* <div className=' flex-col lg:grid grid-cols-3 gap-4  items-center hidden '>
+					<div className=' flex-col lg:grid grid-cols-3 gap-4  items-center hidden '>
 						{img?.map((e, i) => (
 							<ProductItem image={e} index={i} />
 						))}
-					</div> */}
-			{/* <div className='w-full max-w-xl lg:max-w-full ml-[10vw] block  lg:w-[89.5vw]  '>
-				<div className='flex flex-row  gap-4 overflow-x-scroll snap-x snap-mandatory cc px-6 lg:px-0'>
-					{img?.map((e, i) => (
-						<ProductItem image={e} index={i} />
-					))}
+					</div>
+					<div className='w-full max-w-xl lg:hidden  block  '>
+						<div className='flex flex-row  gap-4 overflow-x-scroll snap-x snap-mandatory cc px-[13%] lg:px-0'>
+							{img?.map((e, i) => (
+								<ProductItem image={e} index={i} />
+							))}
+						</div>
+					</div>
+					<Link
+						className='  flex justify-center lg:hidden'
+						to='/products'>
+						<Button
+							text='show all'
+							className='bg-color-secondary btn_base w-full mx-12 sm:w-[65vw] '
+							onClick={(e) => console.log(e)}
+						/>
+					</Link>
 				</div>
-			</div>
-			<Link
-				className='  flex justify-center lg:hidden'
-				to='/products'>
-				<Button
-					text='show all'
-					className='bg-color-secondary btn_base w-[50%] '
-					onClick={(e) => console.log(e)}
-				/>
-			</Link> */}
+			</section>
+
 			{/* </div> */}
 
 			<MembershipBenefits />
