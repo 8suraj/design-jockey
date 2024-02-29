@@ -62,8 +62,8 @@ export default function MembershipBenefits() {
 						</p>
 					</div>
 					<HashLink
-						className='lg:flex hidden w-5/12 h-fit justify-end '
 						smooth
+						className='lg:flex hidden w-5/12 h-fit justify-end '
 						to={'/#plans'}>
 						<Button
 							text='See Plans'
@@ -116,8 +116,8 @@ export default function MembershipBenefits() {
 						))}
 					</div>
 					<HashLink
-						className=' w-full flex justify-center lg:hidden'
 						smooth
+						className=' w-full flex justify-center lg:hidden'
 						to={'/#plans'}>
 						<Button
 							text='See Plans'

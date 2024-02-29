@@ -39,6 +39,7 @@ export default function MembershipWorks() {
 							</h4>
 						</div>
 						<HashLink
+							smooth
 							to={'/#plans'}
 							className='lg:flex hidden w-5/12 h-fit justify-end'>
 							<Button
@@ -88,6 +89,7 @@ export default function MembershipWorks() {
 						</div>
 					</div>
 					<HashLink
+						smooth
 						to={'/#plans'}
 						className='w-full flex justify-center lg:hidden '>
 						<Button

@@ -1,6 +1,3 @@
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import 'slider-moon/dist/style.css';
 import Button from '../button/button.component';
 import H1 from '../header/header.component';
 import './creativeServices.css';
@@ -46,6 +43,7 @@ export default function CreativeServices() {
 							</p>
 						</div>
 						<HashLink
+							smooth
 							to={'/#plans'}
 							className='lg:flex hidden w-5/12 h-fit justify-end '>
 							<Button

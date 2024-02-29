@@ -50,7 +50,11 @@ export default function Hero1() {
 									<Button
 										text='Book a call'
 										className='bg-color-secondary btn_base  md:hidden w-full mt-4  '
-										onClick={() => {}}
+										onClick={() =>
+											window.open(
+												'https://calendly.com/info-designjockey/45min'
+											)
+										}
 									/>
 								</HashLink>
 							</div>
@@ -62,7 +66,11 @@ export default function Hero1() {
 									<Button
 										text='Book a call'
 										className='btn_base bg-color-secondary  '
-										onClick={() => {}}
+										onClick={() =>
+											window.open(
+												'https://calendly.com/info-designjockey/45min'
+											)
+										}
 									/>
 								</HashLink>
 							</div>

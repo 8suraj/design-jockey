@@ -105,15 +105,15 @@ export default function Navbar() {
 									work
 								</Link>
 								<HashLink
-									className='p-4 py-5 m2:py-6 w-full text-center text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
 									smooth
+									className='p-4 py-5 m2:py-6 w-full text-center text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
 									to={'/#services'}
 									onClick={() => setMobileMenu(false)}>
 									services
 								</HashLink>
 								<HashLink
-									className='p-4 py-5 m2:py-6 w-full text-center text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
 									smooth
+									className='p-4 py-5 m2:py-6 w-full text-center text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
 									to={'/#plans'}
 									onClick={() => setMobileMenu(false)}>
 									plans
