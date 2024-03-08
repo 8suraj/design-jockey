@@ -22,7 +22,7 @@ interface FaqItemsProps {
 const FaqItems = ({ content }: FaqItemsProps) => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 	return (
-		<div className='bg-[#121212] rounded-2xl'>
+		<div className='bg-[#121212] rounded-2xl cursor-pointer'>
 			<div
 				className='flex justify-between bg-black3 rounded-2xl items-center m2:px-8 py-5 m1:px-4
 			  gap-2 m1:text-[.7rem] m2:text-[.8rem]  m3:text-[.85rem] md:text-[.9rem] '
@@ -60,10 +60,10 @@ const FaqItems = ({ content }: FaqItemsProps) => {
 			</div>
 			<Transition
 				show={isOpen}
-				enter='transition-opacity ease-in-out duration-300'
+				enter='transition-opacity ease-in-out duration-200'
 				enterFrom='opacity-0'
 				enterTo='opacity-100'
-				leave='transition-opacity ease-in-out duration-300'
+				leave='transition-opacity ease-in-out duration-200'
 				leaveFrom='opacity-100'
 				leaveTo='opacity-0'>
 				<div className='m2:px-8 py-5 m1:px-4 m1:text-[.7rem] m2:text-[.8rem]  m3:text-[.85rem] md:text-[.9rem] font-SFPro'>

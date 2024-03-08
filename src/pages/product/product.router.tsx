@@ -1,9 +1,10 @@
-import Spline from '@splinetool/react-spline';
 import H1 from '../../components/header/header.component';
 import tick from './tick.svg';
 import Button from '../../components/button/button.component';
 import im1 from './a.png';
-import { useEffect } from 'react';
+import branding from '../../assets/product/branding.png';
+import { useEffect, useState } from 'react';
+// import { useParams } from 'react-router-dom';
 const d = [
 	'Brand Logo',
 	'Typography',
@@ -16,6 +17,11 @@ const d = [
 	'Update every 48 hrs',
 ];
 export default function ProductPage() {
+	// const { id } = useParams();
+	const [isLoaded, setIsLoaded] = useState(true);
+	const handleImageLoaded = () => {
+		setIsLoaded(true);
+	};
 	useEffect(() => {
 		setTimeout(() => {
 			window.scrollTo({
@@ -29,16 +35,17 @@ export default function ProductPage() {
 		<section className='py-4 md:py-10 '>
 			<div className=' hero1 h-[100vh]  w-full  '>
 				<div className='absolute left-0 top-0 bottom-0 right-0   '>
-					<Spline
-						scene='https://prod.spline.design/vEByxlHa0a4Jvxsi/scene.splinecode'
-						// onLoad={handleImageLoaded}
-						// className={`${
-						// 	isLoaded ? 'OP1' : 'hidden'
-						// } absolute left-0 top-0  bottom-0 right-0`}
+					<img
+						src={branding}
+						alt=''
+						onLoad={handleImageLoaded}
+						className={`${
+							isLoaded ? 'OP1' : 'hidden'
+						} w-full h-full object-cover`}
 					/>
 				</div>
-				<div className='w-full lg:w-[80vw] xl:w-[80vw] 2xl:w-[80vw] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[100vh] '>
-					<div className=' w-full lg:w-fit  absolute   px-6 lg:p-8 lg:pr-5    -translate-x-1/2 lg:-translate-x-[100%]  -translate-y-1/2 top-[60%] left-[50%]  lg:left-[100%]   m2:top-[55%] m3:top-[50%] lg:top-[40%]  lg:-translate-y-1/4  '>
+				<div className='w-full lg:w-[80vw] xl:w-[80vw] 2xl:w-[80vw] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[100vh]  '>
+					<div className=' mt-5 w-full lg:w-fit  absolute   px-6 lg:p-8 lg:pr-5    -translate-x-1/2 lg:-translate-x-[100%]  -translate-y-1/2 top-[60%] left-[50%]  lg:left-[100%]   m2:top-[55%] m3:top-[50%] lg:top-[40%]  lg:-translate-y-1/4  '>
 						<div className='   bg-black2 backdrop-blur-xl rounded-xl overflow-hidden '>
 							<div className='flex flex-col gap-5 p-6'>
 								<H1 text='Identity' />

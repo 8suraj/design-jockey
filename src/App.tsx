@@ -19,8 +19,8 @@ const ProductPage = lazy(
 	() => import('./pages/product/product.router.tsx')
 );
 
-const Products = lazy(
-	() => import('./pages/products/products.router.tsx')
+const Store = lazy(
+	() => import('./pages/store/store.router.tsx')
 );
 const Home = lazy(
 	() => import('./pages/home/home.router.tsx')
@@ -35,15 +35,12 @@ const MainLayout = lazy(
 const routes = createBrowserRouter(
 	createRoutesFromElements(
 		<>
+			<Route path='/' element={<Home />} />
 			<Route path='/' element={<MainLayout />}>
-				<Route path='/' element={<Home />} />
 				<Route path='/cart' element={<Cart />} />
 				<Route path='*' element={<NotFound />} />
-				<Route path='products' element={<Products />} />
-				<Route
-					path='products/:id'
-					element={<ProductPage />}
-				/>
+				<Route path='store' element={<Store />} />
+				<Route path='store/:id' element={<ProductPage />} />
 				<Route
 					path='privacy-policy'
 					element={<PrivacyPolicy />}
