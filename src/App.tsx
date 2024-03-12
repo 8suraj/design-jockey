@@ -58,7 +58,7 @@ function App() {
 		<>
 			<Suspense
 				fallback={
-					<div className='w-[100vw] h-[100vh] flex items-center justify-center '>
+					<div className='w-[100vw] h-[100vh] flex items-center  justify-center '>
 						<PuffLoader color='#C4FE01' />
 					</div>
 				}>
