@@ -31,7 +31,9 @@ const Cart = lazy(
 const MainLayout = lazy(
 	() => import('./pages/layout/layout.router.tsx')
 );
-
+const Work = lazy(
+	() => import('./pages/work/work.router.tsx')
+);
 const routes = createBrowserRouter(
 	createRoutesFromElements(
 		<>
@@ -46,6 +48,7 @@ const routes = createBrowserRouter(
 					element={<PrivacyPolicy />}
 				/>
 				<Route path='terms' element={<Terms />} />
+				<Route path='work' element={<Work />} />
 			</Route>
 		</>
 	)

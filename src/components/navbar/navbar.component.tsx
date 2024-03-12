@@ -38,14 +38,14 @@ export default function Navbar() {
 						</Link>
 						<ul className=' text-color-primary items-center gap-4 m1:text-[.65rem] text-[.65rem]   md:text-[.75rem] hidden lg:flex'>
 							<Link
-								to='/products'
+								to='/store'
 								onClick={() => {
 									setClicked(!clicked);
 								}}>
 								store
 							</Link>
 							<Link
-								to=''
+								to='/work'
 								onClick={() => {
 									setClicked(!clicked);
 								}}>
@@ -87,7 +87,7 @@ export default function Navbar() {
 						<div className='bg-black2 backdrop-blur-xl w-full  rounded-xl '>
 							<ul className=' text-color-primary   flex flex-col '>
 								<Link
-									to='/products'
+									to='/store'
 									className=' p-4  pt-8 m2:py-6 m2:pt-12 w-full text-center text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
 									onClick={() => {
 										setClicked(!clicked);
@@ -96,7 +96,7 @@ export default function Navbar() {
 									store
 								</Link>
 								<Link
-									to=''
+									to='/work'
 									className='p-4 py-5  m2:py-6 w-full text-center text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
 									onClick={() => {
 										setClicked(!clicked);

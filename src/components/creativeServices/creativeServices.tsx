@@ -54,9 +54,9 @@ export default function CreativeServices() {
 						</HashLink>
 					</div>
 
-					<div className='w-full m-auto flex flex-col justify-center  gap-2   sm:flex-row sm:flex-wrap px-6 md:px-14 pt-12 xl:px-4'>
+					<div className='w-full m-auto flex flex-col justify-center  gap-2   sm:flex-row sm:flex-wrap px-6 md:px-14 pt-12 xl:px-4 creativess'>
 						{data.map((e) => (
-							<div className='bg-black3 rounded-lg m1:text-[.75rem] text-[.75rem] sm:text-[.8rem]  md:text-[.93rem] lg:text-[.9rem] text-wrap	 w-full  sm:w-[30%] md:w-[25%] lg:w-[24%] xl:w-[19%]  1xl:w-[19.2%]  sm:h-24 2xl:h-36 md:text-left sm:p-6 md:py-6 2xl:py-6 sm:text-left text-center py-6 capitalize '>
+							<div className='creativesbox1 bg-black3 rounded-lg m1:text-[.75rem] text-[.75rem] sm:text-[.8rem]  md:text-[.93rem] lg:text-[.9rem] text-wrap	 w-full  sm:w-[30%] md:w-[25%] lg:w-[24%] xl:w-[19%]  1xl:w-[19.2%]  sm:h-24 2xl:h-36 md:text-left sm:p-6 md:py-6 2xl:py-6 sm:text-left text-center py-6 capitalize hover:shadow-lg	hover:shadow-color-primary	'>
 								<span className='text-wrap	'>{e}</span>
 							</div>
 						))}

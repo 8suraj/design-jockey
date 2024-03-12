@@ -4,7 +4,7 @@ import social from '../../assets/product/social.png';
 import web from '../../assets/product/web.png';
 import branding from '../../assets/product/y.png';
 import store from '../../assets/product/store.png';
-import ProductItem from '../../components/products/products.component.tsx';
+import ProductItem from '../../components/productItem/productItem.component.tsx';
 
 const data = [
 	{
