@@ -219,19 +219,22 @@ export default function Work() {
 	return (
 		<>
 			<div className='relative '>
-				<section className='py-4 md:pt-32 pb-10 mt-8  '>
+				<section className='py-4 pt-32 pb-10 mt-8  px-2 md:px-14 lg:px-0 '>
 					<section className=' cursor-zoom-in'>
 						<div
-							className='gallery grid sm:grid-cols-3 lg:grid-cols-5 grid-flow-row-dense	grid-rows-1	gap-4	'
+							className='gallery grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 grid-flow-row-dense	grid-rows-1	gap-4	'
 							onClick={(e) => console.log(e)}>
 							<div className='q1 gallery__items'></div>
 							<div className='q2 gallery__items'></div>
-							<div className='q3 gallery__items'></div>
+							{!window.matchMedia('(max-width: 630px)')
+								.matches && (
+								<div className='q3 gallery__items'></div>
+							)}
 							{!window.matchMedia('(max-width: 1023px)')
 								.matches && (
 								<>
-									<div className='q4 gallery__items sm:hidden lg:flex'></div>
-									<div className='q5 gallery__items sm:hidden lg:flex'></div>
+									<div className='q4 gallery__items '></div>
+									<div className='q5 gallery__items '></div>
 								</>
 							)}
 						</div>
