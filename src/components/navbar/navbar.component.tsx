@@ -5,6 +5,7 @@ import cross from '../../assets/svgs/cross.svg';
 import humburger from '../../assets/svgs/humburger.svg';
 import Button from '../button/button.component';
 import { useState, useEffect } from 'react';
+import './nv.css';
 
 export default function Navbar() {
 	const [clicked, setClicked] = useState<boolean>(false);
@@ -19,9 +20,43 @@ export default function Navbar() {
 			});
 		}, 200);
 	}, [clicked]);
+	const [lastScrollPosition, setLastScrollPosition] =
+		useState(0);
+	const [hideNavbar, setHideNavbar] = useState(false);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const currentScrollPosition = window.pageYOffset;
+
+			if (
+				currentScrollPosition > lastScrollPosition &&
+				!hideNavbar
+			) {
+				// If the scroll direction is down and the user has scrolled past the navbar, hide the navbar
+				setHideNavbar(true);
+			} else if (
+				currentScrollPosition < lastScrollPosition ||
+				currentScrollPosition === 0
+			) {
+				// If the scroll direction is up or the user is at the top of the page, show the navbar
+				setHideNavbar(false);
+			}
+			// Set the last scroll position to the current scroll position
+			setLastScrollPosition(currentScrollPosition);
+		};
+
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, [lastScrollPosition, hideNavbar]);
 	return (
 		<>
-			<div className=' fixed left-[50%] top-[.4rem] centerrr1  xl:w-[80vw] 2xl:w-[80vw]  z-[100] px-6 md:px-14  xl:px-4 w-full  '>
+			<div
+				className={`${
+					hideNavbar ? 'hide' : 'n'
+				} fixed left-[50%] top-[.4rem] centerrr1  xl:w-[80vw] 2xl:w-[80vw]  z-[100] px-6 md:px-14  xl:px-4 w-full  `}>
 				<nav className='w-full mt-8   p-4 px-6 lg:p-0 flex items-center rounded-xl     bg-black2 backdrop-blur-xl    '>
 					<div className='flex w-full  justify-between items-center '>
 						<Link

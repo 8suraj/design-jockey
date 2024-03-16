@@ -55,3 +55,10 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 /* base-text : 20px 1.3rem */
+.n {
+	transition: top 0.3s ease-in-out;
+}
+.hide {
+	top: -30vh;
+	transition: top 0.3s ease-in-out;
+}

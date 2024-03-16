@@ -29,6 +29,9 @@ import humburger from '../../assets/svgs/humburger.svg';
 import { useState, useEffect } from 'react';
 import Spline from '@splinetool/react-spline';
 import { PuffLoader } from 'react-spinners';
+import Footer from '../../components/footer/footer.component';
+import vv from '../../assets/video/data-transfer_2.mp4';
+import { isMobile } from 'react-device-detect';
 const data = [
 	{
 		header: 'Branding guidlines',
@@ -58,22 +61,73 @@ export default function Home() {
 			});
 		}, 1);
 	}, [clicked]);
+
 	const [isLoaded, setIsLoaded] = useState(false);
 	const handleImageLoaded = () => {
 		setIsLoaded(true);
 	};
+	const [lastScrollPosition, setLastScrollPosition] =
+		useState(0);
+	const [hideNavbar, setHideNavbar] = useState(false);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const currentScrollPosition = window.pageYOffset;
+
+			if (
+				currentScrollPosition > lastScrollPosition &&
+				!hideNavbar
+			) {
+				// If the scroll direction is down and the user has scrolled past the navbar, hide the navbar
+				setHideNavbar(true);
+			} else if (
+				currentScrollPosition < lastScrollPosition ||
+				currentScrollPosition === 0
+			) {
+				// If the scroll direction is up or the user is at the top of the page, show the navbar
+				setHideNavbar(false);
+			}
+			// Set the last scroll position to the current scroll position
+			setLastScrollPosition(currentScrollPosition);
+		};
+
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, [lastScrollPosition, hideNavbar]);
+	useEffect(() => {
+		if (isMobile) {
+			setIsLoaded(true);
+		}
+	}, []);
 	return (
 		<>
 			<>
 				<div className=' hero1 h-[100vh]  w-full relative '>
 					<div className='absolute left-0 top-0 bottom-0 right-0   '>
-						<Spline
-							scene='https://prod.spline.design/vEByxlHa0a4Jvxsi/scene.splinecode'
-							onLoad={handleImageLoaded}
-							className={`${
-								isLoaded ? 'OP1' : 'hidden'
-							} absolute left-0 top-0  bottom-0 right-0`}
-						/>
+						{isMobile ? (
+							<>
+								<video
+									autoPlay
+									muted
+									loop
+									src={vv}
+									className={`${
+										isLoaded ? 'OP1' : 'hidden'
+									} absolute left-0 top-0  bottom-0 right-0`}
+								/>
+							</>
+						) : (
+							<Spline
+								scene='https://prod.spline.design/vEByxlHa0a4Jvxsi/scene.splinecode'
+								onLoad={handleImageLoaded}
+								className={`${
+									isLoaded ? 'OP1' : 'hidden'
+								} absolute left-0 top-0  bottom-0 right-0`}
+							/>
+						)}
 					</div>
 					<div
 						className={`${
@@ -158,7 +212,10 @@ export default function Home() {
 				</div>
 
 				{isLoaded ? (
-					<div className=' fixed left-[50%] top-[.4rem] centerrr1  xl:w-[80vw] 2xl:w-[80vw]  z-[100] px-6 md:px-14  xl:px-4 w-full  '>
+					<div
+						className={`${
+							hideNavbar ? 'hide' : 'n'
+						} fixed left-[50%] top-[.4rem] centerrr1  xl:w-[80vw] 2xl:w-[80vw]  z-[100] px-6 md:px-14  xl:px-4 w-full  `}>
 						<nav className='w-full mt-8   p-4 px-6 lg:p-0 flex items-center rounded-xl     bg-black2 backdrop-blur-xl    '>
 							<div className='flex w-full  justify-between items-center '>
 								<Link
@@ -368,6 +425,7 @@ export default function Home() {
 			<CreativeServices />
 			<MembershipLevels />
 			<Faq />
+			<Footer />
 		</>
 	);
 }
