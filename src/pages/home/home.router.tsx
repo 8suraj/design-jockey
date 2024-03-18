@@ -50,17 +50,20 @@ const data = [
 	},
 ];
 export default function Home() {
-	const [clicked, setClicked] = useState<boolean>(false);
 	const [mobileMenu, setMobileMenu] =
 		useState<boolean>(false);
 	useEffect(() => {
-		setTimeout(() => {
-			window.scrollTo({
-				top: 0,
-				behavior: 'smooth',
-			});
-		}, 1);
-	}, [clicked]);
+		const clicked = localStorage.getItem('clicked');
+		if (clicked != 'services' && clicked != 'plans') {
+			setTimeout(() => {
+				window.scrollTo({
+					top: 0,
+					left: 100,
+					behavior: 'smooth',
+				});
+			}, 200);
+		}
+	}, []);
 
 	const [isLoaded, setIsLoaded] = useState(false);
 	const handleImageLoaded = () => {
@@ -106,7 +109,7 @@ export default function Home() {
 		<>
 			<>
 				<div className=' hero1 h-[100vh]  w-full relative '>
-					<div className='absolute left-0 top-0 bottom-0 right-0   '>
+					<div className='absolute left-0 top-0 bottom-0 right-0 '>
 						{isMobile ? (
 							<>
 								<video
@@ -116,7 +119,7 @@ export default function Home() {
 									src={vv}
 									className={`${
 										isLoaded ? 'OP1' : 'hidden'
-									} absolute left-0 top-0  bottom-0 right-0 h-full w-full`}
+									} absolute left-0 top-0  bottom-0 right-0 h-[100vh] w-full  object-cover`}
 								/>
 							</>
 						) : (
@@ -222,7 +225,7 @@ export default function Home() {
 									className='h-full  lg:pl-4'
 									to='/'
 									onClick={() => {
-										setClicked(!clicked);
+										localStorage.setItem('clicked', 'home');
 									}}>
 									<img
 										src={logo}
@@ -234,27 +237,52 @@ export default function Home() {
 									<Link
 										to='/store'
 										onClick={() => {
-											setClicked(!clicked);
+											localStorage.setItem(
+												'clicked',
+												'store'
+											);
 										}}>
 										store
 									</Link>
 									<Link
 										to='/work'
 										onClick={() => {
-											setClicked(!clicked);
+											localStorage.setItem(
+												'clicked',
+												'work'
+											);
 										}}>
 										work
 									</Link>
-									<HashLink smooth to={'/#services'}>
+									<HashLink
+										smooth
+										to={'/#services'}
+										onClick={() =>
+											localStorage.setItem(
+												'clicked',
+												'services'
+											)
+										}>
 										services
 									</HashLink>
-									<HashLink smooth to={'/#plans'}>
+									<HashLink
+										smooth
+										to={'/#plans'}
+										onClick={() =>
+											localStorage.setItem(
+												'clicked',
+												'plans'
+											)
+										}>
 										plans
 									</HashLink>
 									<Link
 										to='/cart'
 										onClick={() => {
-											setClicked(!clicked);
+											localStorage.setItem(
+												'clicked',
+												'cart'
+											);
 										}}>
 										cart
 									</Link>
@@ -286,7 +314,10 @@ export default function Home() {
 											to='/store'
 											className=' p-4  pt-8 m2:py-6 m2:pt-12 w-full text-center text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
 											onClick={() => {
-												setClicked(!clicked);
+												localStorage.setItem(
+													'clicked',
+													'store'
+												);
 												setMobileMenu(false);
 											}}>
 											store
@@ -295,7 +326,10 @@ export default function Home() {
 											to='/work'
 											className='p-4 py-5  m2:py-6 w-full text-center text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
 											onClick={() => {
-												setClicked(!clicked);
+												localStorage.setItem(
+													'clicked',
+													'work'
+												);
 												setMobileMenu(false);
 											}}>
 											work
@@ -304,21 +338,36 @@ export default function Home() {
 											smooth
 											className='p-4 py-5 m2:py-6 w-full text-center text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
 											to={'/#services'}
-											onClick={() => setMobileMenu(false)}>
+											onClick={() => {
+												setMobileMenu(false);
+												localStorage.setItem(
+													'clicked',
+													'services'
+												);
+											}}>
 											services
 										</HashLink>
 										<HashLink
 											smooth
 											className='p-4 py-5 m2:py-6 w-full text-center text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
 											to={'/#plans'}
-											onClick={() => setMobileMenu(false)}>
+											onClick={() => {
+												setMobileMenu(false);
+												localStorage.setItem(
+													'clicked',
+													'plans'
+												);
+											}}>
 											plans
 										</HashLink>
 										<Link
 											className='p-4 py-5 m2:py-6 w-full text-center text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
 											to='/cart'
 											onClick={() => {
-												setClicked(!clicked);
+												localStorage.setItem(
+													'clicked',
+													'cart'
+												);
 												setMobileMenu(false);
 											}}>
 											cart
@@ -379,7 +428,7 @@ export default function Home() {
 						</div>
 						<Link
 							className='lg:flex hidden w-5/12 h-fit justify-end '
-							to='/products'>
+							to='/store'>
 							<Button
 								text='show all'
 								className='bg-color-secondary btn_base '
@@ -411,7 +460,7 @@ export default function Home() {
 					</div>
 					<Link
 						className='  flex justify-center lg:hidden'
-						to='/products'>
+						to='/store'>
 						<Button
 							text='show all'
 							className='bg-color-secondary btn_base w-full mx-12 sm:w-[65vw] '
@@ -426,6 +475,7 @@ export default function Home() {
 			<MembershipLevels />
 			<Faq />
 			<Footer />
+			{/* {console.log('home', clicked)} */}
 		</>
 	);
 }

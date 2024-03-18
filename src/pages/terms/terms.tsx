@@ -2,7 +2,7 @@ export default function Terms() {
 	return (
 		<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto'>
 			<div className='m-auto flex flex-col gap-4 px-6 md:px-14 py-[8rem] md:py-[8rem] xl:px-4'>
-				<h1 className=' text-color-primary text-left md:text-left  capitalize  text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'>
+				<h1 className=' text-color-primary text-left   capitalize  text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'>
 					Terms of Use
 				</h1>
 				<p className='font-SFPro text-justify text-sm'>

@@ -5,21 +5,24 @@ import cross from '../../assets/svgs/cross.svg';
 import humburger from '../../assets/svgs/humburger.svg';
 import Button from '../button/button.component';
 import { useState, useEffect } from 'react';
+
 import './nv.css';
 
 export default function Navbar() {
-	const [clicked, setClicked] = useState<boolean>(false);
 	const [mobileMenu, setMobileMenu] =
 		useState<boolean>(false);
 	useEffect(() => {
-		setTimeout(() => {
-			window.scrollTo({
-				top: 0,
-				left: 100,
-				behavior: 'smooth',
-			});
-		}, 200);
-	}, [clicked]);
+		const clicked = localStorage.getItem('clicked');
+		if (clicked != 'services' && clicked != 'plans') {
+			setTimeout(() => {
+				window.scrollTo({
+					top: 0,
+					left: 100,
+					behavior: 'smooth',
+				});
+			}, 200);
+		}
+	}, []);
 	const [lastScrollPosition, setLastScrollPosition] =
 		useState(0);
 	const [hideNavbar, setHideNavbar] = useState(false);
@@ -63,7 +66,7 @@ export default function Navbar() {
 							className='h-full  lg:pl-4'
 							to='/'
 							onClick={() => {
-								setClicked(!clicked);
+								localStorage.setItem('clicked', 'home');
 							}}>
 							<img
 								src={logo}
@@ -75,27 +78,40 @@ export default function Navbar() {
 							<Link
 								to='/store'
 								onClick={() => {
-									setClicked(!clicked);
+									localStorage.setItem('clicked', 'store');
 								}}>
 								store
 							</Link>
 							<Link
 								to='/work'
 								onClick={() => {
-									setClicked(!clicked);
+									localStorage.setItem('clicked', 'work');
 								}}>
 								work
 							</Link>
-							<HashLink smooth to={'/#services'}>
+							<HashLink
+								smooth
+								to={'/#services'}
+								onClick={() => {
+									localStorage.setItem(
+										'clicked',
+										'services'
+									);
+								}}>
 								services
 							</HashLink>
-							<HashLink smooth to={'/#plans'}>
+							<HashLink
+								smooth
+								to={'/#plans'}
+								onClick={() => {
+									localStorage.setItem('clicked', 'plans');
+								}}>
 								plans
 							</HashLink>
 							<Link
 								to='/cart'
 								onClick={() => {
-									setClicked(!clicked);
+									localStorage.setItem('clicked', 'cart');
 								}}>
 								cart
 							</Link>
@@ -125,7 +141,10 @@ export default function Navbar() {
 									to='/store'
 									className=' p-4  pt-8 m2:py-6 m2:pt-12 w-full text-center text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
 									onClick={() => {
-										setClicked(!clicked);
+										localStorage.setItem(
+											'clicked',
+											'store'
+										);
 										setMobileMenu(false);
 									}}>
 									store
@@ -134,7 +153,7 @@ export default function Navbar() {
 									to='/work'
 									className='p-4 py-5  m2:py-6 w-full text-center text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
 									onClick={() => {
-										setClicked(!clicked);
+										localStorage.setItem('clicked', 'work');
 										setMobileMenu(false);
 									}}>
 									work
@@ -143,21 +162,33 @@ export default function Navbar() {
 									smooth
 									className='p-4 py-5 m2:py-6 w-full text-center text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
 									to={'/#services'}
-									onClick={() => setMobileMenu(false)}>
+									onClick={() => {
+										setMobileMenu(false);
+										localStorage.setItem(
+											'clicked',
+											'services'
+										);
+									}}>
 									services
 								</HashLink>
 								<HashLink
 									smooth
 									className='p-4 py-5 m2:py-6 w-full text-center text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
 									to={'/#plans'}
-									onClick={() => setMobileMenu(false)}>
+									onClick={() => {
+										setMobileMenu(false);
+										localStorage.setItem(
+											'clicked',
+											'plans'
+										);
+									}}>
 									plans
 								</HashLink>
 								<Link
 									className='p-4 py-5 m2:py-6 w-full text-center text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
 									to='/cart'
 									onClick={() => {
-										setClicked(!clicked);
+										localStorage.setItem('clicked', 'cart');
 										setMobileMenu(false);
 									}}>
 									cart
@@ -179,6 +210,7 @@ export default function Navbar() {
 					''
 				)}
 			</div>
+			{/* {console.log('from navbar', clicked)} */}
 		</>
 	);
 }
