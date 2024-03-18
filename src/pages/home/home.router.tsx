@@ -116,7 +116,7 @@ export default function Home() {
 									src={vv}
 									className={`${
 										isLoaded ? 'OP1' : 'hidden'
-									} absolute left-0 top-0  bottom-0 right-0`}
+									} absolute left-0 top-0  bottom-0 right-0 h-full w-full`}
 								/>
 							</>
 						) : (

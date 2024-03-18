@@ -16,7 +16,7 @@ export default function Footer() {
 							type='text'
 							placeholder='your@email.com'
 							className=' md:w-9/12 w-full outline-0 bg-transparent	border-b-4 md:border-b-8 border-grey-dark
-						 placeholder:text-grey-dark placeholder:sm:text-xl placeholder:md:text-2xl placeholder:xl:text-4xl placeholder:2xl:text-5xl
+						 placeholder:text-grey-dark placeholder:sm:text-xl placeholder:md:text-2xl placeholder:xl:text-4xl placeholder:2xl:text-[2.75rem]
 						  placeholder:m1:text-[.85rem] placeholder:m2:text-[1.1rem]  placeholder:m3:text-[1.3rem]
 						   md:text-2xl xl:text-4xl m1:text-[.85rem] 
 						   m2:text-[1.1rem]  m3:text-[1.3rem] 2xl:text-5xl'
@@ -29,16 +29,16 @@ export default function Footer() {
 							/>
 						</div>
 					</div>
-					<div className='flex items-center gap-2 '>
+					<div className='flex items-center gap-2 cursor-pointer '>
 						<input
 							type='checkbox'
-							name=''
-							id=''
-							className=' bg-transparent  border-grey-dark border-12'
+							name='terms'
+							id='terms'
+							className=' bg-transparent  border-grey-dark border-12 cursor-pointer'
 						/>
 						<label
-							htmlFor=''
-							className='font-SFPro text-sm text-grey-light m1:text-[.5rem] m2:text-[.6rem]  m3:text-[.7rem]'>
+							htmlFor='terms'
+							className='font-SFPro text-sm text-grey-light m1:text-[.5rem] m2:text-[.6rem]  m3:text-[.7rem] cursor-pointer '>
 							I have read and accept the Terms & Privacy
 						</label>
 					</div>

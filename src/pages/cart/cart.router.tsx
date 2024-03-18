@@ -2,7 +2,6 @@ import { FunctionComponent, useState } from 'react';
 import minus from './minus.svg';
 import plus from './plus.svg';
 import Button from '../../components/button/button.component';
-import Footer from '../../components/footer/footer.component';
 export default function Cart() {
 	return (
 		<>
@@ -39,7 +38,7 @@ export default function Cart() {
 									<div className='flex  w-full gap-2'>
 										<input
 											type='text'
-											className='w-8/12 rounded placeholder:m1:text-[.75rem] placeholder:text-[.75rem] placeholder:sm:text-[.8rem]  placeholder:md:text-[.78rem] placeholder:lg:text-[.78rem] placeholder:xl:text-[.93rem] placeholder:text-center h-14 placeholder:text-grey-light bg-black4 outline-none m1:text-[.75rem] text-[.75rem] sm:text-[.8rem]  md:text-[.78rem] lg:text-[.78rem] xl:text-[.93rem] text-grey-light'
+											className='w-8/12 rounded placeholder:m1:text-[.75rem] placeholder:text-[.75rem] placeholder:sm:text-[.8rem]  placeholder:md:text-[.78rem] placeholder:lg:text-[.78rem] placeholder:xl:text-[.93rem] placeholder:text-center text-center h-14 placeholder:text-grey-light bg-black4 outline-none m1:text-[.75rem] text-[.75rem] sm:text-[.8rem]  md:text-[.78rem] lg:text-[.78rem] xl:text-[.93rem] text-grey-light'
 											placeholder='coupon code '
 										/>
 										<div className=' w-4/12 flex justify-center '>
@@ -63,7 +62,6 @@ export default function Cart() {
 					</div>
 				</section>
 			</div>
-			<Footer />
 		</>
 	);
 }
