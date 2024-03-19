@@ -29,7 +29,7 @@ export default function MembershipWorks() {
 	return (
 		<>
 			<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto '>
-				<div className='m-auto flex flex-col gap-12  md:px-14 py-[3rem] md:py-10 xl:px-4 px-6'>
+				<div className='m-auto flex flex-col gap-12  md:px-14 py-[3rem] md:py-10 xl:px-4  '>
 					<div className='flex w-full  '>
 						<div className='lg:w-8/12 m1:w-full '>
 							<H1 text='how membership works' />
@@ -67,7 +67,7 @@ export default function MembershipWorks() {
 						))}
 					</div>
 					<div className='md:hidden   w-full snap-x snap-mandatory '>
-						<div className='flex flex-row  gap-2 overflow-x-scroll snap-x snap-mandatory cc px-[10%]  '>
+						<div className='flex flex-row  gap-2 overflow-x-scroll snap-x snap-mandatory cc px-[16%]  '>
 							{data.map((e, index) => (
 								<div className='w-[65vw] flex-shrink-0  '>
 									<div
