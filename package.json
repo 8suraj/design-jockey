@@ -14,6 +14,8 @@
     "@lottiefiles/react-lottie-player": "^3.5.3",
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^1.0.50",
+    "framer-motion": "^11.0.18",
+    "prettier": "^3.2.5",
     "react": "^18.2.0",
     "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",

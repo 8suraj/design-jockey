@@ -26,12 +26,13 @@ import { HashLink } from 'react-router-hash-link';
 import logo from '../../assets/svgs/logo.svg';
 import cross from '../../assets/svgs/cross.svg';
 import humburger from '../../assets/svgs/humburger.svg';
-import { useState, useEffect } from 'react';
+import { useState, useEffect,useRef } from 'react';
 import Spline from '@splinetool/react-spline';
 import { PuffLoader } from 'react-spinners';
 import Footer from '../../components/footer/footer.component';
 import vv from '../../assets/video/data-transfer_2.mp4';
 import { isMobile } from 'react-device-detect';
+import { motion, useScroll,useTransform } from "framer-motion"
 const data = [
 	{
 		header: 'Branding guidlines',
@@ -72,7 +73,7 @@ export default function Home() {
 	const [lastScrollPosition, setLastScrollPosition] =
 		useState(0);
 	const [hideNavbar, setHideNavbar] = useState(false);
-
+	const videoContainerRef = useRef(null)
 	useEffect(() => {
 		const handleScroll = () => {
 			const currentScrollPosition = window.pageYOffset;
@@ -105,6 +106,12 @@ export default function Home() {
 			setIsLoaded(true);
 		}
 	}, []);
+	const { scrollYProgress } = useScroll({
+  target: videoContainerRef,
+  offset: ["start end", "end end"]
+});
+	const scale = useTransform(scrollYProgress, [0, .9,1], [1, 1.25,1.25]);
+
 	return (
 		<>
 			<>
@@ -200,7 +207,6 @@ export default function Home() {
 												hour12: true,
 											}
 										)}
-										{/* <span id='MyClockDisplay'></span> */}
 									</span>
 									<span className='small_text1'>
 										+91 872 396 3206 <br />
@@ -416,9 +422,14 @@ export default function Home() {
 					</div>
 				))}
 			</ScrollCarousel>
-			<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto xl:px-4  '>
-				<img src={ww} className='w-full ' />
-			</section>
+					<motion.div style={{ scaleX:scale }}  className=' xl:w-[80vw] 2xl:w-[80vw] mx-auto overflow-clip max-w-[100vw]' >
+
+				<section  ref={videoContainerRef} className=' w-full  max-w-[100vw]'>
+					<img src={ww} className='w-full max-w-[100vw]' />
+				</section>
+					</motion.div>
+					{console.log(scale)}
+			
 			<MembershipWorks />
 			<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto  '>
 				<div className=' flex flex-col gap-12  md:px-14  xl:px-4  py-[3rem] md:py-10 md:pb-10 '>
