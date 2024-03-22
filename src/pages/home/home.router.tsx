@@ -110,7 +110,7 @@ export default function Home() {
   target: videoContainerRef,
   offset: ["start end", "end end"]
 });
-	const scale = useTransform(scrollYProgress, [0, .9,1], [1, 1.25,1.25]);
+	const scale = useTransform(scrollYProgress, [0, .9,1], [1, 1.24,1.24]);
 
 	return (
 		<>
@@ -190,6 +190,9 @@ export default function Home() {
 												)
 											}
 										/>
+
+
+										
 									</HashLink>
 								</div>
 								<div className='hidden || text-[.64rem] font-SFPro  w-full md:flex justify-between '>
@@ -422,13 +425,15 @@ export default function Home() {
 					</div>
 				))}
 			</ScrollCarousel>
-					<motion.div style={{ scaleX:scale }}  className=' xl:w-[80vw] 2xl:w-[80vw] mx-auto overflow-clip max-w-[100vw]' >
+					<motion.div style={{ scaleX:scale }}  className=' xl:w-[80vw] 2xl:w-[80vw] mx-auto overflow-hidden max-w-[100vw] hidden xl:block' >
 
-				<section  ref={videoContainerRef} className=' w-full  max-w-[100vw]'>
+				<section  ref={videoContainerRef} className=' w-full  max-w-[100vw] overflow-hidden'>
 					<img src={ww} className='w-full max-w-[100vw]' />
 				</section>
 					</motion.div>
-					{console.log(scale)}
+					<section  ref={videoContainerRef} className=' w-full  xl:hidden'>
+					<img src={ww} className='w-full max-w-[100vw]' />
+				</section>
 			
 			<MembershipWorks />
 			<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto  '>
