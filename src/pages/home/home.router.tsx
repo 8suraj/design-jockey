@@ -32,11 +32,7 @@ import { PuffLoader } from 'react-spinners';
 import Footer from '../../components/footer/footer.component';
 import vv from '../../assets/video/data-transfer_2.mp4';
 import { isMobile } from 'react-device-detect';
-import {
-	motion,
-	useScroll,
-	useTransform,
-} from 'framer-motion';
+import { motion } from 'framer-motion';
 const data = [
 	{
 		header: 'Branding guidlines',
@@ -110,15 +106,15 @@ export default function Home() {
 			setIsLoaded(true);
 		}
 	}, []);
-	const { scrollYProgress } = useScroll({
-		target: videoContainerRef,
-		offset: ['start end', 'end end'],
-	});
-	const scale = useTransform(
-		scrollYProgress,
-		[0, 0.9, 1],
-		[1, 1.5, 1.5]
-	);
+	// const { scrollYProgress } = useScroll({
+	// 	target: videoContainerRef,
+	// 	offset: ['start end', 'end end'],
+	// });
+	// const scale = useTransform(
+	// 	scrollYProgress,
+	// 	[0, 0.9, 1],
+	// 	[1, 1.5, 1.5]
+	// );
 
 	return (
 		<>
