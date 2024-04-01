@@ -12,7 +12,7 @@ import MembershipBenefits from '../../components/membership/membershipBenefits.c
 import MembershipLevels from '../../components/membership/membershipLevels.component';
 
 import MembershipWorks from '../../components/membership/membershipworks.component';
-import ww from '../../assets/ww.gif';
+import ww from '../../assets/ww.mp4';
 import Button from '../../components/button/button.component';
 
 import social from '../../assets/product/social.png';
@@ -26,13 +26,17 @@ import { HashLink } from 'react-router-hash-link';
 import logo from '../../assets/svgs/logo.svg';
 import cross from '../../assets/svgs/cross.svg';
 import humburger from '../../assets/svgs/humburger.svg';
-import { useState, useEffect,useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Spline from '@splinetool/react-spline';
 import { PuffLoader } from 'react-spinners';
 import Footer from '../../components/footer/footer.component';
 import vv from '../../assets/video/data-transfer_2.mp4';
 import { isMobile } from 'react-device-detect';
-import { motion, useScroll,useTransform } from "framer-motion"
+import {
+	motion,
+	useScroll,
+	useTransform,
+} from 'framer-motion';
 const data = [
 	{
 		header: 'Branding guidlines',
@@ -40,7 +44,7 @@ const data = [
 		product: 'branding',
 	},
 	{
-		header: 'Website design',
+		header: 'Social Media',
 		image: web,
 		product: 'web-design',
 	},
@@ -73,7 +77,7 @@ export default function Home() {
 	const [lastScrollPosition, setLastScrollPosition] =
 		useState(0);
 	const [hideNavbar, setHideNavbar] = useState(false);
-	const videoContainerRef = useRef(null)
+	const videoContainerRef = useRef(null);
 	useEffect(() => {
 		const handleScroll = () => {
 			const currentScrollPosition = window.pageYOffset;
@@ -107,10 +111,14 @@ export default function Home() {
 		}
 	}, []);
 	const { scrollYProgress } = useScroll({
-  target: videoContainerRef,
-  offset: ["start end", "end end"]
-});
-	const scale = useTransform(scrollYProgress, [0, .9,1], [1, 1.24,1.24]);
+		target: videoContainerRef,
+		offset: ['start end', 'end end'],
+	});
+	const scale = useTransform(
+		scrollYProgress,
+		[0, 0.9, 1],
+		[1, 1.5, 1.5]
+	);
 
 	return (
 		<>
@@ -190,9 +198,6 @@ export default function Home() {
 												)
 											}
 										/>
-
-
-										
 									</HashLink>
 								</div>
 								<div className='hidden || text-[.64rem] font-SFPro  w-full md:flex justify-between '>
@@ -420,21 +425,34 @@ export default function Home() {
 				].map((item, index) => (
 					<div
 						key={index}
-						className=' w-24 h-20 flex items-center  '>
-						<img src={item} alt='' className='	w-24' />
+						className=' w-28 h-20 flex items-center  '>
+						<img
+							src={item}
+							alt='client logo'
+							className='	w-20'
+						/>
 					</div>
 				))}
 			</ScrollCarousel>
-					<motion.div style={{ scaleX:scale }}  className=' xl:w-[80vw] 2xl:w-[80vw] mx-auto overflow-hidden max-w-[100vw] hidden xl:block' >
+			<motion.div
+				// style={{ scaleX: scale }}
+				className=' xl:w-[80vw] 2xl:w-[80vw] mx-auto overflow-hidden max-w-[100vw] '>
+				<section
+					ref={videoContainerRef}
+					className=' w-full  max-w-[100vw] overflow-hidden'>
+					<video
+						src={ww}
+						className='w-full max-w-[100vw]'
+						autoPlay
+						muted
+						loop
+					/>
+				</section>
+			</motion.div>
+			{/* <section className=' w-full  lg:hidden'>
+				<img src={ww} className='w-full max-w-[100vw]' />
+			</section> */}
 
-				<section  ref={videoContainerRef} className=' w-full  max-w-[100vw] overflow-hidden'>
-					<img src={ww} className='w-full max-w-[100vw]' />
-				</section>
-					</motion.div>
-					<section  ref={videoContainerRef} className=' w-full  xl:hidden'>
-					<img src={ww} className='w-full max-w-[100vw]' />
-				</section>
-			
 			<MembershipWorks />
 			<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto  '>
 				<div className=' flex flex-col gap-12  md:px-14  xl:px-4  py-[3rem] md:py-10 md:pb-10 '>
@@ -452,7 +470,7 @@ export default function Home() {
 							/>
 						</Link>
 					</div>
-					<div className=' flex-col lg:grid grid-cols-3 gap-4  items-center hidden '>
+					<div className=' flex-col lg:grid grid-cols-3 gap-2  items-center hidden '>
 						{data?.map((e, i) => (
 							<ProductItem
 								image={e.image}
@@ -463,7 +481,7 @@ export default function Home() {
 						))}
 					</div>
 					<div className='w-full max-w-xl lg:hidden  block  '>
-						<div className='flex flex-row  gap-4 overflow-x-scroll snap-x snap-mandatory cc px-[13%] lg:px-0'>
+						<div className='flex flex-row  gap-2 overflow-x-scroll snap-x snap-mandatory cc px-[13%] lg:px-0'>
 							{data?.map((e, i) => (
 								<ProductItem
 									image={e.image}

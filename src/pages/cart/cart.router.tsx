@@ -38,7 +38,7 @@ export default function Cart() {
 									<div className='flex  w-full gap-2'>
 										<input
 											type='text'
-											className='w-8/12 rounded placeholder:m1:text-[.75rem] placeholder:text-[.75rem] placeholder:sm:text-[.8rem]  placeholder:md:text-[.78rem] placeholder:lg:text-[.78rem] placeholder:xl:text-[.93rem] placeholder:text-center text-center h-14 placeholder:text-grey-light bg-black4 outline-none m1:text-[.75rem] text-[.75rem] sm:text-[.8rem]  md:text-[.78rem] lg:text-[.78rem] xl:text-[.93rem] text-grey-light'
+											className='w-8/12 rounded cart-text placeholder:m1:text-[.75rem] placeholder:text-[.75rem] placeholder:sm:text-[.8rem]  placeholder:md:text-[.78rem] placeholder:lg:text-[.78rem] placeholder:xl:text-[.93rem] placeholder:text-center text-center h-14 placeholder:text-grey-light bg-black4 outline-none m1:text-[.75rem] text-[.75rem] sm:text-[.8rem]  md:text-[.78rem] lg:text-[.78rem] xl:text-[.93rem] focus:placeholder:text-transparent text-grey-light '
 											placeholder='coupon code '
 										/>
 										<div className=' w-4/12 flex justify-center '>

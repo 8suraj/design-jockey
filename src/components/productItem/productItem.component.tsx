@@ -24,21 +24,18 @@ export default function ProductItem({
 				/>
 			</Link>
 			<div className='absolute z-2 bottom-0 ccvv rounded-xl left-0 right-0 '>
-				<div className='bg-black2 backdrop-blur-xl rounded-xl'>
+				<div className='bg-black2 backdrop-blur-xl rounded-xl  '>
 					<Link to={`/store/${index}`} className='z-2'>
-						<div className='lg:px-6 px-4 sm:px-6 py-2 '>
-							<div className='text-left flex  items-start justify-between pt-2 gap-2 '>
-								<h1 className='lg:text-base	 xl:text-lg '>
+						<div className='lg:px-6 px-3 sm:px-3 lg:pt-5 p-3  '>
+							<div className='text-left flex  items-start justify-between  '>
+								<h1 className='lg:text-base	 xl:text-lg  w-[50%]'>
 									{header}
 								</h1>
 								<p className=''>{`$800`}</p>
 							</div>
-							<span className='small_text1 text-white pb-2  block text-left'>
-								See More
-							</span>
 						</div>
 					</Link>
-					<div className='px-4 pb-2 sm:px-6 sm:pb-4'>
+					<div className='px-3 pb-3 sm:px-3 sm:pb-3 lg:px-6 lg:pb-6'>
 						<Button
 							text='Buy now'
 							className='bg-color-secondary btn_base   w-full  '

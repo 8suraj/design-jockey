@@ -5,8 +5,7 @@ import m2 from '../../assets/svgs/membershipworks/m2.svg';
 import m3 from '../../assets/svgs/membershipworks/m3.svg';
 import Button from '../button/button.component';
 import { HashLink } from 'react-router-hash-link';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+
 
 const data = [
 	{
@@ -25,22 +24,15 @@ const data = [
 ];
 
 export default function MembershipWorks() {
-	const ref = useRef(null);
-	const isInView = useInView(ref, { once: true });
-
 	return (
 		<>
-			<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto ' ref={ref}>
+			<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto ' >
 				<div className='m-auto flex flex-col gap-12  md:px-14 py-[3rem] md:py-10 xl:px-4  '>
 					<div className='flex w-full  '>
 						<div className='lg:w-8/12 m1:w-full '>
 							<h1
 								className='text-color-primary text-center md:text-left  capitalize  text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
-								style={{
-									transform: isInView ? 'none' : 'translateX(-200px) ',
-									opacity: isInView ? 1 : 0,
-									transition: 'all 1s cubic-bezier(.31,1.02,.99,1.45) 0.5s',
-								}}
+								
 							>
 								how membership works
 							</h1>

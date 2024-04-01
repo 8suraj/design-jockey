@@ -49,7 +49,7 @@ export default function Store() {
 				</div>
 			</div>
 			<div className='xl:w-[80vw] 2xl:w-[80vw] mx-auto '>
-				<div className='flex flex-col lg:grid grid-cols-3 gap-4 py-24 items-center lg:px-4  '>
+				<div className='flex flex-col lg:grid grid-cols-3 gap-2 py-24 items-center lg:px-4  '>
 					{data?.map((e, i) => (
 						<ProductItem
 							image={e.image}

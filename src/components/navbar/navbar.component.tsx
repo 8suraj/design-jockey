@@ -74,8 +74,9 @@ export default function Navbar() {
 								className='w-8 md:w-10 '
 							/>
 						</Link>
-						<ul className=' text-color-primary items-center gap-4 m1:text-[.65rem] text-[.65rem]   md:text-[.75rem] hidden lg:flex'>
+						<ul className=' text-color-primary items-center gap-4 m1:text-[.65rem] text-[.65rem]   md:text-[.75rem] hidden lg:flex '>
 							<Link
+								className=' '
 								to='/store'
 								onClick={() => {
 									localStorage.setItem('clicked', 'store');
@@ -139,7 +140,7 @@ export default function Navbar() {
 							<ul className=' text-color-primary   flex flex-col '>
 								<Link
 									to='/store'
-									className=' p-4  pt-8 m2:py-6 m2:pt-12 w-full text-center text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem]'
+									className=' p-4  pt-8 m2:py-6 m2:pt-12 w-full text-center text-[1.3rem] m3:text-[1.7rem] md:text-[2.4rem] lg:text-[2.1rem] xl:text-[2.9rem] '
 									onClick={() => {
 										localStorage.setItem(
 											'clicked',
