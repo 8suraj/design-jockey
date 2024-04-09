@@ -447,23 +447,10 @@ export default function Home() {
 					</div>
 				))}
 			</ScrollCarousel>
-			{/* <motion.div
-				// style={{ scaleX: scale }}
-				className=' xl:w-full 2xl:w-full mx-auto overflow-hidden max-w-[100vw] '>
-				<section
-					ref={videoContainerRef}
-					className=' w-full  max-w-[100vw] overflow-hidden'>
-					<video
-						src={ww}
-						className='w-full max-w-[100vw]'
-						autoPlay
-						loop
-					/>
-				</section>
-			</motion.div> */}
+
 			<video
 				width='100%'
-				className='max-w-[100vw]'
+				className='max-w-[100vw] cursor-pointer'
 				autoPlay
 				muted
 				loop
