@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import ScrollCarousel from 'scroll-carousel-react';
 import AVON from '../../assets/BW/AVON.png';
 import EMAAR from '../../assets/BW/EMAAR.png';
@@ -10,6 +11,7 @@ import Faq from '../../components/faq/faq.component';
 import Hero2 from '../../components/hero/testimonials.component';
 import MembershipBenefits from '../../components/membership/membershipBenefits.component';
 import MembershipLevels from '../../components/membership/membershipLevels.component';
+import AnimatedCursor from 'react-animated-cursor';
 
 import MembershipWorks from '../../components/membership/membershipworks.component';
 import ww from '../../assets/ww.mp4';
@@ -32,7 +34,7 @@ import { PuffLoader } from 'react-spinners';
 import Footer from '../../components/footer/footer.component';
 import vv from '../../assets/video/data-transfer_2.mp4';
 import { isMobile } from 'react-device-detect';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 const data = [
 	{
 		header: 'Branding guidlines',
@@ -106,19 +108,34 @@ export default function Home() {
 			setIsLoaded(true);
 		}
 	}, []);
-	// const { scrollYProgress } = useScroll({
-	// 	target: videoContainerRef,
-	// 	offset: ['start end', 'end end'],
-	// });
-	// const scale = useTransform(
-	// 	scrollYProgress,
-	// 	[0, 0.9, 1],
-	// 	[1, 1.5, 1.5]
-	// );
+
+	const toggleMute = () => {
+		if (videoContainerRef.current) {
+			// @ts-ignore
+			videoContainerRef.current.muted =
+				// @ts-ignore
+				!videoContainerRef.current.muted;
+		}
+	};
 
 	return (
 		<>
 			<>
+				<AnimatedCursor
+					showSystemCursor
+					// innerSize={8}
+					outerSize={35}
+					innerScale={0}
+					outerScale={2}
+					outerAlpha={0}
+					innerStyle={{
+						backgroundColor: 'transparent',
+					}}
+					clickables={['video', 'button', 'a', '.faq']}
+					outerStyle={{
+						border: '3px solid rgba(196, 254, 1)',
+					}}
+				/>
 				<div className=' hero1 h-[100vh]  w-full relative '>
 					<div className='absolute left-0 top-0 bottom-0 right-0 '>
 						{isMobile ? (
@@ -430,9 +447,9 @@ export default function Home() {
 					</div>
 				))}
 			</ScrollCarousel>
-			<motion.div
+			{/* <motion.div
 				// style={{ scaleX: scale }}
-				className=' xl:w-[80vw] 2xl:w-[80vw] mx-auto overflow-hidden max-w-[100vw] '>
+				className=' xl:w-full 2xl:w-full mx-auto overflow-hidden max-w-[100vw] '>
 				<section
 					ref={videoContainerRef}
 					className=' w-full  max-w-[100vw] overflow-hidden'>
@@ -440,13 +457,29 @@ export default function Home() {
 						src={ww}
 						className='w-full max-w-[100vw]'
 						autoPlay
-						muted
 						loop
 					/>
 				</section>
-			</motion.div>
-			{/* <section className=' w-full  lg:hidden'>
-				<img src={ww} className='w-full max-w-[100vw]' />
+			</motion.div> */}
+			<video
+				width='100%'
+				className='max-w-[100vw]'
+				autoPlay
+				muted
+				loop
+				ref={videoContainerRef}
+				onClick={toggleMute}
+				src={ww}
+			/>
+
+			{/* </video> */}
+			{/* <section className=' w-full  '>
+				<video
+					autoPlay
+					loop
+					src={ww}
+					className='w-full max-w-[100vw]'
+				/>
 			</section> */}
 
 			<MembershipWorks />

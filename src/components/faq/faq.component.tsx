@@ -95,7 +95,7 @@ const FaqItems = (props: FaqItemsProps) => {
 		}
 	}, [faqId]);
 	return (
-		<div className='bg-[#121212] rounded-2xl cursor-pointer'>
+		<div className='bg-[#121212] rounded-2xl cursor-pointer faq'>
 			<div
 				className='flex justify-between bg-black3 rounded-2xl items-center m2:px-8 py-5 m1:px-4
 			  gap-2 m1:text-[.7rem] m2:text-[.8rem]  m3:text-[.85rem] md:text-[.9rem] hover:bg-[#373636]'
@@ -151,7 +151,7 @@ const FaqItems = (props: FaqItemsProps) => {
 };
 export default function Faq() {
 	return (
-		<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto '>
+		<section className='xl:w-[80vw] 2xl:w-[80vw] mx-auto  '>
 			<div className='  m-auto flex flex-col gap-8  px-6 md:px-14  xl:px-4 py-4 pb-[6rem] md:py-10 md:pb-20'>
 				<H1 text='FAQs' />
 				<div className='w-full flex flex-col gap-2'>

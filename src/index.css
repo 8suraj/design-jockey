@@ -5,7 +5,8 @@
 	font-family: 'Monument Extended';
 	font-style: normal;
 	font-weight: 400;
-	src: local('Monument Extended'),
+	src:
+		local('Monument Extended'),
 		url('./assets/font/MonumentExtended-Regular.otf')
 			format('opentype');
 }
@@ -14,7 +15,8 @@
 	font-family: 'Monument Extended';
 	font-style: normal;
 	font-weight: 800;
-	src: local('Monument Extended'),
+	src:
+		local('Monument Extended'),
 		url('./assets/font/MonumentExtended-Ultrabold.otf')
 			format('opentype');
 }
@@ -22,7 +24,8 @@
 	font-family: 'SF Pro';
 	font-style: normal;
 	font-weight: 400;
-	src: local('Monument Extended'),
+	src:
+		local('Monument Extended'),
 		url('./assets/font/SFPRODISPLAYREGULAR.OTF')
 			format('opentype');
 }
@@ -30,7 +33,8 @@
 	font-family: 'SF Pro';
 	font-style: normal;
 	font-weight: 700;
-	src: local('Monument Extended'),
+	src:
+		local('Monument Extended'),
 		url('./assets/font/SFPRODISPLAYBOLD.OTF')
 			format('opentype');
 }
@@ -65,36 +69,3 @@
 /* .c{
 	rotate0;
 } */
-
-
-
-
-.cursor {
-	transform: translate(-50%,-50%);
-	z-index: 1000;
-  pointer-events: none ;
-  position:absolute;
-  width: 30px;
-  height: 30px;
-  background: transparent;
-  border-radius: 50%;
-  border: 2px solid #C4FE01;
-  mix-blend-mode: exclusion;
-  /* background: radial-gradient(circle,  transparent 0%, transparent 65.99%, #fff 66%, #fff 100%); */
-}
-
-
-.cursor.click {
-  animation: click .1s ease-in-out;
-}
-@keyframes click {
-  0% {
-    transform:translate(-50%,-50%) scale(1);
-  }
-  5% {
-    transform:translate(-50%,-50%) scale(1.5);
-  }
-  100% {
-    transform: translate(-50%,-50%) scale(1);
-  }
-}

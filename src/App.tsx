@@ -1,4 +1,4 @@
-import { lazy, Suspense,useEffect } from 'react';
+import { lazy, Suspense } from 'react';
 import './App.css';
 import {
 	createBrowserRouter,
@@ -54,21 +54,6 @@ const routes = createBrowserRouter(
 	)
 );
 function App() {
-	useEffect(()=>{
-		
-		const cursor = document.querySelector('.cursor')!
-document.addEventListener('mousemove', (e) => {  
-  cursor.setAttribute("style","top: "+(e.pageY)+"px; left: "+ (e.pageX) +"px;")
-})   
-
-document.addEventListener("click", (e) => {
-  console.log(e.target)
-  cursor.classList.add('click')
-  
-  setTimeout(()=>{
-    cursor.classList.remove('click')
-  },500)
-})},[])
 	return (
 		<>
 			<Suspense
