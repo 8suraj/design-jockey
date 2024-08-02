@@ -7,7 +7,6 @@ import {
 	Route,
 } from 'react-router-dom';
 
-
 import { PuffLoader } from 'react-spinners';
 const Terms = lazy(() => import('./pages/terms/terms.tsx'));
 const PrivacyPolicy = lazy(
@@ -36,16 +35,15 @@ const MainLayout = lazy(
 const Work = lazy(
 	() => import('./pages/work/work.router.tsx')
 );
-const Dashboard = lazy(() => import('./pages/Dashboard/MainComponents.jsx'));
-
-
-
+const Dashboard = lazy(
+	() => import('./pages/Dashboard/MainComponents.jsx')
+);
 
 const routes = createBrowserRouter(
 	createRoutesFromElements(
 		<>
 			<Route path='/' element={<Home />} />
-			  <Route path='/' element={<MainLayout />}>
+			<Route path='/' element={<MainLayout />}>
 				<Route path='/cart' element={<Cart />} />
 				<Route path='*' element={<NotFound />} />
 				<Route path='store' element={<Store />} />
@@ -56,9 +54,8 @@ const routes = createBrowserRouter(
 				/>
 				<Route path='terms' element={<Terms />} />
 				<Route path='work' element={<Work />} />
-				
 			</Route>
-			<Route path='dashboard' element={<Dashboard />} /> 
+			<Route path='dashboard' element={<Dashboard />} />
 		</>
 	)
 );
