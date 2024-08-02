@@ -4,7 +4,7 @@ import { MdOutlineDateRange } from "react-icons/md";
 import { FaAngleDown } from "react-icons/fa6";
 import Board from '@lourenci/react-kanban';
 import '@lourenci/react-kanban/dist/styles.css';
-
+import { IoChevronDownSharp } from "react-icons/io5";
 const AssignJob = () => {
   const boardData = {
     columns: [
@@ -51,16 +51,16 @@ const AssignJob = () => {
   };
 
   return (
-    <div className="p-4 ">
-      <div className='flex justify-between font'>
-        <p className='text-lg font-medium'>Assign jobs</p>
-        <div className="flex justify-center items-center rounded-lg text-[#525455] bg-[#f2f3f4] border border-gray-300  px-2 py-1">
-          <MdOutlineDateRange size={20} className=' ml-2' />
-          <input id="datepicker-autohide" type="text" className="text-[#f2f3f4] bg-[#f2f3f4] placeholder:pl-2 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="February" />
-          <FaAngleDown size={20} className=' ' />
-        </div>
+    <div className=" ">
+      <div className='flex justify-between items-center text-[#C9C9C9] pb-4 border-b-2 mb-5'>
+        <p className='text-[15px] text-[#171717] font-MExtended leading-3 font-[400]'>Assign jobs</p>
+        <div className="relative flex  ">
+            <MdOutlineDateRange size={18} className='absolute mt-1.5 ml-2' />
+            <input id="datepicker-autohide" datepicker datepicker-autohide type="text" className=" border text-[#939393] bg-white   text-[12px] rounded-md focus:ring-blue-500 focus:border-blue-500 block w-32 ps-7 h-7 " placeholder="Select date" />
+            <IoChevronDownSharp size={17} className='-ml-7 mt-2' />
+          </div>
       </div>
-      <hr className='my-5' />
+     
       <Board
         initialBoard={boardData}
         disableColumnDrag

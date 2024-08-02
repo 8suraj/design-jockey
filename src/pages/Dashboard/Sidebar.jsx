@@ -13,7 +13,7 @@ const Sidebar = ({ activeItem, onContentChange }) => {
   ];
 
   return (
-    <ul className="space-y-2 p-2 shadow-sm mt-5 bg-white text-black font-medium">
+    <ul className="space-y-2 px-14 shadow-sm mt-5  text-black text-[14px] font-[400]">
       {menuItems.map(item => (
         <li key={item.value}>
           <button

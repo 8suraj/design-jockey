@@ -42,7 +42,7 @@ const MainComponents = () => {
   };
 
   return (
-    <div className='bg-white text-[#5c5e60] font-serif'>
+    <div className='bg-white text-[#5c5e60] font-SFPro'>
       <Navbar data={navbarData} onContentChange={handleContentChange} />
       <div className="flex flex-col w-full md:flex-row md:min-h-screen">
         <Sidebar activeItem={activeContent} onContentChange={handleContentChange} />
