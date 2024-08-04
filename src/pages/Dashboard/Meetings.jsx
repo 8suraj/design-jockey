@@ -17,7 +17,7 @@ const Meetings = () => {
   return (
     <div>
       <div className='flex justify-between items-center  '>
-        <p className=' text-[15px] text-[#171717] font-MExtended leading-3 font-[400]'>All Meetings</p>
+        <h1 className=' text-[15px] text-[#171717] font-MExtended leading-3 -pb-3 font-[400]'>All Meetings</h1>
         <form className=" flex gap-5">
           <div className="relative flex  justify-between">
             <IoIosSearch size={20} className='absolute  mt-1.5 ml-2' />

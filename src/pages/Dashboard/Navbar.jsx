@@ -6,7 +6,7 @@ import m1 from '../../assets/Db/Group.png';
 import { IoChevronDownSharp } from "react-icons/io5";
 
 const Navbar = ({ onContentChange, data }) => {
-  const [activeTab, setActiveTab] = useState("Dashboard");
+  const [activeTab, setActiveTab] = useState("Profile");
 
   const handleTabChange = (value) => {
     setActiveTab(value);
@@ -16,15 +16,16 @@ const Navbar = ({ onContentChange, data }) => {
   return (
     <div className='border-b-2 text-[#454647] border-[#C9C9C9]  font-serif'>
       <nav className='flex justify-between  pt-2 mx-[5%] items-center '>
-        <div className="flex  gap-10">
-        <img src={m1} alt="" className='w-16 h-14 p-2' />
+        <div className="flex ml-10 gap-5 justify-center pb-2 items-end">
+          <img src={m1} alt="" className='w-[24] h-[36] ' />
           {data.map(({ label, value }) => (
             <div
               key={value}
-              className={`cursor-pointer px-4 py-2  text-[15px] font-MExtended font-[400] rounded-t-md ${activeTab === value ? "border-b-4 border-[#939393]" : ""}`}
+              className={`cursor-pointer px-2   text-[15px] font-MExtended font-[400] rounded-t-md ${activeTab === value ? "border-b-2  border-[#939393]" : ""}`}
               onClick={() => handleTabChange(value)}
             >
               {label}
+              <span className={``}></span>
             </div>
           ))}
         </div>

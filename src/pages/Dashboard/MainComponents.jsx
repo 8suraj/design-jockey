@@ -14,11 +14,11 @@ import Plans from './Plans';
 
 const MainComponents = () => {
   const components = {
-    Dashboard: <div>Dashboard Content</div>,
-    Profile: <UserProfile />,
-    Invite: <Invite/>,
-    Store: <div>Store Content</div>,
-    Cart: <div>Cart Content</div>,
+    Dashboard: <div>Dashboard </div>,
+    Profile: <UserProfile/>,
+    Invite: <div>Invite </div>,
+    Store: <div>Store </div>,
+    Cart: <div>Cart </div>,
     Brief: <CreateBrief />,
     Job: <AssignJob />,
     Progress: <Progress />,

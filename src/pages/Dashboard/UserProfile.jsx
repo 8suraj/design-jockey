@@ -5,7 +5,7 @@ const UserProfile = () => {
   return (
     <div className='text-[#171717] font-SFPro text-[14px] font-[400]'>
       <div className='text-[#C9C9C9] pb-2 border-b-2'>
-      <h1 className='text-[15px] font-MExtended text-[#171717] font-medium'>User Profile</h1>
+      <h1 className='text-[15px] font-MExtended text-[#171717] -pb-3 font-medium'>User Profile</h1>
       </div>
       <form className=" mx-auto">
         <div>
