@@ -4,29 +4,38 @@ import { FaUserCircle } from "react-icons/fa";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import m1 from '../../assets/Db/Group.png';
 import { IoChevronDownSharp } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
-const Navbar = ({ onContentChange, data }) => {
-  const [activeTab, setActiveTab] = useState("Profile");
+const Navbar = () => {
+  const [activeTab, setActiveTab] = useState("Dashboard");
 
   const handleTabChange = (value) => {
     setActiveTab(value);
-    onContentChange(value);
   };
+
+  const navbarData = [
+    { label: "Dashboard", value: "Dashboard", link: "/dashboard" },
+    { label: "Profile", value: "Profile", link: "/profile" },
+    { label: "Invite", value: "Invite", link: "/invite" },
+    { label: "Store", value: "Store", link: "/store" },
+    { label: "Cart", value: "Cart", link: "/cart" },
+  ];
 
   return (
     <div className='border-b-2 text-[#454647] border-[#C9C9C9]  font-serif'>
-      <nav className='flex justify-between  pt-2 mx-[5%] items-center '>
-        <div className="flex ml-10 gap-5 justify-center pb-2 items-end">
-          <img src={m1} alt="" className='w-[24] h-[36] ' />
-          {data.map(({ label, value }) => (
-            <div
+      <nav className='flex justify-between  mx-[5%] items-center '>
+        <div className="flex items-end  gap-10">
+          <Link to="/dashboard">
+            <img src={m1} alt="" className='w-10 h-12 p-2 ml-7' /></Link>
+          {navbarData.map(({ label, value, link }) => (
+            <Link
               key={value}
-              className={`cursor-pointer px-2   text-[15px] font-MExtended font-[400] rounded-t-md ${activeTab === value ? "border-b-2  border-[#939393]" : ""}`}
+              to={link}
+              className={`cursor-pointer px-4 py-2  text-[15px] font-MExtended font-[400] rounded-t-md ${activeTab === value ? "border-b-[3px] border-[#939393]" : ""}`}
               onClick={() => handleTabChange(value)}
             >
               {label}
-              <span className={``}></span>
-            </div>
+            </Link>
           ))}
         </div>
         <ul className='flex justify-center items-center gap-2'>

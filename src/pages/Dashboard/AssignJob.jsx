@@ -53,7 +53,9 @@ const AssignJob = () => {
   return (
     <div className=" ">
       <div className='flex justify-between items-center text-[#C9C9C9] pb-4 border-b-2 mb-5'>
-      <h1 className='text-[15px] text-[#171717] font-MExtended leading-3 font-[400] '>Assign jobs</h1>
+      <div className='text-[#C9C9C9] pb-2'>
+        <h1 className='text-[15px] font-MExtended text-[#171717] -pb-3 font-medium'>Assign jobs</h1>
+      </div>
         <div className="relative flex  ">
             <MdOutlineDateRange size={18} className='absolute mt-1.5 ml-2' />
             <input id="datepicker-autohide" datepicker datepicker-autohide type="text" className=" border text-[#939393] bg-white   text-[12px] rounded-md focus:ring-blue-500 focus:border-blue-500 block w-32 ps-7 h-7 " placeholder="Select date" />

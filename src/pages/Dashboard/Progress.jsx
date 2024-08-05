@@ -16,10 +16,12 @@ const Progress = () => {
   ];
   return (
     <div className=''>
-     <div className='flex justify-between items-center'>
-        <h1 className='text-[15px] text-[#171717] font-MExtended leading-3 font-[400]'>Progress</h1>
+      <div className='flex justify-between items-center'>
+        <div className='text-[#C9C9C9] pb-2'>
+          <h1 className='text-[15px] font-MExtended text-[#171717] -pb-3 font-medium'>Progress</h1>
+        </div>
         <form className=" flex gap-5">
-        <div className="relative flex  justify-between">
+          <div className="relative flex  justify-between">
             <IoIosSearch size={20} className='absolute  mt-1.5 ml-2' />
             <input type="search" className=" border text-[#939393] bg-white border-gray-300  text-[12px] rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-52 ps-7 h-7  " placeholder="Search " required />
           </div>
@@ -29,7 +31,7 @@ const Progress = () => {
             <IoChevronDownSharp size={17} className='-ml-7 mt-2' />
           </div>
           <button className="bg-[#0038FF] hover:bg-blue-400 text-white font-[400] font-MExtended  text-[15px] px-5 rounded flex items-center justify-center">
-          <IoMdAdd size={20} />
+            <IoMdAdd size={20} />
             <span>Folder</span>
           </button>
         </form>
@@ -57,7 +59,7 @@ const Progress = () => {
           <button type="button" className="text-white bg-black hover:bg-black focus:ring-4 focus:ring-blue-300  rounded-lg  px-3 py-2 me-2 mb-2 ">Approve</button>
           <button type="button" className="text-white bg-black hover:bg-black focus:ring-4 focus:ring-blue-300  rounded-lg   px-3 py-2 me-2 mb-2 ">Download all</button>
         </div>
-      
+
         <div className='text-[#C9C9C9] pt-4 border-t-2 mt-5'>
           <div className="w-full flex gap-10">
             <label className="text-[14px] font-[400] text-[#171717] font-SFPro">Comment</label>

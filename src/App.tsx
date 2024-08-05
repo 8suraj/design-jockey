@@ -36,6 +36,9 @@ const MainLayout = lazy(
 const Work = lazy(
 	() => import('./pages/work/work.router.tsx')
 );
+const Login = lazy(
+	() => import('./pages/Login/Login.tsx')
+);
 const Dashboard = lazy(() => import('./pages/Dashboard/MainComponents.jsx'));
 
 
@@ -59,6 +62,8 @@ const routes = createBrowserRouter(
 				
 			</Route>
 			<Route path='dashboard' element={<Dashboard />} /> 
+			<Route path='login' element={<Login />} /> 
+
 		</>
 	)
 );

@@ -18,9 +18,10 @@ const CreateBrief = () => {
   ];
   return (
     <div className='text-black '>
-
       <div className='flex justify-between'>
-        <h1 className='text-[15px] text-[#171717] font-MExtended leading-3 font-[400] '>All Briefs</h1>
+        <div className='text-[#C9C9C9] pb-2'>
+          <h1 className='text-[15px] font-MExtended text-[#171717] -pb-3 font-medium'>All Briefs</h1>
+        </div>
         <form className=" flex gap-5">
           <div className="relative flex  justify-between">
             <IoIosSearch size={20} className='absolute  mt-1.5 ml-2' />

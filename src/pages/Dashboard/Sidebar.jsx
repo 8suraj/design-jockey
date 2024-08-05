@@ -8,12 +8,12 @@ import { HiArchive, HiOutlineFolder } from "react-icons/hi";
 const Sidebar = ({ activeItem, onContentChange }) => {
   const menuItems = [
     { label: "Create Brief", icon: PiToolboxFill, value: "Brief" },
-    { label: "Assign Job", icon: HiOutlineFolder, value: "Job" },
+    { label: "Assign Job", icon: HiOutlineFolder, value: "AssignJob" },
     { label: "Progress", icon: FaCheckCircle, value: "Progress" },
     { label: "File Manager", icon: HiArchive, value: "FileManager" },
     { label: "Meetings", icon: BsFillGrid3X3GapFill, value: "Meetings" },
     { label: "Plans", icon: IoIosListBox, value: "Plans" },
-    { label: "User Profile", icon: FaUser, value: "Profile" },
+    { label: "User Profile", icon: FaUser, value: "UserProfile" },
   ];
 
   return (
@@ -22,11 +22,11 @@ const Sidebar = ({ activeItem, onContentChange }) => {
         <li key={item.value}>
           <button
             className={`flex items-center p-3 px-10 w-full rounded-lg ${
-              activeItem === item.value ? 'bg-gray-300' : 'hover:bg-[#F3F3F3]'
+              activeItem === item.value ? 'bg-[#A0A0A0] text-white' : 'hover:bg-[#F3F3F3]'
             }`}
             onClick={() => onContentChange(item.value)}
           >
-            <item.icon className="w-4 h-4 text-gray-500 transition duration-75 group-hover:text-gray-900" />
+            <item.icon className={`w-4 h-4 transition duration-75 ${activeItem === item.value ? 'text-white' : 'text-gray-500 group-hover:text-gray-900'}`} />
             <span className="ms-3">{item.label}</span>
           </button>
         </li>
