@@ -38,6 +38,9 @@ const Work = lazy(
 const Dashboard = lazy(
 	() => import('./pages/Dashboard/MainComponents.jsx')
 );
+const Login = lazy(
+	() => import('./pages/Login/Login.tsx')
+);
 
 const routes = createBrowserRouter(
 	createRoutesFromElements(
@@ -57,9 +60,8 @@ const routes = createBrowserRouter(
 			</Route>
 
 			<Route path='dashboard' element={<Dashboard />} /> 
-			{/* <Route path='login' element={<Login />} />  */}
+			<Route path='login' element={<Login />} /> 
 
-			<Route path='dashboard' element={<Dashboard />} />
 
 		</>
 	)

@@ -73,33 +73,8 @@ const AssignJob = () => {
 				</div>
 			</div>
 
-<<<<<<< HEAD
-  return (
-    <div className=" ">
-      <div className='flex justify-between items-center text-[#C9C9C9] pb-4 border-b-2 mb-5'>
-      <div className='text-[#C9C9C9] pb-2'>
-        <h1 className='text-[15px] font-MExtended text-[#171717] -pb-3 font-medium'>Assign jobs</h1>
-      </div>
-        <div className="relative flex  ">
-            <MdOutlineDateRange size={18} className='absolute mt-1.5 ml-2' />
-            <input id="datepicker-autohide" datepicker datepicker-autohide type="text" className=" border text-[#939393] bg-white   text-[12px] rounded-md focus:ring-blue-500 focus:border-blue-500 block w-32 ps-7 h-7 " placeholder="Select date" />
-            <IoChevronDownSharp size={17} className='-ml-7 mt-2' />
-          </div>
-      </div>
-     
-      <Board
-        initialBoard={boardData}
-        disableColumnDrag
-        disableCardDrag
-        renderCard={({ title }) => (
-          <div className="p-2 mb-3 w-36 mx-2 text-center bg-[#FF00000D] rounded-md text-black  ">
-            {title}
-          </div>
-        )}
-      />
-    </div>
-  );
-=======
+
+
 			<Board
 				initialBoard={boardData}
 				renderCard={({ title }) => (
@@ -110,7 +85,6 @@ const AssignJob = () => {
 			/>
 		</div>
 	);
->>>>>>> 9ddc609f59de18019ebff1cd48b32ee7ee8d218c
 };
 
 export default AssignJob;

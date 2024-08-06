@@ -7,11 +7,11 @@ import { IoChevronDownSharp } from "react-icons/io5";
 const Progress = () => {
 
   const images = [
-    'https://cdn.zeebiz.com/sites/default/files/2023/07/24/252651-delhi-weather-today-forecast.jpg?im=FitAndFill=(1200,800)',
-    'https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?cs=srgb&dl=pexels-pixabay-209831.jpg&fm=jpg',
-    'https://cdn.zeebiz.com/sites/default/files/2023/07/24/252651-delhi-weather-today-forecast.jpg?im=FitAndFill=(1200,800)',
-    'https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?cs=srgb&dl=pexels-pixabay-209831.jpg&fm=jpg',
-    'https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?cs=srgb&dl=pexels-pixabay-209831.jpg&fm=jpg',
+    '/processs.png',
+    '/process.png',
+    '/processs.png',
+    '/process.png',
+    '/processs.png',
 
   ];
   return (
@@ -38,33 +38,34 @@ const Progress = () => {
       </div>
       <div className="container mx-auto text-[#C9C9C9] pt-4 border-t-2 mt-5">
         <p className='text-[14px] font-[400] text-[#171717] font-SFPro'>Attachment</p>
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 justify-items-between mt-3 gap-y-8 lg:gap-y-0 gap-x-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 mt-3">
           {images.map((src, index) => (
-            <div key={index} className="flex items-start flex-col">
-              <div className="relative flex justify-center items-center bg-gray-100 ">
-                <img src={src} alt={`img-${index}`} className="object-contain" />
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex space-x-4">
-                  <div className="flex justify-center items-center p-2 bg-[#818486] rounded-full border-2 border-gray-300">
-                    <FiEye className="text-white hover:text-gray-500" size={12} />
+            <div key={index} className="flex ">
+              <div className="relative ">
+                <img src={src} alt={`img-${index}`} className=" w-[200px] h-[160px] rounded-md" />
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex space-x-2">
+                  <div className="  hover:text-gray-500  p-3 bg-[#00000050] rounded-full ">
+                    <FiEye className="" size={14} />
                   </div>
-                  <div className="flex justify-center items-center p-2 bg-[#818486]  rounded-full border-2 border-gray-300">
-                    <FiUpload className="text-white hover:text-gray-500" size={12} />
+                  <div className=" hover:text-gray-500  p-3 bg-[#00000050] rounded-full ">
+                    <FiUpload className="" size={14} />
                   </div>
+                 
                 </div>
               </div>
             </div>
           ))}
         </div>
         <div className='mt-5 font-[400] text-[12px] font-SFPro'>
-          <button type="button" className="text-white bg-black hover:bg-black focus:ring-4 focus:ring-blue-300  rounded-lg  px-3 py-2 me-2 mb-2 ">Approve</button>
-          <button type="button" className="text-white bg-black hover:bg-black focus:ring-4 focus:ring-blue-300  rounded-lg   px-3 py-2 me-2 mb-2 ">Download all</button>
+          <button type="button" className="text-white bg-black hover:bg-black focus:ring-4 focus:ring-blue-300  rounded-lg  px-8 py-3 me-2 mb-2 ">Approve</button>
+          <button type="button" className="text-white bg-black hover:bg-black focus:ring-4 focus:ring-blue-300  rounded-lg   px-8 py-3 me-2 mb-2 ">Download all</button>
         </div>
 
         <div className='text-[#C9C9C9] pt-4 border-t-2 mt-5'>
           <div className="w-full flex gap-10">
             <label className="text-[14px] font-[400] text-[#171717] font-SFPro">Comment</label>
             <textarea tabindex="0" aria-label="leave a message" role="textbox" type="name" className="h-32 w-[50%] text-[#f2f3f4] bg-[#f2f3f4] text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700  bg-gray-100 border rounded border-gray-200 placeholder-gray-100 resize-none">Comment</textarea>
-            <button type="button" className="text-white text-[12px] h-8 bg-black hover:bg-black focus:ring-4 focus:ring-blue-300 font-[400] rounded-lg  px-3 py-2 me-2 mb-2 ">Comment</button>
+            <button type="button" className="text-white text-[12px] h-10 bg-black hover:bg-black focus:ring-4 focus:ring-blue-300 font-[400] rounded-lg  px-8 py-3 me-2 mb-2 ">Comment</button>
           </div>
         </div>
         <hr className='my-5' />
@@ -73,7 +74,7 @@ const Progress = () => {
             <SiZincsearch size={25} />
             <p className='font-SFPro font-[400] text-[12px]'>https://www.google.com/search?sca_esv=ra</p>
           </div>
-          <button type="button" className="text-white font-[400] text-[12px] font-SFPro bg-black hover:bg-black focus:ring-4 focus:ring-blue-300  rounded-lg  px-3 py-2 me-2 mb-2 ">Copy</button>
+          <button type="button" className="text-white font-[400] text-[12px] font-SFPro bg-black hover:bg-black focus:ring-4 focus:ring-blue-300  rounded-lg  px-8 py-3 me-2 mb-2 ">Copy</button>
         </div>
         <div>
         </div>
