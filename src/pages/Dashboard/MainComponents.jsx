@@ -28,15 +28,25 @@ const MainComponents = () => {
   };
 
   return (
-    <div className='bg-white text-[#5c5e60] font-SFPro'>
+    <div className="bg-white text-[#5c5e60] font-SFPro h-screen">
+    {/* Fixed Navbar */}
+    <div className="fixed top-0 left-0 w-full z-10">
       <Navbar onContentChange={handleContentChange} />
-      <div className="flex flex-col w-full md:flex-row md:min-h-screen">
+    </div>
+    
+    <div className="flex pt-14 h-full">
+      {/* Fixed Sidebar */}
+      <div className="fixed top-16 left-0 w-full md:w-1/4 h-[calc(100%-4rem)] z-10">
         <Sidebar activeItem={activeContent} onContentChange={handleContentChange} />
-        <div className="flex flex-col w-full md:w-3/4">
-          <MainContent content={components[activeContent]} />
-        </div>
+      </div>
+      
+      {/* Scrollable Main Content */}
+      <div className="ml-0 md:ml-[25%] w-full md:w-3/4 h-[calc(100vh-4rem)] overflow-y-auto">
+        <MainContent content={components[activeContent]} />
       </div>
     </div>
+  </div>
+  
   );
 };
 

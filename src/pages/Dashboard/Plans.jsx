@@ -2,9 +2,9 @@ import React from 'react';
 
 const Plans = () => {
   return (
-      <div className='text-[#171717] font-SFPro text-[14px] font-[400]'>
-      <div className='text-[#C9C9C9] pb-2 border-b-2'>
-        <h1 className='text-[15px] font-MExtended text-[#171717] -pb-3 font-medium'>Plans</h1>
+    <div className='text-[#171717] font-SFPro text-[14px] font-[400]'>
+      <div className='text-[#C9C9C9] pb-3  border-b-2'>
+        <h1 className='text-[15px] leading-4 font-MExtended text-[#171717] -pb-3 font-[400]'>Plans</h1>
       </div>
       <div className="flex  items-stretch mt-5 text-[#C9C9C9] ">
         <input className="bg-gray-100 rounded-lg bg-[#ebedef] rounded-r-none placeholder:text-[20px] placeholder:font-[400] placeholder:font-MExtended  text-base leading-none text-gray-800  p-3 w-3/4 border border-transparent focus:outline-none focus:border-gray-500" type="email" placeholder="24 Hours" />

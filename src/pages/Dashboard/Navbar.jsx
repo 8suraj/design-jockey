@@ -22,7 +22,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className='border-b-2 text-[#454647] border-[#C9C9C9]  font-serif'>
+    <div className='border-b-2 text-[#454647] pt-5 text-[15px] leading-5 font-MExtended font-[400] border-[#C9C9C9]'>
       <nav className='flex justify-between  mx-[5%] items-center '>
         <div className="flex items-end  gap-10">
           <Link to="/dashboard">
@@ -31,7 +31,7 @@ const Navbar = () => {
             <Link
               key={value}
               to={link}
-              className={`cursor-pointer px-4 py-2  text-[15px] font-MExtended font-[400] rounded-t-md ${activeTab === value ? "border-b-[3px] border-[#939393]" : ""}`}
+              className={`cursor-pointer px-4 py-2   rounded-t-md ${activeTab === value ? "border-b-[3px] border-[#939393]" : ""}`}
               onClick={() => handleTabChange(value)}
             >
               {label}
